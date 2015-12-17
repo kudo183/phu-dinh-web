@@ -11,7 +11,10 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    <div>
+    <div id="userSettings">
+        @Html.Partial("_UserSettings")
+    </div>
+    <div id="body">
         @RenderBody()
     </div>
 </body>
