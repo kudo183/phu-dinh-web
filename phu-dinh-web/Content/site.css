@@ -1,0 +1,24 @@
+﻿
+#registerPanel{
+    display: none;
+    position: relative;
+    float: left;
+    text-align: left;
+    padding: 25px;
+}
+
+#loginPanel {
+    display: block;
+    position: relative;
+    float: left;
+    text-align: left;
+    padding: 25px;
+    width: 600px;
+}
+
+#registerPanel a,
+#loginPanel a {
+    color: navy;
+    font-weight: bold;
+    cursor: pointer;
+}
