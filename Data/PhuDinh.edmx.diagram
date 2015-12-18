@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a04d1c9af4684522b59ec51a53e587d2" Name="Diagram1">
+        <EntityTypeShape EntityType="PhuDinhEntity.rBaiXe" Width="1.5" PointX="6" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rCanhBaoTonKho" Width="1.5" PointX="12.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rChanh" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rDiaDiem" Width="1.5" PointX="3" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rKhachHang" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rKhachHangChanh" Width="1.5" PointX="7.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rKhoHang" Width="1.5" PointX="8.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rLoaiChiPhi" Width="1.5" PointX="14.25" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rLoaiHang" Width="1.5" PointX="8.25" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rLoaiNguyenLieu" Width="1.5" PointX="10.75" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rMatHangNguyenLieu" Width="1.5" PointX="15.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rNuoc" Width="1.5" PointX="0.75" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rNguyenLieu" Width="1.5" PointX="13" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rNhaCungCap" Width="1.5" PointX="15.25" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rNhanVien" Width="1.5" PointX="11.25" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.rPhuongTien" Width="1.5" PointX="9" PointY="31.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tCongNoKhachHang" Width="1.5" PointX="7.5" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChiPhi" Width="1.5" PointX="16.5" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChiTietChuyenHangDonHang" Width="1.5" PointX="18" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChiTietChuyenKho" Width="1.5" PointX="19.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChiTietDonHang" Width="1.5" PointX="12.75" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChiTietNhapHang" Width="1.5" PointX="20.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChiTietToaHang" Width="1.5" PointX="15" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChuyenHang" Width="1.5" PointX="13.5" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChuyenHangDonHang" Width="1.5" PointX="15.75" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tChuyenKho" Width="1.5" PointX="17.5" PointY="19.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tDonHang" Width="1.5" PointX="10.5" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tGiamTruKhachHang" Width="1.5" PointX="7.5" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tMatHang" Width="1.5" PointX="10.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tNhanTienKhachHang" Width="1.5" PointX="7.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tNhapHang" Width="1.5" PointX="17.5" PointY="23.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tNhapNguyenLieu" Width="1.5" PointX="20.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tPhuThuKhachHang" Width="1.5" PointX="7.5" PointY="25.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tToaHang" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.tTonKho" Width="1.5" PointX="15.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.ThamSoNgay" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.UserProfile" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.webpages_Membership" Width="1.5" PointX="2.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.webpages_OAuthMembership" Width="1.5" PointX="4.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PhuDinhEntity.webpages_Roles" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rChanh_rBaiXe" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rCanhBaoTonKho_rKhoHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rCanhBaoTonKho_tMatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rKhachHangChanh_rChanh" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tDonHang_rChanh" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rDiaDiem_rNuoc" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rKhachHang_rDiaDiem" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rKhachHangChanh_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tCongNoKhachHang_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tDonHang_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tGiamTruKhachHang_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhanTienKhachHang_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tPhuThuKhachHang_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tToaHang_rKhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChuyenKho_rKhoHangNhap" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChuyenKho_rKhoHangXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tDonHang_rKhoHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhapHang_rKhoHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tTonKho_rKhoHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tMatHang_rLoaiHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rNguyenLieu_rLoaiNguyenLieu" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rMatHangNguyenLieu_rNguyenLieu" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rMatHangNguyenLieu_tMatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhapNguyenLieu_rNguyenLieu" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhapHang_rNhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhapNguyenLieu_rNhaCungCap" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_rNhanVienGiaoHang_rPhuongTien" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChuyenHang_rNhanVienGiaoHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChuyenKho_rNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhapHang_rNhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietChuyenKho_tChuyenKho" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietChuyenKho_tMatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietDonHang_tDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietDonHang_tMatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietToaHang_tChiTietDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietNhapHang_tNhapHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tNhapMatHang_tMatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChiTietToaHang_tToaHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChuyenHangDonHang_tChuyenHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tChuyenHangDonHang_tDonHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.FK_tTonKho_tMatHang" ManuallyRouted="false" />
+        <AssociationConnector Association="PhuDinhEntity.webpages_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

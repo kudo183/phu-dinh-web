@@ -1,0 +1,2842 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PhuDinhEntity.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="PhuDinhEntityStoreContainer">
+          <EntitySet Name="rBaiXe" EntityType="PhuDinhEntity.Store.rBaiXe" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rCanhBaoTonKho" EntityType="PhuDinhEntity.Store.rCanhBaoTonKho" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rChanh" EntityType="PhuDinhEntity.Store.rChanh" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rDiaDiem" EntityType="PhuDinhEntity.Store.rDiaDiem" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rKhachHang" EntityType="PhuDinhEntity.Store.rKhachHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rKhachHangChanh" EntityType="PhuDinhEntity.Store.rKhachHangChanh" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rKhoHang" EntityType="PhuDinhEntity.Store.rKhoHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rLoaiChiPhi" EntityType="PhuDinhEntity.Store.rLoaiChiPhi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rLoaiHang" EntityType="PhuDinhEntity.Store.rLoaiHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rLoaiNguyenLieu" EntityType="PhuDinhEntity.Store.rLoaiNguyenLieu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rMatHangNguyenLieu" EntityType="PhuDinhEntity.Store.rMatHangNguyenLieu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rNuoc" EntityType="PhuDinhEntity.Store.rNuoc" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rNguyenLieu" EntityType="PhuDinhEntity.Store.rNguyenLieu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rNhaCungCap" EntityType="PhuDinhEntity.Store.rNhaCungCap" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rNhanVien" EntityType="PhuDinhEntity.Store.rNhanVien" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rPhuongTien" EntityType="PhuDinhEntity.Store.rPhuongTien" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tCongNoKhachHang" EntityType="PhuDinhEntity.Store.tCongNoKhachHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChiPhi" EntityType="PhuDinhEntity.Store.tChiPhi" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChiTietChuyenHangDonHang" EntityType="PhuDinhEntity.Store.tChiTietChuyenHangDonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChiTietChuyenKho" EntityType="PhuDinhEntity.Store.tChiTietChuyenKho" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChiTietDonHang" EntityType="PhuDinhEntity.Store.tChiTietDonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChiTietNhapHang" EntityType="PhuDinhEntity.Store.tChiTietNhapHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChiTietToaHang" EntityType="PhuDinhEntity.Store.tChiTietToaHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChuyenHang" EntityType="PhuDinhEntity.Store.tChuyenHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChuyenHangDonHang" EntityType="PhuDinhEntity.Store.tChuyenHangDonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tChuyenKho" EntityType="PhuDinhEntity.Store.tChuyenKho" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tDonHang" EntityType="PhuDinhEntity.Store.tDonHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tGiamTruKhachHang" EntityType="PhuDinhEntity.Store.tGiamTruKhachHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tMatHang" EntityType="PhuDinhEntity.Store.tMatHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tNhanTienKhachHang" EntityType="PhuDinhEntity.Store.tNhanTienKhachHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tNhapHang" EntityType="PhuDinhEntity.Store.tNhapHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tNhapNguyenLieu" EntityType="PhuDinhEntity.Store.tNhapNguyenLieu" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tPhuThuKhachHang" EntityType="PhuDinhEntity.Store.tPhuThuKhachHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tToaHang" EntityType="PhuDinhEntity.Store.tToaHang" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="tTonKho" EntityType="PhuDinhEntity.Store.tTonKho" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ThamSoNgay" EntityType="PhuDinhEntity.Store.ThamSoNgay" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserProfile" EntityType="PhuDinhEntity.Store.UserProfile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_Membership" EntityType="PhuDinhEntity.Store.webpages_Membership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_OAuthMembership" EntityType="PhuDinhEntity.Store.webpages_OAuthMembership" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_Roles" EntityType="PhuDinhEntity.Store.webpages_Roles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="webpages_UsersInRoles" EntityType="PhuDinhEntity.Store.webpages_UsersInRoles" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_rCanhBaoTonKho_rKhoHang" Association="PhuDinhEntity.Store.FK_rCanhBaoTonKho_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHang" />
+            <End Role="rCanhBaoTonKho" EntitySet="rCanhBaoTonKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rCanhBaoTonKho_tMatHang" Association="PhuDinhEntity.Store.FK_rCanhBaoTonKho_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHang" />
+            <End Role="rCanhBaoTonKho" EntitySet="rCanhBaoTonKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rChanh_rBaiXe" Association="PhuDinhEntity.Store.FK_rChanh_rBaiXe">
+            <End Role="rBaiXe" EntitySet="rBaiXe" />
+            <End Role="rChanh" EntitySet="rChanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rDiaDiem_rNuoc" Association="PhuDinhEntity.Store.FK_rDiaDiem_rNuoc">
+            <End Role="rNuoc" EntitySet="rNuoc" />
+            <End Role="rDiaDiem" EntitySet="rDiaDiem" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rKhachHang_rDiaDiem" Association="PhuDinhEntity.Store.FK_rKhachHang_rDiaDiem">
+            <End Role="rDiaDiem" EntitySet="rDiaDiem" />
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rKhachHangChanh_rChanh" Association="PhuDinhEntity.Store.FK_rKhachHangChanh_rChanh">
+            <End Role="rChanh" EntitySet="rChanh" />
+            <End Role="rKhachHangChanh" EntitySet="rKhachHangChanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rKhachHangChanh_rKhachHang" Association="PhuDinhEntity.Store.FK_rKhachHangChanh_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="rKhachHangChanh" EntitySet="rKhachHangChanh" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rMatHangNguyenLieu_rNguyenLieu" Association="PhuDinhEntity.Store.FK_rMatHangNguyenLieu_rNguyenLieu">
+            <End Role="rNguyenLieu" EntitySet="rNguyenLieu" />
+            <End Role="rMatHangNguyenLieu" EntitySet="rMatHangNguyenLieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rMatHangNguyenLieu_tMatHang" Association="PhuDinhEntity.Store.FK_rMatHangNguyenLieu_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHang" />
+            <End Role="rMatHangNguyenLieu" EntitySet="rMatHangNguyenLieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rNguyenLieu_rLoaiNguyenLieu" Association="PhuDinhEntity.Store.FK_rNguyenLieu_rLoaiNguyenLieu">
+            <End Role="rLoaiNguyenLieu" EntitySet="rLoaiNguyenLieu" />
+            <End Role="rNguyenLieu" EntitySet="rNguyenLieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rNhanVienGiaoHang_rPhuongTien" Association="PhuDinhEntity.Store.FK_rNhanVienGiaoHang_rPhuongTien">
+            <End Role="rPhuongTien" EntitySet="rPhuongTien" />
+            <End Role="rNhanVien" EntitySet="rNhanVien" />
+          </AssociationSet>
+          <AssociationSet Name="fk_RoleId" Association="PhuDinhEntity.Store.fk_RoleId">
+            <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+            <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tCongNoKhachHang_rKhachHang" Association="PhuDinhEntity.Store.FK_tCongNoKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="tCongNoKhachHang" EntitySet="tCongNoKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi" Association="PhuDinhEntity.Store.FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi">
+            <End Role="rLoaiChiPhi" EntitySet="rLoaiChiPhi" />
+            <End Role="tChiPhi" EntitySet="tChiPhi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang" Association="PhuDinhEntity.Store.FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang">
+            <End Role="rNhanVien" EntitySet="rNhanVien" />
+            <End Role="tChiPhi" EntitySet="tChiPhi" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenHangDonHang_tChiTietDonHang" Association="PhuDinhEntity.Store.FK_tChiTietChuyenHangDonHang_tChiTietDonHang">
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHang" />
+            <End Role="tChiTietChuyenHangDonHang" EntitySet="tChiTietChuyenHangDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang" Association="PhuDinhEntity.Store.FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang">
+            <End Role="tChuyenHangDonHang" EntitySet="tChuyenHangDonHang" />
+            <End Role="tChiTietChuyenHangDonHang" EntitySet="tChiTietChuyenHangDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenKho_tChuyenKho" Association="PhuDinhEntity.Store.FK_tChiTietChuyenKho_tChuyenKho">
+            <End Role="tChuyenKho" EntitySet="tChuyenKho" />
+            <End Role="tChiTietChuyenKho" EntitySet="tChiTietChuyenKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenKho_tMatHang" Association="PhuDinhEntity.Store.FK_tChiTietChuyenKho_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHang" />
+            <End Role="tChiTietChuyenKho" EntitySet="tChiTietChuyenKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietDonHang_tDonHang" Association="PhuDinhEntity.Store.FK_tChiTietDonHang_tDonHang">
+            <End Role="tDonHang" EntitySet="tDonHang" />
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietDonHang_tMatHang" Association="PhuDinhEntity.Store.FK_tChiTietDonHang_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHang" />
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietNhapHang_tNhapHang" Association="PhuDinhEntity.Store.FK_tChiTietNhapHang_tNhapHang">
+            <End Role="tNhapHang" EntitySet="tNhapHang" />
+            <End Role="tChiTietNhapHang" EntitySet="tChiTietNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietToaHang_tChiTietDonHang" Association="PhuDinhEntity.Store.FK_tChiTietToaHang_tChiTietDonHang">
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHang" />
+            <End Role="tChiTietToaHang" EntitySet="tChiTietToaHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietToaHang_tToaHang" Association="PhuDinhEntity.Store.FK_tChiTietToaHang_tToaHang">
+            <End Role="tToaHang" EntitySet="tToaHang" />
+            <End Role="tChiTietToaHang" EntitySet="tChiTietToaHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenHang_rNhanVienGiaoHang" Association="PhuDinhEntity.Store.FK_tChuyenHang_rNhanVienGiaoHang">
+            <End Role="rNhanVien" EntitySet="rNhanVien" />
+            <End Role="tChuyenHang" EntitySet="tChuyenHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenHangDonHang_tChuyenHang" Association="PhuDinhEntity.Store.FK_tChuyenHangDonHang_tChuyenHang">
+            <End Role="tChuyenHang" EntitySet="tChuyenHang" />
+            <End Role="tChuyenHangDonHang" EntitySet="tChuyenHangDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenHangDonHang_tDonHang" Association="PhuDinhEntity.Store.FK_tChuyenHangDonHang_tDonHang">
+            <End Role="tDonHang" EntitySet="tDonHang" />
+            <End Role="tChuyenHangDonHang" EntitySet="tChuyenHangDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenKho_rKhoHangNhap" Association="PhuDinhEntity.Store.FK_tChuyenKho_rKhoHangNhap">
+            <End Role="rKhoHang" EntitySet="rKhoHang" />
+            <End Role="tChuyenKho" EntitySet="tChuyenKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenKho_rKhoHangXuat" Association="PhuDinhEntity.Store.FK_tChuyenKho_rKhoHangXuat">
+            <End Role="rKhoHang" EntitySet="rKhoHang" />
+            <End Role="tChuyenKho" EntitySet="tChuyenKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenKho_rNhanVien" Association="PhuDinhEntity.Store.FK_tChuyenKho_rNhanVien">
+            <End Role="rNhanVien" EntitySet="rNhanVien" />
+            <End Role="tChuyenKho" EntitySet="tChuyenKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDonHang_rChanh" Association="PhuDinhEntity.Store.FK_tDonHang_rChanh">
+            <End Role="rChanh" EntitySet="rChanh" />
+            <End Role="tDonHang" EntitySet="tDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDonHang_rKhachHang" Association="PhuDinhEntity.Store.FK_tDonHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="tDonHang" EntitySet="tDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDonHang_rKhoHang" Association="PhuDinhEntity.Store.FK_tDonHang_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHang" />
+            <End Role="tDonHang" EntitySet="tDonHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGiamTruKhachHang_rKhachHang" Association="PhuDinhEntity.Store.FK_tGiamTruKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="tGiamTruKhachHang" EntitySet="tGiamTruKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tMatHang_rLoaiHang" Association="PhuDinhEntity.Store.FK_tMatHang_rLoaiHang">
+            <End Role="rLoaiHang" EntitySet="rLoaiHang" />
+            <End Role="tMatHang" EntitySet="tMatHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhanTienKhachHang_rKhachHang" Association="PhuDinhEntity.Store.FK_tNhanTienKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="tNhanTienKhachHang" EntitySet="tNhanTienKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapHang_rKhoHang" Association="PhuDinhEntity.Store.FK_tNhapHang_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHang" />
+            <End Role="tNhapHang" EntitySet="tNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapHang_rNhaCungCap" Association="PhuDinhEntity.Store.FK_tNhapHang_rNhaCungCap">
+            <End Role="rNhaCungCap" EntitySet="rNhaCungCap" />
+            <End Role="tNhapHang" EntitySet="tNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapHang_rNhanVien" Association="PhuDinhEntity.Store.FK_tNhapHang_rNhanVien">
+            <End Role="rNhanVien" EntitySet="rNhanVien" />
+            <End Role="tNhapHang" EntitySet="tNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapMatHang_tMatHang" Association="PhuDinhEntity.Store.FK_tNhapMatHang_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHang" />
+            <End Role="tChiTietNhapHang" EntitySet="tChiTietNhapHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapNguyenLieu_rNguyenLieu" Association="PhuDinhEntity.Store.FK_tNhapNguyenLieu_rNguyenLieu">
+            <End Role="rNguyenLieu" EntitySet="rNguyenLieu" />
+            <End Role="tNhapNguyenLieu" EntitySet="tNhapNguyenLieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapNguyenLieu_rNhaCungCap" Association="PhuDinhEntity.Store.FK_tNhapNguyenLieu_rNhaCungCap">
+            <End Role="rNhaCungCap" EntitySet="rNhaCungCap" />
+            <End Role="tNhapNguyenLieu" EntitySet="tNhapNguyenLieu" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tPhuThuKhachHang_rKhachHang" Association="PhuDinhEntity.Store.FK_tPhuThuKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="tPhuThuKhachHang" EntitySet="tPhuThuKhachHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tToaHang_rKhachHang" Association="PhuDinhEntity.Store.FK_tToaHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHang" />
+            <End Role="tToaHang" EntitySet="tToaHang" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTonKho_rKhoHang" Association="PhuDinhEntity.Store.FK_tTonKho_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHang" />
+            <End Role="tTonKho" EntitySet="tTonKho" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTonKho_tMatHang" Association="PhuDinhEntity.Store.FK_tTonKho_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHang" />
+            <End Role="tTonKho" EntitySet="tTonKho" />
+          </AssociationSet>
+          <AssociationSet Name="fk_UserId" Association="PhuDinhEntity.Store.fk_UserId">
+            <End Role="UserProfile" EntitySet="UserProfile" />
+            <End Role="webpages_UsersInRoles" EntitySet="webpages_UsersInRoles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="rBaiXe">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="DiaDiemBaiXe" Type="nvarchar" Nullable="false" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="rCanhBaoTonKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaMatHang" Type="int" Nullable="false" />
+          <Property Name="MaKhoHang" Type="int" Nullable="false" />
+          <Property Name="TonCaoNhat" Type="int" Nullable="false" />
+          <Property Name="TonThapNhat" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rChanh">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaBaiXe" Type="int" Nullable="false" />
+          <Property Name="TenChanh" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="rDiaDiem">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNuoc" Type="int" Nullable="false" />
+          <Property Name="Tinh" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="rKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaDiaDiem" Type="int" Nullable="false" />
+          <Property Name="TenKhachHang" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="KhachRieng" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rKhachHangChanh">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaChanh" Type="int" Nullable="false" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+          <Property Name="LaMacDinh" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rKhoHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenKho" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="TrangThai" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rLoaiChiPhi">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiChiPhi" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="rLoaiHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="rLoaiNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="rMatHangNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaMatHang" Type="int" Nullable="false" />
+          <Property Name="MaNguyenLieu" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rNuoc">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNuoc" Type="nvarchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="rNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaLoaiNguyenLieu" Type="int" Nullable="false" />
+          <Property Name="DuongKinh" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rNhaCungCap">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenNhaCungCap" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="rNhanVien">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaPhuongTien" Type="int" Nullable="false" />
+          <Property Name="TenNhanVien" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="rPhuongTien">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TenPhuongTien" Type="nvarchar" Nullable="false" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="tCongNoKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="SoTien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChiPhi">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVienGiaoHang" Type="int" Nullable="false" />
+          <Property Name="MaLoaiChiPhi" Type="int" Nullable="false" />
+          <Property Name="SoTien" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="GhiChu" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="tChiTietChuyenHangDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaChuyenHangDonHang" Type="int" Nullable="false" />
+          <Property Name="MaChiTietDonHang" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="SoLuongTheoDonHang" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChiTietChuyenKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaChuyenKho" Type="int" Nullable="false" />
+          <Property Name="MaMatHang" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChiTietDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaDonHang" Type="int" Nullable="false" />
+          <Property Name="MaMatHang" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="Xong" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChiTietNhapHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhapHang" Type="int" Nullable="false" />
+          <Property Name="MaMatHang" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChiTietToaHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaToaHang" Type="int" Nullable="false" />
+          <Property Name="MaChiTietDonHang" Type="int" Nullable="false" />
+          <Property Name="GiaTien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChuyenHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVienGiaoHang" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="Gio" Type="time" Precision="0" />
+          <Property Name="TongDonHang" Type="int" Nullable="false" />
+          <Property Name="TongSoLuongTheoDonHang" Type="int" Nullable="false" />
+          <Property Name="TongSoLuongThucTe" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChuyenHangDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaChuyenHang" Type="int" Nullable="false" />
+          <Property Name="MaDonHang" Type="int" Nullable="false" />
+          <Property Name="TongSoLuongTheoDonHang" Type="int" Nullable="false" />
+          <Property Name="TongSoLuongThucTe" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tChuyenKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVien" Type="int" Nullable="false" />
+          <Property Name="MaKhoHangXuat" Type="int" Nullable="false" />
+          <Property Name="MaKhoHangNhap" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+          <Property Name="MaChanh" Type="int" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="Xong" Type="bit" Nullable="false" />
+          <Property Name="MaKhoHang" Type="int" Nullable="false" />
+          <Property Name="TongSoLuong" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tGiamTruKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="SoTien" Type="int" Nullable="false" />
+          <Property Name="GhiChu" Type="nvarchar" Nullable="false" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tMatHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaLoai" Type="int" Nullable="false" />
+          <Property Name="TenMatHang" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="SoKy" Type="int" Nullable="false" />
+          <Property Name="SoMet" Type="int" Nullable="false" />
+          <Property Name="TenMatHangDayDu" Type="nvarchar" Nullable="false" MaxLength="200" />
+          <Property Name="TenMatHangIn" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tNhanTienKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="SoTien" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tNhapHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVien" Type="int" Nullable="false" />
+          <Property Name="MaKhoHang" Type="int" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tNhapNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="MaNguyenLieu" Type="int" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="int" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tPhuThuKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="SoTien" Type="int" Nullable="false" />
+          <Property Name="GhiChu" Type="nvarchar" Nullable="false" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="tToaHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="MaKhachHang" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tTonKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhoHang" Type="int" Nullable="false" />
+          <Property Name="MaMatHang" Type="int" Nullable="false" />
+          <Property Name="Ngay" Type="date" Nullable="false" />
+          <Property Name="SoLuong" Type="int" Nullable="false" />
+          <Property Name="SoLuongCu" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ThamSoNgay">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="GiaTri" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="56" />
+        </EntityType>
+        <EntityType Name="webpages_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="ConfirmationToken" Type="nvarchar" MaxLength="128" />
+          <Property Name="IsConfirmed" Type="bit" />
+          <Property Name="LastPasswordFailureDate" Type="datetime" />
+          <Property Name="PasswordFailuresSinceLastSuccess" Type="int" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordChangedDate" Type="datetime" />
+          <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="PasswordVerificationToken" Type="nvarchar" MaxLength="128" />
+          <Property Name="PasswordVerificationTokenExpirationDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="webpages_OAuthMembership">
+          <Key>
+            <PropertyRef Name="Provider" />
+            <PropertyRef Name="ProviderUserId" />
+          </Key>
+          <Property Name="Provider" Type="nvarchar" Nullable="false" MaxLength="30" />
+          <Property Name="ProviderUserId" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+        </EntityType>
+        <EntityType Name="webpages_UsersInRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_rCanhBaoTonKho_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.Store.rKhoHang" Multiplicity="1" />
+          <End Role="rCanhBaoTonKho" Type="PhuDinhEntity.Store.rCanhBaoTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rCanhBaoTonKho">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rCanhBaoTonKho_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="1" />
+          <End Role="rCanhBaoTonKho" Type="PhuDinhEntity.Store.rCanhBaoTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rCanhBaoTonKho">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rChanh_rBaiXe">
+          <End Role="rBaiXe" Type="PhuDinhEntity.Store.rBaiXe" Multiplicity="1" />
+          <End Role="rChanh" Type="PhuDinhEntity.Store.rChanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rBaiXe">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rChanh">
+              <PropertyRef Name="MaBaiXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rDiaDiem_rNuoc">
+          <End Role="rNuoc" Type="PhuDinhEntity.Store.rNuoc" Multiplicity="1" />
+          <End Role="rDiaDiem" Type="PhuDinhEntity.Store.rDiaDiem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNuoc">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rDiaDiem">
+              <PropertyRef Name="MaNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rKhachHang_rDiaDiem">
+          <End Role="rDiaDiem" Type="PhuDinhEntity.Store.rDiaDiem" Multiplicity="1" />
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rDiaDiem">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rKhachHang">
+              <PropertyRef Name="MaDiaDiem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rKhachHangChanh_rChanh">
+          <End Role="rChanh" Type="PhuDinhEntity.Store.rChanh" Multiplicity="1" />
+          <End Role="rKhachHangChanh" Type="PhuDinhEntity.Store.rKhachHangChanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rChanh">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rKhachHangChanh">
+              <PropertyRef Name="MaChanh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rKhachHangChanh_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="rKhachHangChanh" Type="PhuDinhEntity.Store.rKhachHangChanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rKhachHangChanh">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rMatHangNguyenLieu_rNguyenLieu">
+          <End Role="rNguyenLieu" Type="PhuDinhEntity.Store.rNguyenLieu" Multiplicity="1" />
+          <End Role="rMatHangNguyenLieu" Type="PhuDinhEntity.Store.rMatHangNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNguyenLieu">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rMatHangNguyenLieu">
+              <PropertyRef Name="MaNguyenLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rMatHangNguyenLieu_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="1" />
+          <End Role="rMatHangNguyenLieu" Type="PhuDinhEntity.Store.rMatHangNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rMatHangNguyenLieu">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rNguyenLieu_rLoaiNguyenLieu">
+          <End Role="rLoaiNguyenLieu" Type="PhuDinhEntity.Store.rLoaiNguyenLieu" Multiplicity="1" />
+          <End Role="rNguyenLieu" Type="PhuDinhEntity.Store.rNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rLoaiNguyenLieu">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rNguyenLieu">
+              <PropertyRef Name="MaLoaiNguyenLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rNhanVienGiaoHang_rPhuongTien">
+          <End Role="rPhuongTien" Type="PhuDinhEntity.Store.rPhuongTien" Multiplicity="1" />
+          <End Role="rNhanVien" Type="PhuDinhEntity.Store.rNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rPhuongTien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rNhanVien">
+              <PropertyRef Name="MaPhuongTien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_RoleId">
+          <End Role="webpages_Roles" Type="PhuDinhEntity.Store.webpages_Roles" Multiplicity="1" />
+          <End Role="webpages_UsersInRoles" Type="PhuDinhEntity.Store.webpages_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="webpages_Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="webpages_UsersInRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tCongNoKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="tCongNoKhachHang" Type="PhuDinhEntity.Store.tCongNoKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tCongNoKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi">
+          <End Role="rLoaiChiPhi" Type="PhuDinhEntity.Store.rLoaiChiPhi" Multiplicity="1" />
+          <End Role="tChiPhi" Type="PhuDinhEntity.Store.tChiPhi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rLoaiChiPhi">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiPhi">
+              <PropertyRef Name="MaLoaiChiPhi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang">
+          <End Role="rNhanVien" Type="PhuDinhEntity.Store.rNhanVien" Multiplicity="1" />
+          <End Role="tChiPhi" Type="PhuDinhEntity.Store.tChiPhi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiPhi">
+              <PropertyRef Name="MaNhanVienGiaoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenHangDonHang_tChiTietDonHang">
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.Store.tChiTietDonHang" Multiplicity="1" />
+          <End Role="tChiTietChuyenHangDonHang" Type="PhuDinhEntity.Store.tChiTietChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChiTietDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenHangDonHang">
+              <PropertyRef Name="MaChiTietDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang">
+          <End Role="tChuyenHangDonHang" Type="PhuDinhEntity.Store.tChuyenHangDonHang" Multiplicity="1" />
+          <End Role="tChiTietChuyenHangDonHang" Type="PhuDinhEntity.Store.tChiTietChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChuyenHangDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenHangDonHang">
+              <PropertyRef Name="MaChuyenHangDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenKho_tChuyenKho">
+          <End Role="tChuyenKho" Type="PhuDinhEntity.Store.tChuyenKho" Multiplicity="1" />
+          <End Role="tChiTietChuyenKho" Type="PhuDinhEntity.Store.tChiTietChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChuyenKho">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenKho">
+              <PropertyRef Name="MaChuyenKho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenKho_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="1" />
+          <End Role="tChiTietChuyenKho" Type="PhuDinhEntity.Store.tChiTietChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenKho">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietDonHang_tDonHang">
+          <End Role="tDonHang" Type="PhuDinhEntity.Store.tDonHang" Multiplicity="1" />
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.Store.tChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietDonHang">
+              <PropertyRef Name="MaDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietDonHang_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="1" />
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.Store.tChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietDonHang">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietNhapHang_tNhapHang">
+          <End Role="tNhapHang" Type="PhuDinhEntity.Store.tNhapHang" Multiplicity="1" />
+          <End Role="tChiTietNhapHang" Type="PhuDinhEntity.Store.tChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNhapHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietNhapHang">
+              <PropertyRef Name="MaNhapHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietToaHang_tChiTietDonHang">
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.Store.tChiTietDonHang" Multiplicity="1" />
+          <End Role="tChiTietToaHang" Type="PhuDinhEntity.Store.tChiTietToaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChiTietDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietToaHang">
+              <PropertyRef Name="MaChiTietDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietToaHang_tToaHang">
+          <End Role="tToaHang" Type="PhuDinhEntity.Store.tToaHang" Multiplicity="1" />
+          <End Role="tChiTietToaHang" Type="PhuDinhEntity.Store.tChiTietToaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tToaHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietToaHang">
+              <PropertyRef Name="MaToaHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenHang_rNhanVienGiaoHang">
+          <End Role="rNhanVien" Type="PhuDinhEntity.Store.rNhanVien" Multiplicity="1" />
+          <End Role="tChuyenHang" Type="PhuDinhEntity.Store.tChuyenHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenHang">
+              <PropertyRef Name="MaNhanVienGiaoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenHangDonHang_tChuyenHang">
+          <End Role="tChuyenHang" Type="PhuDinhEntity.Store.tChuyenHang" Multiplicity="1" />
+          <End Role="tChuyenHangDonHang" Type="PhuDinhEntity.Store.tChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChuyenHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenHangDonHang">
+              <PropertyRef Name="MaChuyenHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenHangDonHang_tDonHang">
+          <End Role="tDonHang" Type="PhuDinhEntity.Store.tDonHang" Multiplicity="1" />
+          <End Role="tChuyenHangDonHang" Type="PhuDinhEntity.Store.tChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenHangDonHang">
+              <PropertyRef Name="MaDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenKho_rKhoHangNhap">
+          <End Role="rKhoHang" Type="PhuDinhEntity.Store.rKhoHang" Multiplicity="1" />
+          <End Role="tChuyenKho" Type="PhuDinhEntity.Store.tChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenKho">
+              <PropertyRef Name="MaKhoHangNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenKho_rKhoHangXuat">
+          <End Role="rKhoHang" Type="PhuDinhEntity.Store.rKhoHang" Multiplicity="1" />
+          <End Role="tChuyenKho" Type="PhuDinhEntity.Store.tChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenKho">
+              <PropertyRef Name="MaKhoHangXuat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenKho_rNhanVien">
+          <End Role="rNhanVien" Type="PhuDinhEntity.Store.rNhanVien" Multiplicity="1" />
+          <End Role="tChuyenKho" Type="PhuDinhEntity.Store.tChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenKho">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDonHang_rChanh">
+          <End Role="rChanh" Type="PhuDinhEntity.Store.rChanh" Multiplicity="0..1" />
+          <End Role="tDonHang" Type="PhuDinhEntity.Store.tDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rChanh">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tDonHang">
+              <PropertyRef Name="MaChanh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDonHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="tDonHang" Type="PhuDinhEntity.Store.tDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tDonHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDonHang_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.Store.rKhoHang" Multiplicity="1" />
+          <End Role="tDonHang" Type="PhuDinhEntity.Store.tDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tDonHang">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGiamTruKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="tGiamTruKhachHang" Type="PhuDinhEntity.Store.tGiamTruKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tGiamTruKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tMatHang_rLoaiHang">
+          <End Role="rLoaiHang" Type="PhuDinhEntity.Store.rLoaiHang" Multiplicity="1" />
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rLoaiHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tMatHang">
+              <PropertyRef Name="MaLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhanTienKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="tNhanTienKhachHang" Type="PhuDinhEntity.Store.tNhanTienKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhanTienKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapHang_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.Store.rKhoHang" Multiplicity="1" />
+          <End Role="tNhapHang" Type="PhuDinhEntity.Store.tNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapHang">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapHang_rNhaCungCap">
+          <End Role="rNhaCungCap" Type="PhuDinhEntity.Store.rNhaCungCap" Multiplicity="1" />
+          <End Role="tNhapHang" Type="PhuDinhEntity.Store.tNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhaCungCap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapHang">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapHang_rNhanVien">
+          <End Role="rNhanVien" Type="PhuDinhEntity.Store.rNhanVien" Multiplicity="1" />
+          <End Role="tNhapHang" Type="PhuDinhEntity.Store.tNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapHang">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapMatHang_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="1" />
+          <End Role="tChiTietNhapHang" Type="PhuDinhEntity.Store.tChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietNhapHang">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapNguyenLieu_rNguyenLieu">
+          <End Role="rNguyenLieu" Type="PhuDinhEntity.Store.rNguyenLieu" Multiplicity="1" />
+          <End Role="tNhapNguyenLieu" Type="PhuDinhEntity.Store.tNhapNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNguyenLieu">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapNguyenLieu">
+              <PropertyRef Name="MaNguyenLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapNguyenLieu_rNhaCungCap">
+          <End Role="rNhaCungCap" Type="PhuDinhEntity.Store.rNhaCungCap" Multiplicity="1" />
+          <End Role="tNhapNguyenLieu" Type="PhuDinhEntity.Store.tNhapNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhaCungCap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapNguyenLieu">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tPhuThuKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="tPhuThuKhachHang" Type="PhuDinhEntity.Store.tPhuThuKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tPhuThuKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tToaHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.Store.rKhachHang" Multiplicity="1" />
+          <End Role="tToaHang" Type="PhuDinhEntity.Store.tToaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tToaHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTonKho_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.Store.rKhoHang" Multiplicity="1" />
+          <End Role="tTonKho" Type="PhuDinhEntity.Store.tTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tTonKho">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTonKho_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.Store.tMatHang" Multiplicity="1" />
+          <End Role="tTonKho" Type="PhuDinhEntity.Store.tTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tTonKho">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_UserId">
+          <End Role="UserProfile" Type="PhuDinhEntity.Store.UserProfile" Multiplicity="1" />
+          <End Role="webpages_UsersInRoles" Type="PhuDinhEntity.Store.webpages_UsersInRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserProfile">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="webpages_UsersInRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PhuDinhEntity" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PhuDinhEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="rBaiXes" EntityType="PhuDinhEntity.rBaiXe" />
+          <EntitySet Name="rCanhBaoTonKhoes" EntityType="PhuDinhEntity.rCanhBaoTonKho" />
+          <EntitySet Name="rChanhs" EntityType="PhuDinhEntity.rChanh" />
+          <EntitySet Name="rDiaDiems" EntityType="PhuDinhEntity.rDiaDiem" />
+          <EntitySet Name="rKhachHangs" EntityType="PhuDinhEntity.rKhachHang" />
+          <EntitySet Name="rKhachHangChanhs" EntityType="PhuDinhEntity.rKhachHangChanh" />
+          <EntitySet Name="rKhoHangs" EntityType="PhuDinhEntity.rKhoHang" />
+          <EntitySet Name="rLoaiChiPhis" EntityType="PhuDinhEntity.rLoaiChiPhi" />
+          <EntitySet Name="rLoaiHangs" EntityType="PhuDinhEntity.rLoaiHang" />
+          <EntitySet Name="rLoaiNguyenLieux" EntityType="PhuDinhEntity.rLoaiNguyenLieu" />
+          <EntitySet Name="rMatHangNguyenLieux" EntityType="PhuDinhEntity.rMatHangNguyenLieu" />
+          <EntitySet Name="rNuocs" EntityType="PhuDinhEntity.rNuoc" />
+          <EntitySet Name="rNguyenLieux" EntityType="PhuDinhEntity.rNguyenLieu" />
+          <EntitySet Name="rNhaCungCaps" EntityType="PhuDinhEntity.rNhaCungCap" />
+          <EntitySet Name="rNhanViens" EntityType="PhuDinhEntity.rNhanVien" />
+          <EntitySet Name="rPhuongTiens" EntityType="PhuDinhEntity.rPhuongTien" />
+          <EntitySet Name="tCongNoKhachHangs" EntityType="PhuDinhEntity.tCongNoKhachHang" />
+          <EntitySet Name="tChiPhis" EntityType="PhuDinhEntity.tChiPhi" />
+          <EntitySet Name="tChiTietChuyenHangDonHangs" EntityType="PhuDinhEntity.tChiTietChuyenHangDonHang" />
+          <EntitySet Name="tChiTietChuyenKhoes" EntityType="PhuDinhEntity.tChiTietChuyenKho" />
+          <EntitySet Name="tChiTietDonHangs" EntityType="PhuDinhEntity.tChiTietDonHang" />
+          <EntitySet Name="tChiTietNhapHangs" EntityType="PhuDinhEntity.tChiTietNhapHang" />
+          <EntitySet Name="tChiTietToaHangs" EntityType="PhuDinhEntity.tChiTietToaHang" />
+          <EntitySet Name="tChuyenHangs" EntityType="PhuDinhEntity.tChuyenHang" />
+          <EntitySet Name="tChuyenHangDonHangs" EntityType="PhuDinhEntity.tChuyenHangDonHang" />
+          <EntitySet Name="tChuyenKhoes" EntityType="PhuDinhEntity.tChuyenKho" />
+          <EntitySet Name="tDonHangs" EntityType="PhuDinhEntity.tDonHang" />
+          <EntitySet Name="tGiamTruKhachHangs" EntityType="PhuDinhEntity.tGiamTruKhachHang" />
+          <EntitySet Name="tMatHangs" EntityType="PhuDinhEntity.tMatHang" />
+          <EntitySet Name="tNhanTienKhachHangs" EntityType="PhuDinhEntity.tNhanTienKhachHang" />
+          <EntitySet Name="tNhapHangs" EntityType="PhuDinhEntity.tNhapHang" />
+          <EntitySet Name="tNhapNguyenLieux" EntityType="PhuDinhEntity.tNhapNguyenLieu" />
+          <EntitySet Name="tPhuThuKhachHangs" EntityType="PhuDinhEntity.tPhuThuKhachHang" />
+          <EntitySet Name="tToaHangs" EntityType="PhuDinhEntity.tToaHang" />
+          <EntitySet Name="tTonKhoes" EntityType="PhuDinhEntity.tTonKho" />
+          <EntitySet Name="ThamSoNgays" EntityType="PhuDinhEntity.ThamSoNgay" />
+          <EntitySet Name="UserProfiles" EntityType="PhuDinhEntity.UserProfile" />
+          <EntitySet Name="webpages_Membership" EntityType="PhuDinhEntity.webpages_Membership" />
+          <EntitySet Name="webpages_OAuthMembership" EntityType="PhuDinhEntity.webpages_OAuthMembership" />
+          <EntitySet Name="webpages_Roles" EntityType="PhuDinhEntity.webpages_Roles" />
+          <AssociationSet Name="FK_rChanh_rBaiXe" Association="PhuDinhEntity.FK_rChanh_rBaiXe">
+            <End Role="rBaiXe" EntitySet="rBaiXes" />
+            <End Role="rChanh" EntitySet="rChanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rCanhBaoTonKho_rKhoHang" Association="PhuDinhEntity.FK_rCanhBaoTonKho_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHangs" />
+            <End Role="rCanhBaoTonKho" EntitySet="rCanhBaoTonKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rCanhBaoTonKho_tMatHang" Association="PhuDinhEntity.FK_rCanhBaoTonKho_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+            <End Role="rCanhBaoTonKho" EntitySet="rCanhBaoTonKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rKhachHangChanh_rChanh" Association="PhuDinhEntity.FK_rKhachHangChanh_rChanh">
+            <End Role="rChanh" EntitySet="rChanhs" />
+            <End Role="rKhachHangChanh" EntitySet="rKhachHangChanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDonHang_rChanh" Association="PhuDinhEntity.FK_tDonHang_rChanh">
+            <End Role="rChanh" EntitySet="rChanhs" />
+            <End Role="tDonHang" EntitySet="tDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rDiaDiem_rNuoc" Association="PhuDinhEntity.FK_rDiaDiem_rNuoc">
+            <End Role="rNuoc" EntitySet="rNuocs" />
+            <End Role="rDiaDiem" EntitySet="rDiaDiems" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rKhachHang_rDiaDiem" Association="PhuDinhEntity.FK_rKhachHang_rDiaDiem">
+            <End Role="rDiaDiem" EntitySet="rDiaDiems" />
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rKhachHangChanh_rKhachHang" Association="PhuDinhEntity.FK_rKhachHangChanh_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="rKhachHangChanh" EntitySet="rKhachHangChanhs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tCongNoKhachHang_rKhachHang" Association="PhuDinhEntity.FK_tCongNoKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="tCongNoKhachHang" EntitySet="tCongNoKhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDonHang_rKhachHang" Association="PhuDinhEntity.FK_tDonHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="tDonHang" EntitySet="tDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tGiamTruKhachHang_rKhachHang" Association="PhuDinhEntity.FK_tGiamTruKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="tGiamTruKhachHang" EntitySet="tGiamTruKhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhanTienKhachHang_rKhachHang" Association="PhuDinhEntity.FK_tNhanTienKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="tNhanTienKhachHang" EntitySet="tNhanTienKhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tPhuThuKhachHang_rKhachHang" Association="PhuDinhEntity.FK_tPhuThuKhachHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="tPhuThuKhachHang" EntitySet="tPhuThuKhachHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tToaHang_rKhachHang" Association="PhuDinhEntity.FK_tToaHang_rKhachHang">
+            <End Role="rKhachHang" EntitySet="rKhachHangs" />
+            <End Role="tToaHang" EntitySet="tToaHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenKho_rKhoHangNhap" Association="PhuDinhEntity.FK_tChuyenKho_rKhoHangNhap">
+            <End Role="rKhoHang" EntitySet="rKhoHangs" />
+            <End Role="tChuyenKho" EntitySet="tChuyenKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenKho_rKhoHangXuat" Association="PhuDinhEntity.FK_tChuyenKho_rKhoHangXuat">
+            <End Role="rKhoHang" EntitySet="rKhoHangs" />
+            <End Role="tChuyenKho" EntitySet="tChuyenKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tDonHang_rKhoHang" Association="PhuDinhEntity.FK_tDonHang_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHangs" />
+            <End Role="tDonHang" EntitySet="tDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapHang_rKhoHang" Association="PhuDinhEntity.FK_tNhapHang_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHangs" />
+            <End Role="tNhapHang" EntitySet="tNhapHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTonKho_rKhoHang" Association="PhuDinhEntity.FK_tTonKho_rKhoHang">
+            <End Role="rKhoHang" EntitySet="rKhoHangs" />
+            <End Role="tTonKho" EntitySet="tTonKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi" Association="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi">
+            <End Role="rLoaiChiPhi" EntitySet="rLoaiChiPhis" />
+            <End Role="tChiPhi" EntitySet="tChiPhis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tMatHang_rLoaiHang" Association="PhuDinhEntity.FK_tMatHang_rLoaiHang">
+            <End Role="rLoaiHang" EntitySet="rLoaiHangs" />
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rNguyenLieu_rLoaiNguyenLieu" Association="PhuDinhEntity.FK_rNguyenLieu_rLoaiNguyenLieu">
+            <End Role="rLoaiNguyenLieu" EntitySet="rLoaiNguyenLieux" />
+            <End Role="rNguyenLieu" EntitySet="rNguyenLieux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rMatHangNguyenLieu_rNguyenLieu" Association="PhuDinhEntity.FK_rMatHangNguyenLieu_rNguyenLieu">
+            <End Role="rNguyenLieu" EntitySet="rNguyenLieux" />
+            <End Role="rMatHangNguyenLieu" EntitySet="rMatHangNguyenLieux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rMatHangNguyenLieu_tMatHang" Association="PhuDinhEntity.FK_rMatHangNguyenLieu_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+            <End Role="rMatHangNguyenLieu" EntitySet="rMatHangNguyenLieux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapNguyenLieu_rNguyenLieu" Association="PhuDinhEntity.FK_tNhapNguyenLieu_rNguyenLieu">
+            <End Role="rNguyenLieu" EntitySet="rNguyenLieux" />
+            <End Role="tNhapNguyenLieu" EntitySet="tNhapNguyenLieux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapHang_rNhaCungCap" Association="PhuDinhEntity.FK_tNhapHang_rNhaCungCap">
+            <End Role="rNhaCungCap" EntitySet="rNhaCungCaps" />
+            <End Role="tNhapHang" EntitySet="tNhapHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapNguyenLieu_rNhaCungCap" Association="PhuDinhEntity.FK_tNhapNguyenLieu_rNhaCungCap">
+            <End Role="rNhaCungCap" EntitySet="rNhaCungCaps" />
+            <End Role="tNhapNguyenLieu" EntitySet="tNhapNguyenLieux" />
+          </AssociationSet>
+          <AssociationSet Name="FK_rNhanVienGiaoHang_rPhuongTien" Association="PhuDinhEntity.FK_rNhanVienGiaoHang_rPhuongTien">
+            <End Role="rPhuongTien" EntitySet="rPhuongTiens" />
+            <End Role="rNhanVien" EntitySet="rNhanViens" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang" Association="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang">
+            <End Role="rNhanVien" EntitySet="rNhanViens" />
+            <End Role="tChiPhi" EntitySet="tChiPhis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenHang_rNhanVienGiaoHang" Association="PhuDinhEntity.FK_tChuyenHang_rNhanVienGiaoHang">
+            <End Role="rNhanVien" EntitySet="rNhanViens" />
+            <End Role="tChuyenHang" EntitySet="tChuyenHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenKho_rNhanVien" Association="PhuDinhEntity.FK_tChuyenKho_rNhanVien">
+            <End Role="rNhanVien" EntitySet="rNhanViens" />
+            <End Role="tChuyenKho" EntitySet="tChuyenKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapHang_rNhanVien" Association="PhuDinhEntity.FK_tNhapHang_rNhanVien">
+            <End Role="rNhanVien" EntitySet="rNhanViens" />
+            <End Role="tNhapHang" EntitySet="tNhapHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenHangDonHang_tChiTietDonHang" Association="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChiTietDonHang">
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHangs" />
+            <End Role="tChiTietChuyenHangDonHang" EntitySet="tChiTietChuyenHangDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang" Association="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang">
+            <End Role="tChuyenHangDonHang" EntitySet="tChuyenHangDonHangs" />
+            <End Role="tChiTietChuyenHangDonHang" EntitySet="tChiTietChuyenHangDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenKho_tChuyenKho" Association="PhuDinhEntity.FK_tChiTietChuyenKho_tChuyenKho">
+            <End Role="tChuyenKho" EntitySet="tChuyenKhoes" />
+            <End Role="tChiTietChuyenKho" EntitySet="tChiTietChuyenKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietChuyenKho_tMatHang" Association="PhuDinhEntity.FK_tChiTietChuyenKho_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+            <End Role="tChiTietChuyenKho" EntitySet="tChiTietChuyenKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietDonHang_tDonHang" Association="PhuDinhEntity.FK_tChiTietDonHang_tDonHang">
+            <End Role="tDonHang" EntitySet="tDonHangs" />
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietDonHang_tMatHang" Association="PhuDinhEntity.FK_tChiTietDonHang_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietToaHang_tChiTietDonHang" Association="PhuDinhEntity.FK_tChiTietToaHang_tChiTietDonHang">
+            <End Role="tChiTietDonHang" EntitySet="tChiTietDonHangs" />
+            <End Role="tChiTietToaHang" EntitySet="tChiTietToaHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietNhapHang_tNhapHang" Association="PhuDinhEntity.FK_tChiTietNhapHang_tNhapHang">
+            <End Role="tNhapHang" EntitySet="tNhapHangs" />
+            <End Role="tChiTietNhapHang" EntitySet="tChiTietNhapHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tNhapMatHang_tMatHang" Association="PhuDinhEntity.FK_tNhapMatHang_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+            <End Role="tChiTietNhapHang" EntitySet="tChiTietNhapHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChiTietToaHang_tToaHang" Association="PhuDinhEntity.FK_tChiTietToaHang_tToaHang">
+            <End Role="tToaHang" EntitySet="tToaHangs" />
+            <End Role="tChiTietToaHang" EntitySet="tChiTietToaHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenHangDonHang_tChuyenHang" Association="PhuDinhEntity.FK_tChuyenHangDonHang_tChuyenHang">
+            <End Role="tChuyenHang" EntitySet="tChuyenHangs" />
+            <End Role="tChuyenHangDonHang" EntitySet="tChuyenHangDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tChuyenHangDonHang_tDonHang" Association="PhuDinhEntity.FK_tChuyenHangDonHang_tDonHang">
+            <End Role="tDonHang" EntitySet="tDonHangs" />
+            <End Role="tChuyenHangDonHang" EntitySet="tChuyenHangDonHangs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tTonKho_tMatHang" Association="PhuDinhEntity.FK_tTonKho_tMatHang">
+            <End Role="tMatHang" EntitySet="tMatHangs" />
+            <End Role="tTonKho" EntitySet="tTonKhoes" />
+          </AssociationSet>
+          <AssociationSet Name="webpages_UsersInRoles" Association="PhuDinhEntity.webpages_UsersInRoles">
+            <End Role="webpages_Roles" EntitySet="webpages_Roles" />
+            <End Role="UserProfile" EntitySet="UserProfiles" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="rBaiXe">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="DiaDiemBaiXe" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rChanhs" Relationship="PhuDinhEntity.FK_rChanh_rBaiXe" FromRole="rBaiXe" ToRole="rChanh" />
+        </EntityType>
+        <EntityType Name="rCanhBaoTonKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaMatHang" Type="Int32" Nullable="false" />
+          <Property Name="MaKhoHang" Type="Int32" Nullable="false" />
+          <Property Name="TonCaoNhat" Type="Int32" Nullable="false" />
+          <Property Name="TonThapNhat" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rKhoHang" Relationship="PhuDinhEntity.FK_rCanhBaoTonKho_rKhoHang" FromRole="rCanhBaoTonKho" ToRole="rKhoHang" />
+          <NavigationProperty Name="tMatHang" Relationship="PhuDinhEntity.FK_rCanhBaoTonKho_tMatHang" FromRole="rCanhBaoTonKho" ToRole="tMatHang" />
+        </EntityType>
+        <EntityType Name="rChanh">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaBaiXe" Type="Int32" Nullable="false" />
+          <Property Name="TenChanh" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rBaiXe" Relationship="PhuDinhEntity.FK_rChanh_rBaiXe" FromRole="rChanh" ToRole="rBaiXe" />
+          <NavigationProperty Name="rKhachHangChanhs" Relationship="PhuDinhEntity.FK_rKhachHangChanh_rChanh" FromRole="rChanh" ToRole="rKhachHangChanh" />
+          <NavigationProperty Name="tDonHangs" Relationship="PhuDinhEntity.FK_tDonHang_rChanh" FromRole="rChanh" ToRole="tDonHang" />
+        </EntityType>
+        <EntityType Name="rDiaDiem">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNuoc" Type="Int32" Nullable="false" />
+          <Property Name="Tinh" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rNuoc" Relationship="PhuDinhEntity.FK_rDiaDiem_rNuoc" FromRole="rDiaDiem" ToRole="rNuoc" />
+          <NavigationProperty Name="rKhachHangs" Relationship="PhuDinhEntity.FK_rKhachHang_rDiaDiem" FromRole="rDiaDiem" ToRole="rKhachHang" />
+        </EntityType>
+        <EntityType Name="rKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaDiaDiem" Type="Int32" Nullable="false" />
+          <Property Name="TenKhachHang" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="KhachRieng" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="rDiaDiem" Relationship="PhuDinhEntity.FK_rKhachHang_rDiaDiem" FromRole="rKhachHang" ToRole="rDiaDiem" />
+          <NavigationProperty Name="rKhachHangChanhs" Relationship="PhuDinhEntity.FK_rKhachHangChanh_rKhachHang" FromRole="rKhachHang" ToRole="rKhachHangChanh" />
+          <NavigationProperty Name="tCongNoKhachHangs" Relationship="PhuDinhEntity.FK_tCongNoKhachHang_rKhachHang" FromRole="rKhachHang" ToRole="tCongNoKhachHang" />
+          <NavigationProperty Name="tDonHangs" Relationship="PhuDinhEntity.FK_tDonHang_rKhachHang" FromRole="rKhachHang" ToRole="tDonHang" />
+          <NavigationProperty Name="tGiamTruKhachHangs" Relationship="PhuDinhEntity.FK_tGiamTruKhachHang_rKhachHang" FromRole="rKhachHang" ToRole="tGiamTruKhachHang" />
+          <NavigationProperty Name="tNhanTienKhachHangs" Relationship="PhuDinhEntity.FK_tNhanTienKhachHang_rKhachHang" FromRole="rKhachHang" ToRole="tNhanTienKhachHang" />
+          <NavigationProperty Name="tPhuThuKhachHangs" Relationship="PhuDinhEntity.FK_tPhuThuKhachHang_rKhachHang" FromRole="rKhachHang" ToRole="tPhuThuKhachHang" />
+          <NavigationProperty Name="tToaHangs" Relationship="PhuDinhEntity.FK_tToaHang_rKhachHang" FromRole="rKhachHang" ToRole="tToaHang" />
+        </EntityType>
+        <EntityType Name="rKhachHangChanh">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaChanh" Type="Int32" Nullable="false" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="LaMacDinh" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="rChanh" Relationship="PhuDinhEntity.FK_rKhachHangChanh_rChanh" FromRole="rKhachHangChanh" ToRole="rChanh" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_rKhachHangChanh_rKhachHang" FromRole="rKhachHangChanh" ToRole="rKhachHang" />
+        </EntityType>
+        <EntityType Name="rKhoHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenKho" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="TrangThai" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="rCanhBaoTonKhoes" Relationship="PhuDinhEntity.FK_rCanhBaoTonKho_rKhoHang" FromRole="rKhoHang" ToRole="rCanhBaoTonKho" />
+          <NavigationProperty Name="tChuyenKhoes" Relationship="PhuDinhEntity.FK_tChuyenKho_rKhoHangNhap" FromRole="rKhoHang" ToRole="tChuyenKho" />
+          <NavigationProperty Name="tChuyenKhoes1" Relationship="PhuDinhEntity.FK_tChuyenKho_rKhoHangXuat" FromRole="rKhoHang" ToRole="tChuyenKho" />
+          <NavigationProperty Name="tDonHangs" Relationship="PhuDinhEntity.FK_tDonHang_rKhoHang" FromRole="rKhoHang" ToRole="tDonHang" />
+          <NavigationProperty Name="tNhapHangs" Relationship="PhuDinhEntity.FK_tNhapHang_rKhoHang" FromRole="rKhoHang" ToRole="tNhapHang" />
+          <NavigationProperty Name="tTonKhoes" Relationship="PhuDinhEntity.FK_tTonKho_rKhoHang" FromRole="rKhoHang" ToRole="tTonKho" />
+        </EntityType>
+        <EntityType Name="rLoaiChiPhi">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoaiChiPhi" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tChiPhis" Relationship="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi" FromRole="rLoaiChiPhi" ToRole="tChiPhi" />
+        </EntityType>
+        <EntityType Name="rLoaiHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tMatHangs" Relationship="PhuDinhEntity.FK_tMatHang_rLoaiHang" FromRole="rLoaiHang" ToRole="tMatHang" />
+        </EntityType>
+        <EntityType Name="rLoaiNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenLoai" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rNguyenLieux" Relationship="PhuDinhEntity.FK_rNguyenLieu_rLoaiNguyenLieu" FromRole="rLoaiNguyenLieu" ToRole="rNguyenLieu" />
+        </EntityType>
+        <EntityType Name="rMatHangNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaMatHang" Type="Int32" Nullable="false" />
+          <Property Name="MaNguyenLieu" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rNguyenLieu" Relationship="PhuDinhEntity.FK_rMatHangNguyenLieu_rNguyenLieu" FromRole="rMatHangNguyenLieu" ToRole="rNguyenLieu" />
+          <NavigationProperty Name="tMatHang" Relationship="PhuDinhEntity.FK_rMatHangNguyenLieu_tMatHang" FromRole="rMatHangNguyenLieu" ToRole="tMatHang" />
+        </EntityType>
+        <EntityType Name="rNuoc">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNuoc" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rDiaDiems" Relationship="PhuDinhEntity.FK_rDiaDiem_rNuoc" FromRole="rNuoc" ToRole="rDiaDiem" />
+        </EntityType>
+        <EntityType Name="rNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaLoaiNguyenLieu" Type="Int32" Nullable="false" />
+          <Property Name="DuongKinh" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rLoaiNguyenLieu" Relationship="PhuDinhEntity.FK_rNguyenLieu_rLoaiNguyenLieu" FromRole="rNguyenLieu" ToRole="rLoaiNguyenLieu" />
+          <NavigationProperty Name="rMatHangNguyenLieux" Relationship="PhuDinhEntity.FK_rMatHangNguyenLieu_rNguyenLieu" FromRole="rNguyenLieu" ToRole="rMatHangNguyenLieu" />
+          <NavigationProperty Name="tNhapNguyenLieux" Relationship="PhuDinhEntity.FK_tNhapNguyenLieu_rNguyenLieu" FromRole="rNguyenLieu" ToRole="tNhapNguyenLieu" />
+        </EntityType>
+        <EntityType Name="rNhaCungCap">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenNhaCungCap" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="tNhapHangs" Relationship="PhuDinhEntity.FK_tNhapHang_rNhaCungCap" FromRole="rNhaCungCap" ToRole="tNhapHang" />
+          <NavigationProperty Name="tNhapNguyenLieux" Relationship="PhuDinhEntity.FK_tNhapNguyenLieu_rNhaCungCap" FromRole="rNhaCungCap" ToRole="tNhapNguyenLieu" />
+        </EntityType>
+        <EntityType Name="rNhanVien">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaPhuongTien" Type="Int32" Nullable="false" />
+          <Property Name="TenNhanVien" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rPhuongTien" Relationship="PhuDinhEntity.FK_rNhanVienGiaoHang_rPhuongTien" FromRole="rNhanVien" ToRole="rPhuongTien" />
+          <NavigationProperty Name="tChiPhis" Relationship="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang" FromRole="rNhanVien" ToRole="tChiPhi" />
+          <NavigationProperty Name="tChuyenHangs" Relationship="PhuDinhEntity.FK_tChuyenHang_rNhanVienGiaoHang" FromRole="rNhanVien" ToRole="tChuyenHang" />
+          <NavigationProperty Name="tChuyenKhoes" Relationship="PhuDinhEntity.FK_tChuyenKho_rNhanVien" FromRole="rNhanVien" ToRole="tChuyenKho" />
+          <NavigationProperty Name="tNhapHangs" Relationship="PhuDinhEntity.FK_tNhapHang_rNhanVien" FromRole="rNhanVien" ToRole="tNhapHang" />
+        </EntityType>
+        <EntityType Name="rPhuongTien">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="TenPhuongTien" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rNhanViens" Relationship="PhuDinhEntity.FK_rNhanVienGiaoHang_rPhuongTien" FromRole="rPhuongTien" ToRole="rNhanVien" />
+        </EntityType>
+        <EntityType Name="tCongNoKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoTien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_tCongNoKhachHang_rKhachHang" FromRole="tCongNoKhachHang" ToRole="rKhachHang" />
+        </EntityType>
+        <EntityType Name="tChiPhi">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVienGiaoHang" Type="Int32" Nullable="false" />
+          <Property Name="MaLoaiChiPhi" Type="Int32" Nullable="false" />
+          <Property Name="SoTien" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="GhiChu" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rLoaiChiPhi" Relationship="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi" FromRole="tChiPhi" ToRole="rLoaiChiPhi" />
+          <NavigationProperty Name="rNhanVien" Relationship="PhuDinhEntity.FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang" FromRole="tChiPhi" ToRole="rNhanVien" />
+        </EntityType>
+        <EntityType Name="tChiTietChuyenHangDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaChuyenHangDonHang" Type="Int32" Nullable="false" />
+          <Property Name="MaChiTietDonHang" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="SoLuongTheoDonHang" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tChiTietDonHang" Relationship="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChiTietDonHang" FromRole="tChiTietChuyenHangDonHang" ToRole="tChiTietDonHang" />
+          <NavigationProperty Name="tChuyenHangDonHang" Relationship="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang" FromRole="tChiTietChuyenHangDonHang" ToRole="tChuyenHangDonHang" />
+        </EntityType>
+        <EntityType Name="tChiTietChuyenKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaChuyenKho" Type="Int32" Nullable="false" />
+          <Property Name="MaMatHang" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tChuyenKho" Relationship="PhuDinhEntity.FK_tChiTietChuyenKho_tChuyenKho" FromRole="tChiTietChuyenKho" ToRole="tChuyenKho" />
+          <NavigationProperty Name="tMatHang" Relationship="PhuDinhEntity.FK_tChiTietChuyenKho_tMatHang" FromRole="tChiTietChuyenKho" ToRole="tMatHang" />
+        </EntityType>
+        <EntityType Name="tChiTietDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaDonHang" Type="Int32" Nullable="false" />
+          <Property Name="MaMatHang" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="Xong" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="tChiTietChuyenHangDonHangs" Relationship="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChiTietDonHang" FromRole="tChiTietDonHang" ToRole="tChiTietChuyenHangDonHang" />
+          <NavigationProperty Name="tDonHang" Relationship="PhuDinhEntity.FK_tChiTietDonHang_tDonHang" FromRole="tChiTietDonHang" ToRole="tDonHang" />
+          <NavigationProperty Name="tMatHang" Relationship="PhuDinhEntity.FK_tChiTietDonHang_tMatHang" FromRole="tChiTietDonHang" ToRole="tMatHang" />
+          <NavigationProperty Name="tChiTietToaHangs" Relationship="PhuDinhEntity.FK_tChiTietToaHang_tChiTietDonHang" FromRole="tChiTietDonHang" ToRole="tChiTietToaHang" />
+        </EntityType>
+        <EntityType Name="tChiTietNhapHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhapHang" Type="Int32" Nullable="false" />
+          <Property Name="MaMatHang" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tNhapHang" Relationship="PhuDinhEntity.FK_tChiTietNhapHang_tNhapHang" FromRole="tChiTietNhapHang" ToRole="tNhapHang" />
+          <NavigationProperty Name="tMatHang" Relationship="PhuDinhEntity.FK_tNhapMatHang_tMatHang" FromRole="tChiTietNhapHang" ToRole="tMatHang" />
+        </EntityType>
+        <EntityType Name="tChiTietToaHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaToaHang" Type="Int32" Nullable="false" />
+          <Property Name="MaChiTietDonHang" Type="Int32" Nullable="false" />
+          <Property Name="GiaTien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tChiTietDonHang" Relationship="PhuDinhEntity.FK_tChiTietToaHang_tChiTietDonHang" FromRole="tChiTietToaHang" ToRole="tChiTietDonHang" />
+          <NavigationProperty Name="tToaHang" Relationship="PhuDinhEntity.FK_tChiTietToaHang_tToaHang" FromRole="tChiTietToaHang" ToRole="tToaHang" />
+        </EntityType>
+        <EntityType Name="tChuyenHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVienGiaoHang" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Gio" Type="Time" Precision="0" />
+          <Property Name="TongDonHang" Type="Int32" Nullable="false" />
+          <Property Name="TongSoLuongTheoDonHang" Type="Int32" Nullable="false" />
+          <Property Name="TongSoLuongThucTe" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rNhanVien" Relationship="PhuDinhEntity.FK_tChuyenHang_rNhanVienGiaoHang" FromRole="tChuyenHang" ToRole="rNhanVien" />
+          <NavigationProperty Name="tChuyenHangDonHangs" Relationship="PhuDinhEntity.FK_tChuyenHangDonHang_tChuyenHang" FromRole="tChuyenHang" ToRole="tChuyenHangDonHang" />
+        </EntityType>
+        <EntityType Name="tChuyenHangDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaChuyenHang" Type="Int32" Nullable="false" />
+          <Property Name="MaDonHang" Type="Int32" Nullable="false" />
+          <Property Name="TongSoLuongTheoDonHang" Type="Int32" Nullable="false" />
+          <Property Name="TongSoLuongThucTe" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tChiTietChuyenHangDonHangs" Relationship="PhuDinhEntity.FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang" FromRole="tChuyenHangDonHang" ToRole="tChiTietChuyenHangDonHang" />
+          <NavigationProperty Name="tChuyenHang" Relationship="PhuDinhEntity.FK_tChuyenHangDonHang_tChuyenHang" FromRole="tChuyenHangDonHang" ToRole="tChuyenHang" />
+          <NavigationProperty Name="tDonHang" Relationship="PhuDinhEntity.FK_tChuyenHangDonHang_tDonHang" FromRole="tChuyenHangDonHang" ToRole="tDonHang" />
+        </EntityType>
+        <EntityType Name="tChuyenKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVien" Type="Int32" Nullable="false" />
+          <Property Name="MaKhoHangXuat" Type="Int32" Nullable="false" />
+          <Property Name="MaKhoHangNhap" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="rKhoHang" Relationship="PhuDinhEntity.FK_tChuyenKho_rKhoHangNhap" FromRole="tChuyenKho" ToRole="rKhoHang" />
+          <NavigationProperty Name="rKhoHang1" Relationship="PhuDinhEntity.FK_tChuyenKho_rKhoHangXuat" FromRole="tChuyenKho" ToRole="rKhoHang" />
+          <NavigationProperty Name="rNhanVien" Relationship="PhuDinhEntity.FK_tChuyenKho_rNhanVien" FromRole="tChuyenKho" ToRole="rNhanVien" />
+          <NavigationProperty Name="tChiTietChuyenKhoes" Relationship="PhuDinhEntity.FK_tChiTietChuyenKho_tChuyenKho" FromRole="tChuyenKho" ToRole="tChiTietChuyenKho" />
+        </EntityType>
+        <EntityType Name="tDonHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="MaChanh" Type="Int32" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Xong" Type="Boolean" Nullable="false" />
+          <Property Name="MaKhoHang" Type="Int32" Nullable="false" />
+          <Property Name="TongSoLuong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rChanh" Relationship="PhuDinhEntity.FK_tDonHang_rChanh" FromRole="tDonHang" ToRole="rChanh" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_tDonHang_rKhachHang" FromRole="tDonHang" ToRole="rKhachHang" />
+          <NavigationProperty Name="rKhoHang" Relationship="PhuDinhEntity.FK_tDonHang_rKhoHang" FromRole="tDonHang" ToRole="rKhoHang" />
+          <NavigationProperty Name="tChiTietDonHangs" Relationship="PhuDinhEntity.FK_tChiTietDonHang_tDonHang" FromRole="tDonHang" ToRole="tChiTietDonHang" />
+          <NavigationProperty Name="tChuyenHangDonHangs" Relationship="PhuDinhEntity.FK_tChuyenHangDonHang_tDonHang" FromRole="tDonHang" ToRole="tChuyenHangDonHang" />
+        </EntityType>
+        <EntityType Name="tGiamTruKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoTien" Type="Int32" Nullable="false" />
+          <Property Name="GhiChu" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_tGiamTruKhachHang_rKhachHang" FromRole="tGiamTruKhachHang" ToRole="rKhachHang" />
+        </EntityType>
+        <EntityType Name="tMatHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaLoai" Type="Int32" Nullable="false" />
+          <Property Name="TenMatHang" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="SoKy" Type="Int32" Nullable="false" />
+          <Property Name="SoMet" Type="Int32" Nullable="false" />
+          <Property Name="TenMatHangDayDu" Type="String" Nullable="false" MaxLength="200" Unicode="true" FixedLength="false" />
+          <Property Name="TenMatHangIn" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rCanhBaoTonKhoes" Relationship="PhuDinhEntity.FK_rCanhBaoTonKho_tMatHang" FromRole="tMatHang" ToRole="rCanhBaoTonKho" />
+          <NavigationProperty Name="rLoaiHang" Relationship="PhuDinhEntity.FK_tMatHang_rLoaiHang" FromRole="tMatHang" ToRole="rLoaiHang" />
+          <NavigationProperty Name="rMatHangNguyenLieux" Relationship="PhuDinhEntity.FK_rMatHangNguyenLieu_tMatHang" FromRole="tMatHang" ToRole="rMatHangNguyenLieu" />
+          <NavigationProperty Name="tChiTietChuyenKhoes" Relationship="PhuDinhEntity.FK_tChiTietChuyenKho_tMatHang" FromRole="tMatHang" ToRole="tChiTietChuyenKho" />
+          <NavigationProperty Name="tChiTietDonHangs" Relationship="PhuDinhEntity.FK_tChiTietDonHang_tMatHang" FromRole="tMatHang" ToRole="tChiTietDonHang" />
+          <NavigationProperty Name="tChiTietNhapHangs" Relationship="PhuDinhEntity.FK_tNhapMatHang_tMatHang" FromRole="tMatHang" ToRole="tChiTietNhapHang" />
+          <NavigationProperty Name="tTonKhoes" Relationship="PhuDinhEntity.FK_tTonKho_tMatHang" FromRole="tMatHang" ToRole="tTonKho" />
+        </EntityType>
+        <EntityType Name="tNhanTienKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoTien" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_tNhanTienKhachHang_rKhachHang" FromRole="tNhanTienKhachHang" ToRole="rKhachHang" />
+        </EntityType>
+        <EntityType Name="tNhapHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNhanVien" Type="Int32" Nullable="false" />
+          <Property Name="MaKhoHang" Type="Int32" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="rKhoHang" Relationship="PhuDinhEntity.FK_tNhapHang_rKhoHang" FromRole="tNhapHang" ToRole="rKhoHang" />
+          <NavigationProperty Name="rNhaCungCap" Relationship="PhuDinhEntity.FK_tNhapHang_rNhaCungCap" FromRole="tNhapHang" ToRole="rNhaCungCap" />
+          <NavigationProperty Name="rNhanVien" Relationship="PhuDinhEntity.FK_tNhapHang_rNhanVien" FromRole="tNhapHang" ToRole="rNhanVien" />
+          <NavigationProperty Name="tChiTietNhapHangs" Relationship="PhuDinhEntity.FK_tChiTietNhapHang_tNhapHang" FromRole="tNhapHang" ToRole="tChiTietNhapHang" />
+        </EntityType>
+        <EntityType Name="tNhapNguyenLieu">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MaNguyenLieu" Type="Int32" Nullable="false" />
+          <Property Name="MaNhaCungCap" Type="Int32" Nullable="false" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rNguyenLieu" Relationship="PhuDinhEntity.FK_tNhapNguyenLieu_rNguyenLieu" FromRole="tNhapNguyenLieu" ToRole="rNguyenLieu" />
+          <NavigationProperty Name="rNhaCungCap" Relationship="PhuDinhEntity.FK_tNhapNguyenLieu_rNhaCungCap" FromRole="tNhapNguyenLieu" ToRole="rNhaCungCap" />
+        </EntityType>
+        <EntityType Name="tPhuThuKhachHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoTien" Type="Int32" Nullable="false" />
+          <Property Name="GhiChu" Type="String" Nullable="false" MaxLength="300" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_tPhuThuKhachHang_rKhachHang" FromRole="tPhuThuKhachHang" ToRole="rKhachHang" />
+        </EntityType>
+        <EntityType Name="tToaHang">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="MaKhachHang" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rKhachHang" Relationship="PhuDinhEntity.FK_tToaHang_rKhachHang" FromRole="tToaHang" ToRole="rKhachHang" />
+          <NavigationProperty Name="tChiTietToaHangs" Relationship="PhuDinhEntity.FK_tChiTietToaHang_tToaHang" FromRole="tToaHang" ToRole="tChiTietToaHang" />
+        </EntityType>
+        <EntityType Name="tTonKho">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKhoHang" Type="Int32" Nullable="false" />
+          <Property Name="MaMatHang" Type="Int32" Nullable="false" />
+          <Property Name="Ngay" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="SoLuong" Type="Int32" Nullable="false" />
+          <Property Name="SoLuongCu" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="rKhoHang" Relationship="PhuDinhEntity.FK_tTonKho_rKhoHang" FromRole="tTonKho" ToRole="rKhoHang" />
+          <NavigationProperty Name="tMatHang" Relationship="PhuDinhEntity.FK_tTonKho_tMatHang" FromRole="tTonKho" ToRole="tMatHang" />
+        </EntityType>
+        <EntityType Name="ThamSoNgay">
+          <Key>
+            <PropertyRef Name="Ma" />
+          </Key>
+          <Property Name="Ma" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Ten" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="GiaTri" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        <EntityType Name="UserProfile">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="56" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="webpages_Roles" Relationship="PhuDinhEntity.webpages_UsersInRoles" FromRole="UserProfile" ToRole="webpages_Roles" />
+        </EntityType>
+        <EntityType Name="webpages_Membership">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Precision="3" />
+          <Property Name="ConfirmationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="IsConfirmed" Type="Boolean" />
+          <Property Name="LastPasswordFailureDate" Type="DateTime" Precision="3" />
+          <Property Name="PasswordFailuresSinceLastSuccess" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordChangedDate" Type="DateTime" Precision="3" />
+          <Property Name="PasswordSalt" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordVerificationToken" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="PasswordVerificationTokenExpirationDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="webpages_OAuthMembership">
+          <Key>
+            <PropertyRef Name="Provider" />
+            <PropertyRef Name="ProviderUserId" />
+          </Key>
+          <Property Name="Provider" Type="String" Nullable="false" MaxLength="30" Unicode="true" FixedLength="false" />
+          <Property Name="ProviderUserId" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="webpages_Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="UserProfiles" Relationship="PhuDinhEntity.webpages_UsersInRoles" FromRole="webpages_Roles" ToRole="UserProfile" />
+        </EntityType>
+        <Association Name="FK_rChanh_rBaiXe">
+          <End Role="rBaiXe" Type="PhuDinhEntity.rBaiXe" Multiplicity="1" />
+          <End Role="rChanh" Type="PhuDinhEntity.rChanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rBaiXe">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rChanh">
+              <PropertyRef Name="MaBaiXe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rCanhBaoTonKho_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.rKhoHang" Multiplicity="1" />
+          <End Role="rCanhBaoTonKho" Type="PhuDinhEntity.rCanhBaoTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rCanhBaoTonKho">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rCanhBaoTonKho_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="1" />
+          <End Role="rCanhBaoTonKho" Type="PhuDinhEntity.rCanhBaoTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rCanhBaoTonKho">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rKhachHangChanh_rChanh">
+          <End Role="rChanh" Type="PhuDinhEntity.rChanh" Multiplicity="1" />
+          <End Role="rKhachHangChanh" Type="PhuDinhEntity.rKhachHangChanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rChanh">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rKhachHangChanh">
+              <PropertyRef Name="MaChanh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDonHang_rChanh">
+          <End Role="rChanh" Type="PhuDinhEntity.rChanh" Multiplicity="0..1" />
+          <End Role="tDonHang" Type="PhuDinhEntity.tDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rChanh">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tDonHang">
+              <PropertyRef Name="MaChanh" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rDiaDiem_rNuoc">
+          <End Role="rNuoc" Type="PhuDinhEntity.rNuoc" Multiplicity="1" />
+          <End Role="rDiaDiem" Type="PhuDinhEntity.rDiaDiem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNuoc">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rDiaDiem">
+              <PropertyRef Name="MaNuoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rKhachHang_rDiaDiem">
+          <End Role="rDiaDiem" Type="PhuDinhEntity.rDiaDiem" Multiplicity="1" />
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rDiaDiem">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rKhachHang">
+              <PropertyRef Name="MaDiaDiem" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rKhachHangChanh_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="rKhachHangChanh" Type="PhuDinhEntity.rKhachHangChanh" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rKhachHangChanh">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tCongNoKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="tCongNoKhachHang" Type="PhuDinhEntity.tCongNoKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tCongNoKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDonHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="tDonHang" Type="PhuDinhEntity.tDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tDonHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tGiamTruKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="tGiamTruKhachHang" Type="PhuDinhEntity.tGiamTruKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tGiamTruKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhanTienKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="tNhanTienKhachHang" Type="PhuDinhEntity.tNhanTienKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhanTienKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tPhuThuKhachHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="tPhuThuKhachHang" Type="PhuDinhEntity.tPhuThuKhachHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tPhuThuKhachHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tToaHang_rKhachHang">
+          <End Role="rKhachHang" Type="PhuDinhEntity.rKhachHang" Multiplicity="1" />
+          <End Role="tToaHang" Type="PhuDinhEntity.tToaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhachHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tToaHang">
+              <PropertyRef Name="MaKhachHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenKho_rKhoHangNhap">
+          <End Role="rKhoHang" Type="PhuDinhEntity.rKhoHang" Multiplicity="1" />
+          <End Role="tChuyenKho" Type="PhuDinhEntity.tChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenKho">
+              <PropertyRef Name="MaKhoHangNhap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenKho_rKhoHangXuat">
+          <End Role="rKhoHang" Type="PhuDinhEntity.rKhoHang" Multiplicity="1" />
+          <End Role="tChuyenKho" Type="PhuDinhEntity.tChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenKho">
+              <PropertyRef Name="MaKhoHangXuat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tDonHang_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.rKhoHang" Multiplicity="1" />
+          <End Role="tDonHang" Type="PhuDinhEntity.tDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tDonHang">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapHang_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.rKhoHang" Multiplicity="1" />
+          <End Role="tNhapHang" Type="PhuDinhEntity.tNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapHang">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTonKho_rKhoHang">
+          <End Role="rKhoHang" Type="PhuDinhEntity.rKhoHang" Multiplicity="1" />
+          <End Role="tTonKho" Type="PhuDinhEntity.tTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rKhoHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tTonKho">
+              <PropertyRef Name="MaKhoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiPhiNhanVienGiaoHang_rLoaiChiPhi">
+          <End Role="rLoaiChiPhi" Type="PhuDinhEntity.rLoaiChiPhi" Multiplicity="1" />
+          <End Role="tChiPhi" Type="PhuDinhEntity.tChiPhi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rLoaiChiPhi">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiPhi">
+              <PropertyRef Name="MaLoaiChiPhi" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tMatHang_rLoaiHang">
+          <End Role="rLoaiHang" Type="PhuDinhEntity.rLoaiHang" Multiplicity="1" />
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rLoaiHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tMatHang">
+              <PropertyRef Name="MaLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rNguyenLieu_rLoaiNguyenLieu">
+          <End Role="rLoaiNguyenLieu" Type="PhuDinhEntity.rLoaiNguyenLieu" Multiplicity="1" />
+          <End Role="rNguyenLieu" Type="PhuDinhEntity.rNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rLoaiNguyenLieu">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rNguyenLieu">
+              <PropertyRef Name="MaLoaiNguyenLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rMatHangNguyenLieu_rNguyenLieu">
+          <End Role="rNguyenLieu" Type="PhuDinhEntity.rNguyenLieu" Multiplicity="1" />
+          <End Role="rMatHangNguyenLieu" Type="PhuDinhEntity.rMatHangNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNguyenLieu">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rMatHangNguyenLieu">
+              <PropertyRef Name="MaNguyenLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rMatHangNguyenLieu_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="1" />
+          <End Role="rMatHangNguyenLieu" Type="PhuDinhEntity.rMatHangNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rMatHangNguyenLieu">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapNguyenLieu_rNguyenLieu">
+          <End Role="rNguyenLieu" Type="PhuDinhEntity.rNguyenLieu" Multiplicity="1" />
+          <End Role="tNhapNguyenLieu" Type="PhuDinhEntity.tNhapNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNguyenLieu">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapNguyenLieu">
+              <PropertyRef Name="MaNguyenLieu" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapHang_rNhaCungCap">
+          <End Role="rNhaCungCap" Type="PhuDinhEntity.rNhaCungCap" Multiplicity="1" />
+          <End Role="tNhapHang" Type="PhuDinhEntity.tNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhaCungCap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapHang">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapNguyenLieu_rNhaCungCap">
+          <End Role="rNhaCungCap" Type="PhuDinhEntity.rNhaCungCap" Multiplicity="1" />
+          <End Role="tNhapNguyenLieu" Type="PhuDinhEntity.tNhapNguyenLieu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhaCungCap">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapNguyenLieu">
+              <PropertyRef Name="MaNhaCungCap" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_rNhanVienGiaoHang_rPhuongTien">
+          <End Role="rPhuongTien" Type="PhuDinhEntity.rPhuongTien" Multiplicity="1" />
+          <End Role="rNhanVien" Type="PhuDinhEntity.rNhanVien" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rPhuongTien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="rNhanVien">
+              <PropertyRef Name="MaPhuongTien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiPhiNhanVienGiaoHang_rNhanVienGiaoHang">
+          <End Role="rNhanVien" Type="PhuDinhEntity.rNhanVien" Multiplicity="1" />
+          <End Role="tChiPhi" Type="PhuDinhEntity.tChiPhi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiPhi">
+              <PropertyRef Name="MaNhanVienGiaoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenHang_rNhanVienGiaoHang">
+          <End Role="rNhanVien" Type="PhuDinhEntity.rNhanVien" Multiplicity="1" />
+          <End Role="tChuyenHang" Type="PhuDinhEntity.tChuyenHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenHang">
+              <PropertyRef Name="MaNhanVienGiaoHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenKho_rNhanVien">
+          <End Role="rNhanVien" Type="PhuDinhEntity.rNhanVien" Multiplicity="1" />
+          <End Role="tChuyenKho" Type="PhuDinhEntity.tChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenKho">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapHang_rNhanVien">
+          <End Role="rNhanVien" Type="PhuDinhEntity.rNhanVien" Multiplicity="1" />
+          <End Role="tNhapHang" Type="PhuDinhEntity.tNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rNhanVien">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tNhapHang">
+              <PropertyRef Name="MaNhanVien" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenHangDonHang_tChiTietDonHang">
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.tChiTietDonHang" Multiplicity="1" />
+          <End Role="tChiTietChuyenHangDonHang" Type="PhuDinhEntity.tChiTietChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChiTietDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenHangDonHang">
+              <PropertyRef Name="MaChiTietDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenHangDonHang_tChuyenHangDonHang">
+          <End Role="tChuyenHangDonHang" Type="PhuDinhEntity.tChuyenHangDonHang" Multiplicity="1" />
+          <End Role="tChiTietChuyenHangDonHang" Type="PhuDinhEntity.tChiTietChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChuyenHangDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenHangDonHang">
+              <PropertyRef Name="MaChuyenHangDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenKho_tChuyenKho">
+          <End Role="tChuyenKho" Type="PhuDinhEntity.tChuyenKho" Multiplicity="1" />
+          <End Role="tChiTietChuyenKho" Type="PhuDinhEntity.tChiTietChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChuyenKho">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenKho">
+              <PropertyRef Name="MaChuyenKho" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietChuyenKho_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="1" />
+          <End Role="tChiTietChuyenKho" Type="PhuDinhEntity.tChiTietChuyenKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietChuyenKho">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietDonHang_tDonHang">
+          <End Role="tDonHang" Type="PhuDinhEntity.tDonHang" Multiplicity="1" />
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.tChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietDonHang">
+              <PropertyRef Name="MaDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietDonHang_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="1" />
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.tChiTietDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietDonHang">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietToaHang_tChiTietDonHang">
+          <End Role="tChiTietDonHang" Type="PhuDinhEntity.tChiTietDonHang" Multiplicity="1" />
+          <End Role="tChiTietToaHang" Type="PhuDinhEntity.tChiTietToaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChiTietDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietToaHang">
+              <PropertyRef Name="MaChiTietDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietNhapHang_tNhapHang">
+          <End Role="tNhapHang" Type="PhuDinhEntity.tNhapHang" Multiplicity="1" />
+          <End Role="tChiTietNhapHang" Type="PhuDinhEntity.tChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tNhapHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietNhapHang">
+              <PropertyRef Name="MaNhapHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tNhapMatHang_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="1" />
+          <End Role="tChiTietNhapHang" Type="PhuDinhEntity.tChiTietNhapHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietNhapHang">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChiTietToaHang_tToaHang">
+          <End Role="tToaHang" Type="PhuDinhEntity.tToaHang" Multiplicity="1" />
+          <End Role="tChiTietToaHang" Type="PhuDinhEntity.tChiTietToaHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tToaHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChiTietToaHang">
+              <PropertyRef Name="MaToaHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenHangDonHang_tChuyenHang">
+          <End Role="tChuyenHang" Type="PhuDinhEntity.tChuyenHang" Multiplicity="1" />
+          <End Role="tChuyenHangDonHang" Type="PhuDinhEntity.tChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tChuyenHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenHangDonHang">
+              <PropertyRef Name="MaChuyenHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tChuyenHangDonHang_tDonHang">
+          <End Role="tDonHang" Type="PhuDinhEntity.tDonHang" Multiplicity="1" />
+          <End Role="tChuyenHangDonHang" Type="PhuDinhEntity.tChuyenHangDonHang" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tDonHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tChuyenHangDonHang">
+              <PropertyRef Name="MaDonHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tTonKho_tMatHang">
+          <End Role="tMatHang" Type="PhuDinhEntity.tMatHang" Multiplicity="1" />
+          <End Role="tTonKho" Type="PhuDinhEntity.tTonKho" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tMatHang">
+              <PropertyRef Name="Ma" />
+            </Principal>
+            <Dependent Role="tTonKho">
+              <PropertyRef Name="MaMatHang" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="webpages_UsersInRoles">
+          <End Role="webpages_Roles" Type="PhuDinhEntity.webpages_Roles" Multiplicity="*" />
+          <End Role="UserProfile" Type="PhuDinhEntity.UserProfile" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PhuDinhEntityStoreContainer" CdmEntityContainer="PhuDinhEntities">
+          <EntitySetMapping Name="rBaiXes">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rBaiXe">
+              <MappingFragment StoreEntitySet="rBaiXe">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="DiaDiemBaiXe" ColumnName="DiaDiemBaiXe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rCanhBaoTonKhoes">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rCanhBaoTonKho">
+              <MappingFragment StoreEntitySet="rCanhBaoTonKho">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaMatHang" ColumnName="MaMatHang" />
+                <ScalarProperty Name="MaKhoHang" ColumnName="MaKhoHang" />
+                <ScalarProperty Name="TonCaoNhat" ColumnName="TonCaoNhat" />
+                <ScalarProperty Name="TonThapNhat" ColumnName="TonThapNhat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rChanhs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rChanh">
+              <MappingFragment StoreEntitySet="rChanh">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaBaiXe" ColumnName="MaBaiXe" />
+                <ScalarProperty Name="TenChanh" ColumnName="TenChanh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rDiaDiems">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rDiaDiem">
+              <MappingFragment StoreEntitySet="rDiaDiem">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaNuoc" ColumnName="MaNuoc" />
+                <ScalarProperty Name="Tinh" ColumnName="Tinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rKhachHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rKhachHang">
+              <MappingFragment StoreEntitySet="rKhachHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaDiaDiem" ColumnName="MaDiaDiem" />
+                <ScalarProperty Name="TenKhachHang" ColumnName="TenKhachHang" />
+                <ScalarProperty Name="KhachRieng" ColumnName="KhachRieng" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rKhachHangChanhs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rKhachHangChanh">
+              <MappingFragment StoreEntitySet="rKhachHangChanh">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaChanh" ColumnName="MaChanh" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="LaMacDinh" ColumnName="LaMacDinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rKhoHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rKhoHang">
+              <MappingFragment StoreEntitySet="rKhoHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenKho" ColumnName="TenKho" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rLoaiChiPhis">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rLoaiChiPhi">
+              <MappingFragment StoreEntitySet="rLoaiChiPhi">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenLoaiChiPhi" ColumnName="TenLoaiChiPhi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rLoaiHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rLoaiHang">
+              <MappingFragment StoreEntitySet="rLoaiHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rLoaiNguyenLieux">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rLoaiNguyenLieu">
+              <MappingFragment StoreEntitySet="rLoaiNguyenLieu">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rMatHangNguyenLieux">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rMatHangNguyenLieu">
+              <MappingFragment StoreEntitySet="rMatHangNguyenLieu">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaMatHang" ColumnName="MaMatHang" />
+                <ScalarProperty Name="MaNguyenLieu" ColumnName="MaNguyenLieu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rNuocs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rNuoc">
+              <MappingFragment StoreEntitySet="rNuoc">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenNuoc" ColumnName="TenNuoc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rNguyenLieux">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rNguyenLieu">
+              <MappingFragment StoreEntitySet="rNguyenLieu">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaLoaiNguyenLieu" ColumnName="MaLoaiNguyenLieu" />
+                <ScalarProperty Name="DuongKinh" ColumnName="DuongKinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rNhaCungCaps">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rNhaCungCap">
+              <MappingFragment StoreEntitySet="rNhaCungCap">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenNhaCungCap" ColumnName="TenNhaCungCap" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rNhanViens">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rNhanVien">
+              <MappingFragment StoreEntitySet="rNhanVien">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaPhuongTien" ColumnName="MaPhuongTien" />
+                <ScalarProperty Name="TenNhanVien" ColumnName="TenNhanVien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rPhuongTiens">
+            <EntityTypeMapping TypeName="PhuDinhEntity.rPhuongTien">
+              <MappingFragment StoreEntitySet="rPhuongTien">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="TenPhuongTien" ColumnName="TenPhuongTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tCongNoKhachHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tCongNoKhachHang">
+              <MappingFragment StoreEntitySet="tCongNoKhachHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChiPhis">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChiPhi">
+              <MappingFragment StoreEntitySet="tChiPhi">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaNhanVienGiaoHang" ColumnName="MaNhanVienGiaoHang" />
+                <ScalarProperty Name="MaLoaiChiPhi" ColumnName="MaLoaiChiPhi" />
+                <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChiTietChuyenHangDonHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChiTietChuyenHangDonHang">
+              <MappingFragment StoreEntitySet="tChiTietChuyenHangDonHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaChuyenHangDonHang" ColumnName="MaChuyenHangDonHang" />
+                <ScalarProperty Name="MaChiTietDonHang" ColumnName="MaChiTietDonHang" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="SoLuongTheoDonHang" ColumnName="SoLuongTheoDonHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChiTietChuyenKhoes">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChiTietChuyenKho">
+              <MappingFragment StoreEntitySet="tChiTietChuyenKho">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaChuyenKho" ColumnName="MaChuyenKho" />
+                <ScalarProperty Name="MaMatHang" ColumnName="MaMatHang" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChiTietDonHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChiTietDonHang">
+              <MappingFragment StoreEntitySet="tChiTietDonHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+                <ScalarProperty Name="MaMatHang" ColumnName="MaMatHang" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="Xong" ColumnName="Xong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChiTietNhapHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChiTietNhapHang">
+              <MappingFragment StoreEntitySet="tChiTietNhapHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaNhapHang" ColumnName="MaNhapHang" />
+                <ScalarProperty Name="MaMatHang" ColumnName="MaMatHang" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChiTietToaHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChiTietToaHang">
+              <MappingFragment StoreEntitySet="tChiTietToaHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaToaHang" ColumnName="MaToaHang" />
+                <ScalarProperty Name="MaChiTietDonHang" ColumnName="MaChiTietDonHang" />
+                <ScalarProperty Name="GiaTien" ColumnName="GiaTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChuyenHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChuyenHang">
+              <MappingFragment StoreEntitySet="tChuyenHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaNhanVienGiaoHang" ColumnName="MaNhanVienGiaoHang" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="Gio" ColumnName="Gio" />
+                <ScalarProperty Name="TongDonHang" ColumnName="TongDonHang" />
+                <ScalarProperty Name="TongSoLuongTheoDonHang" ColumnName="TongSoLuongTheoDonHang" />
+                <ScalarProperty Name="TongSoLuongThucTe" ColumnName="TongSoLuongThucTe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChuyenHangDonHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChuyenHangDonHang">
+              <MappingFragment StoreEntitySet="tChuyenHangDonHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaChuyenHang" ColumnName="MaChuyenHang" />
+                <ScalarProperty Name="MaDonHang" ColumnName="MaDonHang" />
+                <ScalarProperty Name="TongSoLuongTheoDonHang" ColumnName="TongSoLuongTheoDonHang" />
+                <ScalarProperty Name="TongSoLuongThucTe" ColumnName="TongSoLuongThucTe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tChuyenKhoes">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tChuyenKho">
+              <MappingFragment StoreEntitySet="tChuyenKho">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaKhoHangXuat" ColumnName="MaKhoHangXuat" />
+                <ScalarProperty Name="MaKhoHangNhap" ColumnName="MaKhoHangNhap" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tDonHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tDonHang">
+              <MappingFragment StoreEntitySet="tDonHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="MaChanh" ColumnName="MaChanh" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="Xong" ColumnName="Xong" />
+                <ScalarProperty Name="MaKhoHang" ColumnName="MaKhoHang" />
+                <ScalarProperty Name="TongSoLuong" ColumnName="TongSoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tGiamTruKhachHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tGiamTruKhachHang">
+              <MappingFragment StoreEntitySet="tGiamTruKhachHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tMatHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tMatHang">
+              <MappingFragment StoreEntitySet="tMatHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+                <ScalarProperty Name="TenMatHang" ColumnName="TenMatHang" />
+                <ScalarProperty Name="SoKy" ColumnName="SoKy" />
+                <ScalarProperty Name="SoMet" ColumnName="SoMet" />
+                <ScalarProperty Name="TenMatHangDayDu" ColumnName="TenMatHangDayDu" />
+                <ScalarProperty Name="TenMatHangIn" ColumnName="TenMatHangIn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNhanTienKhachHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tNhanTienKhachHang">
+              <MappingFragment StoreEntitySet="tNhanTienKhachHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNhapHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tNhapHang">
+              <MappingFragment StoreEntitySet="tNhapHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaNhanVien" ColumnName="MaNhanVien" />
+                <ScalarProperty Name="MaKhoHang" ColumnName="MaKhoHang" />
+                <ScalarProperty Name="MaNhaCungCap" ColumnName="MaNhaCungCap" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tNhapNguyenLieux">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tNhapNguyenLieu">
+              <MappingFragment StoreEntitySet="tNhapNguyenLieu">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="MaNguyenLieu" ColumnName="MaNguyenLieu" />
+                <ScalarProperty Name="MaNhaCungCap" ColumnName="MaNhaCungCap" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tPhuThuKhachHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tPhuThuKhachHang">
+              <MappingFragment StoreEntitySet="tPhuThuKhachHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="SoTien" ColumnName="SoTien" />
+                <ScalarProperty Name="GhiChu" ColumnName="GhiChu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tToaHangs">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tToaHang">
+              <MappingFragment StoreEntitySet="tToaHang">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="MaKhachHang" ColumnName="MaKhachHang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tTonKhoes">
+            <EntityTypeMapping TypeName="PhuDinhEntity.tTonKho">
+              <MappingFragment StoreEntitySet="tTonKho">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="MaKhoHang" ColumnName="MaKhoHang" />
+                <ScalarProperty Name="MaMatHang" ColumnName="MaMatHang" />
+                <ScalarProperty Name="Ngay" ColumnName="Ngay" />
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="SoLuongCu" ColumnName="SoLuongCu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ThamSoNgays">
+            <EntityTypeMapping TypeName="PhuDinhEntity.ThamSoNgay">
+              <MappingFragment StoreEntitySet="ThamSoNgay">
+                <ScalarProperty Name="Ma" ColumnName="Ma" />
+                <ScalarProperty Name="Ten" ColumnName="Ten" />
+                <ScalarProperty Name="GiaTri" ColumnName="GiaTri" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserProfiles">
+            <EntityTypeMapping TypeName="PhuDinhEntity.UserProfile">
+              <MappingFragment StoreEntitySet="UserProfile">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_Membership">
+            <EntityTypeMapping TypeName="PhuDinhEntity.webpages_Membership">
+              <MappingFragment StoreEntitySet="webpages_Membership">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="ConfirmationToken" ColumnName="ConfirmationToken" />
+                <ScalarProperty Name="IsConfirmed" ColumnName="IsConfirmed" />
+                <ScalarProperty Name="LastPasswordFailureDate" ColumnName="LastPasswordFailureDate" />
+                <ScalarProperty Name="PasswordFailuresSinceLastSuccess" ColumnName="PasswordFailuresSinceLastSuccess" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PasswordChangedDate" ColumnName="PasswordChangedDate" />
+                <ScalarProperty Name="PasswordSalt" ColumnName="PasswordSalt" />
+                <ScalarProperty Name="PasswordVerificationToken" ColumnName="PasswordVerificationToken" />
+                <ScalarProperty Name="PasswordVerificationTokenExpirationDate" ColumnName="PasswordVerificationTokenExpirationDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_OAuthMembership">
+            <EntityTypeMapping TypeName="PhuDinhEntity.webpages_OAuthMembership">
+              <MappingFragment StoreEntitySet="webpages_OAuthMembership">
+                <ScalarProperty Name="Provider" ColumnName="Provider" />
+                <ScalarProperty Name="ProviderUserId" ColumnName="ProviderUserId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="webpages_Roles">
+            <EntityTypeMapping TypeName="PhuDinhEntity.webpages_Roles">
+              <MappingFragment StoreEntitySet="webpages_Roles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="webpages_UsersInRoles" TypeName="PhuDinhEntity.webpages_UsersInRoles" StoreEntitySet="webpages_UsersInRoles">
+            <EndProperty Name="webpages_Roles">
+              <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+            </EndProperty>
+            <EndProperty Name="UserProfile">
+              <ScalarProperty Name="UserId" ColumnName="UserId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
