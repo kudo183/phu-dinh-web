@@ -22,3 +22,26 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+fieldset {
+    border: medium none;
+    display: inline;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+}
+
+fieldset legend {
+    display: none;
+}
+
+fieldset ol {
+    list-style: outside none none;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+fieldset label:not(.checkbox) {
+    display: block;
+    text-align: left;
+}
