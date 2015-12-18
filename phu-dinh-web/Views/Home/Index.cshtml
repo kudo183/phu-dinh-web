@@ -15,7 +15,34 @@
 
     @if (@User.Identity.IsAuthenticated)
     {
-        <h2>Logged in</h2>
+        <div id="filter" data-bind="with: filter">
+            <!-- ko with: kho -->
+            <select data-bind="optionsCaption: caption
+                            , options: items
+                            , optionsText: itemText
+                            , optionsValue: itemValue
+                            , value: selected" >
+            </select>
+            <!-- /ko -->
+            <!-- ko with: loaiHang -->
+            <select data-bind="optionsCaption: caption
+                            , options: items
+                            , optionsText: itemText
+                            , optionsValue: itemValue
+                            , value: selected" >
+            </select>
+            <!-- /ko -->
+            <button data-bind="click: function(data, event) { load($root, data, event) }">OK</button>
+        </div>
+        <div id="contentGrid" class="table" data-bind="with: gridViewModel">
+            <!-- ko foreach: items -->
+            <div class="row" data-bind="foreach: $parent.columns">
+                <div class="cell">
+                    <span data-bind="text: $parent[cellValueProperty]" />
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
     }
     else
     {
