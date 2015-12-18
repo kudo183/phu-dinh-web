@@ -17,6 +17,9 @@ namespace phu_dinh_web.App_Start
             bundles.Add(new ScriptBundle("~/bundles/ajaxlogin").Include(
                 "~/Scripts/ajaxlogin.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
+                        "~/Scripts/knockout-{version}.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/Site.css"));
         }
