@@ -11,15 +11,52 @@ namespace phu_dinh_web.Controllers
 {
     public class TonkhoController : ApiController
     {
-        private Data.PhuDinhEntities _context = new Data.PhuDinhEntities();
-        public IEnumerable<tTonKhoDto> GettTonKhoes()
+        private readonly Data.PhuDinhEntities _context = new Data.PhuDinhEntities();
+        public IEnumerable<tTonKhoDto> GettTonKhoes(string json)
         {
-            //var now = DateTime.Now.Date;
-            var now = new DateTime(2015, 12, 10);
-            return _context.tTonKhoes
-                .Where(p => p.Ngay == now)
-                .Include(p => p.tMatHang)
-                .AsEnumerable().Select(p => new tTonKhoDto(p));
+            var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
+            var now = DateTime.Now.Date;
+            const int pageSize = 300;
+            int pageCount;
+
+            AddDefaultDateFilter(filter, now);
+            var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
+                _context.tTonKhoes.Include(p => p.tMatHang)
+                , filter, pageSize, out pageCount);
+
+            return query.AsEnumerable().Select(p => new tTonKhoDto(p));
+        }
+
+        private void AddDefaultDateFilter(ExpressionBuilder.FilterExpression filter, DateTime date)
+        {
+            if (filter.WhereOptions == null)
+            {
+                filter.WhereOptions = new List<ExpressionBuilder.WhereExpression.WhereOption>
+                {
+                    new ExpressionBuilder.WhereExpression.WhereOption
+                        {
+                            Predicate = "=",
+                            PropertyPath = "Ngay",
+                            Value = date.ToString("yyyy/MM/dd")
+                        }
+                };
+                return;
+            }
+            if (filter.WhereOptions.Any(p => p.PropertyPath == "Ngay") == false)
+            {
+                filter.WhereOptions.Add(new ExpressionBuilder.WhereExpression.WhereOption
+                {
+                    Predicate = "=",
+                    PropertyPath = "Ngay",
+                    Value = date.ToString("yyyy/MM/dd")
+                });
+            }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+            base.Dispose(disposing);
         }
     }
 }

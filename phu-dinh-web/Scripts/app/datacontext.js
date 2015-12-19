@@ -10,15 +10,14 @@ window.app.datacontext = (function () {
     return datacontext;
 
     function getList(url, filter) {
+        filter = filter || { };
         var options = {
             dataType: "json",
             contentType: "application/json",
             cache: false,
-            type: "get"
+            type: "get",
+            data:"json=" + JSON.stringify(filter)
         };
-        if (filter) {
-            options.data = "json=" + JSON.stringify(filter);
-        }
             
         var antiForgeryToken = $("#antiForgeryToken").val();
         if (antiForgeryToken) {

@@ -12,5 +12,11 @@ namespace phu_dinh_web.Controllers
         {
             return _context.rLoaiHangs.AsEnumerable().Select(p => new rLoaiHangDto(p));
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

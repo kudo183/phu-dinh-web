@@ -15,7 +15,7 @@
                 ],
                 itemText: "tenKho",
                 itemValue: "maKho",
-                selected: ko.observable()
+                selected: ko.observable(1)
             },
             loaiHang: {
                 caption: "...",
@@ -26,9 +26,25 @@
             },
             load: function (root) {
                 var context = root.filter;
-                alert(context.kho.selected());
-                alert(context.loaiHang.selected());
-                root.load();
+                var filter = {};
+                filter.whereOptions = [];
+                var fKho = context.kho.selected();
+                if (fKho !== undefined) {
+                    filter.whereOptions.push({
+                        predicate: "=",
+                        propertyPath: "rKhoHang.ma",
+                        value: fKho
+                    });
+                }
+                var fLoaiHang = context.loaiHang.selected();
+                if (fLoaiHang !== undefined) {
+                    filter.whereOptions.push({
+                        predicate: "=",
+                        propertyPath: "tMatHang.MaLoai",
+                        value: fLoaiHang
+                    });
+                }
+                root.load(filter);
             }
         },
         load: load
@@ -39,9 +55,11 @@
 
     datacontext.getList(datacontext.rLoaiHangUrl("GetrLoaiHangs"))
         .done(function (data) {
+            var items = [];
             for (var i = 0; i < data.length; i++) {
-                viewModel.filter.loaiHang.items.push(data[i]);
+                items.push(data[i]);
             }
+            viewModel.filter.loaiHang.items(items);
         }).fail(function (error) {
             alert(error);
         });
@@ -49,9 +67,11 @@
     function load(filter) {
         datacontext.getList(datacontext.tTonKhoUrl("GettTonKhoes"), filter)
         .done(function (data) {
+            var items = [];
             for (var i = 0; i < data.length; i++) {
-                viewModel.gridViewModel.items.push(data[i]);
+                items.push(data[i]);
             }
+            viewModel.gridViewModel.items(items);
         }).fail(function (error) {
             alert(error);
         });
