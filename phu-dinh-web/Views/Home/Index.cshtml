@@ -1,62 +1,90 @@
-﻿@{
+﻿@using System.Web.Optimization
+@{
     ViewBag.Title = "Quan Ly";
 }
-
-<div id="main-content">
-    @functions{
-        public string GetAntiForgeryToken()
-        {
-            string cookieToken, formToken;
-            AntiForgery.GetTokens(null, out cookieToken, out formToken);
-            return cookieToken + ":" + formToken;
-        }
-    }
-    <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/ajaxlogin")
+    @Scripts.Render("~/bundles/knockout")
+    <title>@ViewBag.Title</title>
+</head>
+<body>
     @if (@User.Identity.IsAuthenticated)
     {
-        <div id="filter" data-bind="with: filter">
-            <!-- ko with: kho -->
-            <select data-bind="optionsCaption: caption
+        <text>
+        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: new { area = "" }, htmlAttributes: new { @class = "username", title = "Manage" })
+        @using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+        {
+            @Html.AntiForgeryToken()
+            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+        }
+        </text>
+    }
+
+    <div id="main-content">
+        @functions{
+            public string GetAntiForgeryToken()
+            {
+                string cookieToken, formToken;
+                AntiForgery.GetTokens(null, out cookieToken, out formToken);
+                return cookieToken + ":" + formToken;
+            }
+        }
+        <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
+
+        @if (@User.Identity.IsAuthenticated)
+        {
+            <div id="filter" data-bind="with: filter">
+                <!-- ko with: kho -->
+                <select data-bind="optionsCaption: caption
                             , options: items
                             , optionsText: itemText
                             , optionsValue: itemValue
-                            , value: selected" >
-            </select>
-            <!-- /ko -->
-            <!-- ko with: loaiHang -->
-            <select data-bind="optionsCaption: caption
+                            , value: selected">
+                </select>
+                <!-- /ko -->
+                <!-- ko with: loaiHang -->
+                <select data-bind="optionsCaption: caption
                             , options: items
                             , optionsText: itemText
                             , optionsValue: itemValue
-                            , value: selected" >
-            </select>
-            <!-- /ko -->
-            <button data-bind="click: function(data, event) { load($root, data, event) }">OK</button>
-        </div>
-        <div id="contentGrid" class="table" data-bind="with: gridViewModel">
-            <!-- ko foreach: items -->
-            <div class="row" data-bind="foreach: $parent.columns">
-                <div class="cell">
-                    <span data-bind="text: $parent[cellValueProperty]" />
-                </div>
+                            , value: selected">
+                </select>
+                <!-- /ko -->
+                <button data-bind="click: function (data, event) { load($root, data, event) }">OK</button>
             </div>
-            <!-- /ko -->
-        </div>
-    }
-    else
-    {
-        <div id="loginPanel">
-            <section id="localLoginPanel">
-                <h2>Log in</h2>
-                @Html.Partial("_Login")
-            </section>
-            <p>First time here? <a id="showRegister">Sign up</a></p>
-        </div>
-        <div id="registerPanel">
-            <h2>Sign up</h2>
-            @Html.Partial("_Register")
-            <p>Already signed up? <a id="showLogin">Log in</a></p>
-        </div>
-    }
-</div>
+            <div id="contentGrid" class="table" data-bind="with: gridViewModel">
+                <!-- ko foreach: items -->
+                <div class="row" data-bind="foreach: $parent.columns">
+                    <div class="cell">
+                        <span data-bind="text: $parent[cellValueProperty]" />
+                    </div>
+                </div>
+                <!-- /ko -->
+            </div>
+        }
+        else
+        {
+            <div id="loginPanel">
+                <section id="localLoginPanel">
+                    <h2>Log in</h2>
+                    @Html.Partial("_Login")
+                </section>
+                <p>First time here? <a id="showRegister">Sign up</a></p>
+            </div>
+            <div id="registerPanel">
+                <h2>Sign up</h2>
+                @Html.Partial("_Register")
+                <p>Already signed up? <a id="showLogin">Log in</a></p>
+            </div>
+        }
+    </div>
+    
+    @Scripts.Render("~/bundles/app")
+</body>
+</html>
