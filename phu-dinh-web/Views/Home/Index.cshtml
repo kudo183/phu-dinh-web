@@ -24,40 +24,20 @@
             }
     <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
 
-    <div class="header-content">
-        @if (@User.Identity.IsAuthenticated)
-        {
-            <ul>
-                <li>
-                    <a>Ton Kho</a>
-                </li>
-            </ul>
-            <ul>
-                <li class="line">|</li>
-            </ul>
-            <ul>
-                <li>
-                    <a>Xuat</a>
-                </li>
-            </ul>
-            <ul>
-                <li class="line">|</li>
-            </ul>
-            <ul>
-                <li>
-                    @Html.ActionLink("Manage", "Manage", "Account", routeValues: new { area = "" }, htmlAttributes: new { id = "changePassword" })
-                    <span>or </span>
-                    <a id="logOff">Log Off</a>
-                </li>
-            </ul>
-        }
-    </div>
-    <div id="main-content">
+    <div id="headerContent">
         @if (@User.Identity.IsAuthenticated)
         {
             @Scripts.Render("~/bundles/view")
             <script>
-                $("#main-content").append(window.app.view.tonKhoView("tonKhoView"));
+                $("#headerContent").append(window.app.view.headerMenuView("headerMenuView"));
+            </script>
+        }
+    </div>
+    <div id="mainContent">
+        @if (@User.Identity.IsAuthenticated)
+        {
+            <script>
+                $("#mainContent").append(window.app.view.tonKhoView("tonKhoView"));
             </script>
         }
         else

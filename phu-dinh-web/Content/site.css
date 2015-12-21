@@ -2,7 +2,7 @@
     padding-top: 40px;
 }
 
-.header-content {
+#headerMenuView {
     position: fixed;
     left: 0px;
     top: 0px;
@@ -10,11 +10,11 @@
     background-color: #d2d2d2;
 }
 
-    .header-content > ul {
+    #headerMenuView > ul {
         list-style: outside none none;
     }
 
-        .header-content > ul > li {
+        #headerMenuView > ul > li {
             float: left;
         }
 
@@ -35,12 +35,12 @@
     width: 600px;
 }
 
-.header-content > ul > li.line {
+#headerMenuView > ul > li.line {
     margin: 0 8px;
 }
 
-.header-content > a,
-.header-content > ul > li > a,
+#headerMenuView > a,
+#headerMenuView > ul > li > a,
 #registerPanel a,
 #loginPanel a {
     color: navy;

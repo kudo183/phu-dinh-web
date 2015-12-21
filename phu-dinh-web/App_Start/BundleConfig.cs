@@ -24,6 +24,7 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
+                        "~/Scripts/app/headerMenuView.js",
                         "~/Scripts/app/tonKhoView.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
