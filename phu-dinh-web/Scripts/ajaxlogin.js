@@ -56,7 +56,20 @@
             });
         });
     });
+    
+    $("#logOff").click(function () {
+        $.post("Account/LogOff")
+            .done(function (json) {
+                json = json || {};
 
+                // In case of success, we redirect to the provided URL or the same page.
+                if (json.success) {
+                    window.location = json.redirect || location.href;
+                }
+            })
+            .error();
+    });
+    
     $("#loginForm").submit(formSubmitHandler);
     $("#registerForm").submit(formSubmitHandler);
 });

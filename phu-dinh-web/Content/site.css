@@ -1,5 +1,24 @@
-﻿
-#registerPanel{
+﻿body {
+    padding-top: 40px;
+}
+
+.header-content {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    background-color: #d2d2d2;
+}
+
+    .header-content > ul {
+        list-style: outside none none;
+    }
+
+        .header-content > ul > li {
+            float: left;
+        }
+
+#registerPanel {
     display: none;
     position: relative;
     float: left;
@@ -16,10 +35,17 @@
     width: 600px;
 }
 
+.header-content > ul > li.line {
+    margin: 0 8px;
+}
+
+.header-content > a,
+.header-content > ul > li > a,
 #registerPanel a,
 #loginPanel a {
     color: navy;
     font-weight: bold;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -31,24 +57,25 @@ fieldset {
     text-align: left;
 }
 
-fieldset legend {
-    display: none;
-}
+    fieldset legend {
+        display: none;
+    }
 
-fieldset ol {
-    list-style: outside none none;
-    margin: 0 0 8px;
-    padding: 0;
-}
+    fieldset ol {
+        list-style: outside none none;
+        margin: 0 0 8px;
+        padding: 0;
+    }
 
-fieldset label:not(.checkbox) {
-    display: block;
-    text-align: left;
-}
+    fieldset label:not(.checkbox) {
+        display: block;
+        text-align: left;
+    }
 
 .row {
     display: table-row;
 }
+
 .cell {
     display: table-cell;
     border: 1px solid #e8eef4;

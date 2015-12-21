@@ -14,29 +14,45 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    @if (@User.Identity.IsAuthenticated)
-    {
-        <text>
-        Hello, @Html.ActionLink(User.Identity.Name, "Manage", "Account", routeValues: new { area = "" }, htmlAttributes: new { @class = "username", title = "Manage" })
-        @using (Html.BeginForm("LogOff", "Account", new { area = "" }, FormMethod.Post, new { id = "logoutForm" }))
+    @functions{
+        public string GetAntiForgeryToken()
         {
-            @Html.AntiForgeryToken()
-            <a href="javascript:document.getElementById('logoutForm').submit()">Log off</a>
+            string cookieToken, formToken;
+            AntiForgery.GetTokens(null, out cookieToken, out formToken);
+            return cookieToken + ":" + formToken;
         }
-        </text>
-    }
-
-    <div id="main-content">
-        @functions{
-            public string GetAntiForgeryToken()
-            {
-                string cookieToken, formToken;
-                AntiForgery.GetTokens(null, out cookieToken, out formToken);
-                return cookieToken + ":" + formToken;
             }
-        }
-        <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
+    <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
 
+    <div class="header-content">
+        @if (@User.Identity.IsAuthenticated)
+        {
+            <ul>
+                <li>
+                    <a>Ton Kho</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="line">|</li>
+            </ul>
+            <ul>
+                <li>
+                    <a>Xuat</a>
+                </li>
+            </ul>
+            <ul>
+                <li class="line">|</li>
+            </ul>
+            <ul>
+                <li>
+                    @Html.ActionLink("Manage", "Manage", "Account", routeValues: new { area = "" }, htmlAttributes: new { id = "changePassword" })
+                    <span>or </span>
+                    <a id="logOff">Log Off</a>
+                </li>
+            </ul>
+        }
+    </div>
+    <div id="main-content">
         @if (@User.Identity.IsAuthenticated)
         {
             <div id="filter" data-bind="with: filter">
@@ -84,7 +100,7 @@
             </div>
         }
     </div>
-    
+
     @Scripts.Render("~/bundles/app")
 </body>
 </html>
