@@ -20,8 +20,13 @@ namespace phu_dinh_web.App_Start
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+            bundles.Add(new ScriptBundle("~/bundles/view").Include(
+                        "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/datacontext.js",
+                        "~/Scripts/app/utilsDOM.js",
+                        "~/Scripts/app/tonKhoView.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
                         "~/Scripts/app/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

@@ -1,4 +1,5 @@
 ﻿window.app.viewModel = (function (datacontext) {
+    
     var viewModel = {
         gridViewModel: {
             items: ko.observableArray(),

@@ -1,5 +1,4 @@
-﻿window.app = window.app || {};
-window.app.datacontext = (function () {
+﻿window.app.datacontext = (function () {
 
     var datacontext = {
         getList: getList,
