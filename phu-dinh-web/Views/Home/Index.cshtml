@@ -26,8 +26,8 @@
 
     @if (@User.Identity.IsAuthenticated)
     {
-        <div id="headerContent" />
-        <div id="mainContent" />
+        <div id="headerContent" ></div>
+        <div id="mainContent" ></div>
         @Scripts.Render("~/bundles/view")
         @Scripts.Render("~/bundles/viewModel")
         <script>
@@ -37,8 +37,10 @@
             ]));
             
             $("#mainContent").append(window.app.view.tonKhoView("tonKhoView"));
+            $("#mainContent").append(window.app.view.xuatView("xuatView"));
 
             $(document).ready(function () {
+                $("#xuatView").hide();
                 ko.applyBindings(window.app.viewModel);
             });
         </script>

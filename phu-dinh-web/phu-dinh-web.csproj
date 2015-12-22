@@ -145,10 +145,12 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\app\datacontext.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
+    <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
     <Content Include="Scripts\app\view\tonKhoView.js" />
     <Content Include="Scripts\app\viewModel\tonKhoViewModel.js" />
     <Content Include="Scripts\app\utilsDOM.js" />
+    <Content Include="Scripts\app\view\xuatView.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\knockout-3.4.0.debug.js" />

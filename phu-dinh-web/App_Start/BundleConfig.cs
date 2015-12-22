@@ -25,9 +25,11 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
                         "~/Scripts/app/view/headerMenuView.js",
+                        "~/Scripts/app/view/xuatView.js",
                         "~/Scripts/app/view/tonKhoView.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
+                        "~/Scripts/app/viewModel/xuatViewModel.js",
                         "~/Scripts/app/viewModel/tonKhoViewModel.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
