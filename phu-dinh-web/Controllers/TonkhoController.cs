@@ -9,9 +9,8 @@ using System.Data.Entity;
 
 namespace phu_dinh_web.Controllers
 {
-    public class TonkhoController : ApiController
+    public class TonkhoController : BaseApiController
     {
-        private readonly Data.PhuDinhEntities _context = new Data.PhuDinhEntities();
         public IEnumerable<tTonKhoDto> GettTonKhoes(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
@@ -51,12 +50,6 @@ namespace phu_dinh_web.Controllers
                     Value = date.ToString("yyyy/MM/dd")
                 });
             }
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _context.Dispose();
-            base.Dispose(disposing);
         }
     }
 }
