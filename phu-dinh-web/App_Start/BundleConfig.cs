@@ -24,11 +24,11 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
-                        "~/Scripts/app/headerMenuView.js",
-                        "~/Scripts/app/tonKhoView.js"));
+                        "~/Scripts/app/view/headerMenuView.js",
+                        "~/Scripts/app/view/tonKhoView.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                        "~/Scripts/app/tonKhoViewModel.js"));
+                        "~/Scripts/app/viewModel/tonKhoViewModel.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/Site.css"));
