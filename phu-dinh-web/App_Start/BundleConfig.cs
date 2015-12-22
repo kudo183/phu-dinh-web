@@ -27,7 +27,7 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/view/headerMenuView.js",
                         "~/Scripts/app/view/tonKhoView.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+            bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
                         "~/Scripts/app/viewModel/tonKhoViewModel.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width" />
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/ajaxlogin")
     @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/ajaxlogin")
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -24,33 +24,28 @@
             }
     <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
 
-    <div id="headerContent">
-        @if (@User.Identity.IsAuthenticated)
-        {
-            @Scripts.Render("~/bundles/view")
-            <script>
-                $("#headerContent").append(window.app.view.headerMenuView("headerMenuView", [
-                    {
-                        text: "Ton Kho",
-                        id: "#tonKhoView"
-                    },
-                    {
-                        text: "Xuat",
-                        id: "#xuatView"
-                    }
-                ]));
-            </script>
-        }
-    </div>
-    <div id="mainContent">
-        @if (@User.Identity.IsAuthenticated)
-        {
-            <script>
-                $("#mainContent").append(window.app.view.tonKhoView("tonKhoView"));
-            </script>
-        }
-        else
-        {
+    @if (@User.Identity.IsAuthenticated)
+    {
+        <div id="headerContent" />
+        <div id="mainContent" />
+        @Scripts.Render("~/bundles/view")
+        @Scripts.Render("~/bundles/viewModel")
+        <script>
+            $("#headerContent").append(window.app.view.headerMenuView("headerMenuView", [
+                { text: "Ton Kho", id: "#tonKhoView" },
+                { text: "Xuat", id: "#xuatView" }
+            ]));
+            
+            $("#mainContent").append(window.app.view.tonKhoView("tonKhoView"));
+
+            $(document).ready(function () {
+                ko.applyBindings(window.app.viewModel);
+            });
+        </script>
+    }
+    else
+    {
+        <div id="mainContent">
             <div id="loginPanel">
                 <section id="localLoginPanel">
                     <h2>Log in</h2>
@@ -63,14 +58,7 @@
                 @Html.Partial("_Register")
                 <p>Already signed up? <a id="showLogin">Log in</a></p>
             </div>
-        }
-    </div>
-    @if (@User.Identity.IsAuthenticated)
-    {
-        @Scripts.Render("~/bundles/app")
-        <script>
-            ko.applyBindings(window.app.viewModel);
-        </script>
+        </div>
     }
 </body>
 </html>
