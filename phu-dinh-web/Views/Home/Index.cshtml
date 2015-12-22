@@ -29,7 +29,16 @@
         {
             @Scripts.Render("~/bundles/view")
             <script>
-                $("#headerContent").append(window.app.view.headerMenuView("headerMenuView"));
+                $("#headerContent").append(window.app.view.headerMenuView("headerMenuView", [
+                    {
+                        text: "Ton Kho",
+                        id: "#tonKhoView"
+                    },
+                    {
+                        text: "Xuat",
+                        id: "#xuatView"
+                    }
+                ]));
             </script>
         }
     </div>

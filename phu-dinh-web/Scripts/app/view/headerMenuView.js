@@ -1,26 +1,33 @@
 ﻿window.app.view.headerMenuView = (function () {
-    return function (id) {
-        var ulTonKho = window.app.utilsDOM.createElement("ul");
-        var liTonKho = window.app.utilsDOM.createElement("li");
-        var aTonKho = window.app.utilsDOM.createElement("a", {}, undefined, "Ton Kho");
-        ulTonKho.appendChild(liTonKho);
-        liTonKho.appendChild(aTonKho);
+    return function (id, items) {
+        var view = window.app.utilsDOM.createElement("div", { id: id });
 
-        var ulLine1 = window.app.utilsDOM.createElement("ul");
-        var liLine1 = window.app.utilsDOM.createElement("li", {}, undefined, "|");
-        window.app.utilsDOM.addClass(liLine1, "line");
-        ulLine1.appendChild(liLine1);
+        for (var i = 0; i < items.length; i++) {
+            var ul = window.app.utilsDOM.createElement("ul");
+            var li = window.app.utilsDOM.createElement("li");
+            var a = window.app.utilsDOM.createElement("a", { viewId: items[i].id }, undefined, items[i].text);
+            ul.appendChild(li);
+            li.appendChild(a);
 
-        var ulXuat = window.app.utilsDOM.createElement("ul");
-        var liXuat = window.app.utilsDOM.createElement("li");
-        var aXuat = window.app.utilsDOM.createElement("a", {}, undefined, "Xuat");
-        ulXuat.appendChild(liXuat);
-        liXuat.appendChild(aXuat);
+            view.appendChild(ul);
 
-        var ulLine2 = window.app.utilsDOM.createElement("ul");
-        var liLine2 = window.app.utilsDOM.createElement("li", {}, undefined, "|");
-        window.app.utilsDOM.addClass(liLine2, "line");
-        ulLine2.appendChild(liLine2);
+            var ulLine = window.app.utilsDOM.createElement("ul");
+            var liLine = window.app.utilsDOM.createElement("li", {}, undefined, "|");
+            window.app.utilsDOM.addClass(liLine, "line");
+            ulLine.appendChild(liLine);
+
+            view.appendChild(ulLine);
+
+            $(a).click(function () {
+                for (var j = 0; j < items.length; j++) {
+                    if ($(this).attr("viewId") === items[j].id) {
+                        $(items[j].id).show();
+                    } else {
+                        $(items[j].id).hide();
+                    }
+                }
+            });
+        }
 
         var ulAccount = window.app.utilsDOM.createElement("ul");
         var liAccount = window.app.utilsDOM.createElement("li");
@@ -32,11 +39,6 @@
         liAccount.appendChild(textOr);
         liAccount.appendChild(aLogoff);
 
-        var view = window.app.utilsDOM.createElement("div", { id: id });
-        view.appendChild(ulTonKho);
-        view.appendChild(ulLine1);
-        view.appendChild(ulXuat);
-        view.appendChild(ulLine2);
         view.appendChild(ulAccount);
 
         return view;
