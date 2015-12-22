@@ -44,7 +44,7 @@ namespace phu_dinh_web.Controllers
         // POST: /Account/LogOff
 
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateHttpAntiForgeryToken]
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
