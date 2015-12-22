@@ -28,7 +28,7 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/tonKhoView.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                        "~/Scripts/app/main.js"));
+                        "~/Scripts/app/tonKhoViewModel.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/Site.css"));

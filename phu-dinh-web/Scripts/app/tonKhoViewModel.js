@@ -1,5 +1,4 @@
-﻿window.app.viewModel = (function (datacontext) {
-    
+﻿window.app.viewModel.tonKhoViewModel = (function (datacontext) {
     var viewModel = {
         gridViewModel: {
             items: ko.observableArray(),
@@ -79,6 +78,7 @@
     }
 
     load();
+
     return viewModel;
+
 })(window.app.datacontext);
-ko.applyBindings(window.app.viewModel);

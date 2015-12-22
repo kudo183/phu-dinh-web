@@ -8,7 +8,7 @@
         var koLoaiHang = window.app.utilsDOM.createComment(" ko with: loaiHang ");
         var selectLoaiHang = window.app.utilsDOM.createElement("select", { }, "optionsCaption: caption, options: items, optionsText: itemText, optionsValue: itemValue, value: selected");
         var endKoLoaiHang = window.app.utilsDOM.createComment(" /ko ");
-        var buttonOk = window.app.utilsDOM.createElement("button", { }, "click: function (data, event) { load($root, data, event) }", "OK");
+        var buttonOk = window.app.utilsDOM.createElement("button", { }, "click: function (data, event) { load($parent, data, event) }", "OK");
 
         var gridViewModel = window.app.utilsDOM.createElement("div", { id: "contentGrid" }, "with: gridViewModel");
         var koItems = window.app.utilsDOM.createComment(" ko foreach: items ");
@@ -33,7 +33,7 @@
         cell.appendChild(cellText);
         gridViewModel.appendChild(endKoItems);
 
-        var view = window.app.utilsDOM.createElement("div", { id: id });
+        var view = window.app.utilsDOM.createElement("div", { id: id }, "with: tonKhoViewModel");
         view.appendChild(filter);
         view.appendChild(gridViewModel);
         return view;

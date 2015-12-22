@@ -56,7 +56,12 @@
             </div>
         }
     </div>
-
-    @Scripts.Render("~/bundles/app")
+    @if (@User.Identity.IsAuthenticated)
+    {
+        @Scripts.Render("~/bundles/app")
+        <script>
+            ko.applyBindings(window.app.viewModel);
+        </script>
+    }
 </body>
 </html>
