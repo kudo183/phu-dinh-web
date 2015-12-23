@@ -32,6 +32,12 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/viewModel/xuatViewModel.js",
                         "~/Scripts/app/viewModel/tonKhoViewModel.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/test").Include(
+                        "~/Scripts/app/defineNamespace.js",
+                        "~/Scripts/app/datacontext.js",
+                        "~/Scripts/app/utilsDOM.js",
+                        "~/Scripts/app/viewModel/testViewModel.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/Site.css"));
         }

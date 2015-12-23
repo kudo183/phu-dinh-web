@@ -1,0 +1,45 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/ajaxlogin")
+    <title>test</title>
+</head>
+<body>
+    @functions{
+        public string GetAntiForgeryToken()
+        {
+            string cookieToken, formToken;
+            AntiForgery.GetTokens(null, out cookieToken, out formToken);
+            return cookieToken + ":" + formToken;
+        }
+            }
+    <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
+    @if (@User.Identity.IsAuthenticated)
+    {
+        <div id="mainContent">
+            <div data-bind="with: testViewModel">
+                <div data-bind="with: gridViewModel">
+                    <!--ko foreach: items-->
+                    <div class="row" data-bind="foreach: $parent.columns">
+                        <div class="cell"><span data-bind="text: $parent[cellValueProperty]"></span></div>
+                    </div>
+                    <!--/ko-->
+                </div>
+            </div>
+        </div>
+        @Scripts.Render("~/bundles/test")
+        <script>
+            $(document).ready(function () {
+                ko.applyBindings(window.app.viewModel);
+            });
+        </script>
+    }
+</body>
+</html>

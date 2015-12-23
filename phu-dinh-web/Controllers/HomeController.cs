@@ -12,5 +12,10 @@ namespace phu_dinh_web.Controllers
         {
             return View();
         }
+
+        public ActionResult Test(string returnUrl)
+        {
+            return View();
+        }
     }
 }

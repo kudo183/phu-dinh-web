@@ -145,6 +145,7 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\app\datacontext.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
+    <Content Include="Scripts\app\viewModel\testViewModel.js" />
     <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
     <Content Include="Scripts\app\view\tonKhoView.js" />
@@ -186,6 +187,7 @@
     <Content Include="Scripts\jquery-2.1.4.min.map" />
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\_ChangePassword.cshtml" />
+    <Content Include="Views\Home\Test.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
