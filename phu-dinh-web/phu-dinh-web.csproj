@@ -152,6 +152,7 @@
     <Content Include="Scripts\app\viewModel\tonKhoViewModel.js" />
     <Content Include="Scripts\app\utilsDOM.js" />
     <Content Include="Scripts\app\view\xuatView.js" />
+    <Content Include="Scripts\app\view\_utils.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
     <Content Include="Scripts\knockout-3.4.0.debug.js" />
