@@ -41,6 +41,9 @@
 
             $(document).ready(function () {
                 $("#xuatView").hide();
+                $(".datePicker").datepicker({
+                    dateFormat: "dd/mm/yy"
+                });
                 ko.applyBindings(window.app.viewModel);
             });
         </script>

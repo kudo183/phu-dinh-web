@@ -2,6 +2,10 @@
     padding-top: 40px;
 }
 
+span {
+    white-space: pre;
+}
+
 #headerMenuView {
     position: fixed;
     left: 0px;
@@ -81,3 +85,9 @@ fieldset {
     border: 1px solid #e8eef4;
     padding: 5px;
 }
+
+.datePicker {
+    width: 80px;
+}
+/*jquery ui datepicker size*/
+div.ui-datepicker, .ui-datepicker input{font-size:62.5%;}
