@@ -24,6 +24,9 @@
                 itemValue: "ma",
                 value: ko.observable()
             },
+            ngay: {
+                value: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
+            },
             action: function (root) {
                 var context = root.filter;
                 var filter = {};
@@ -44,6 +47,15 @@
                         value: fLoaiHang
                     });
                 }
+                var fNgay = context.ngay.value();
+                if (fNgay !== "") {
+                    filter.whereOptions.push({
+                        predicate: "=",
+                        propertyPath: "Ngay",
+                        value: fNgay
+                    });
+                }
+                filter.orderOptions = [{ propertyPath: "tMatHang.TenMatHangDayDu", isAscending: true }];
                 root.load(filter);
             }
         },
@@ -65,7 +77,7 @@
         });
 
     viewModel.filter.action(viewModel);
-        
+
     return viewModel;
 
     function load(filter) {
