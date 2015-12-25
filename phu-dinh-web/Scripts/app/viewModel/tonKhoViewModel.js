@@ -1,6 +1,6 @@
 ﻿window.app.viewModel.tonKhoViewModel = (function (datacontext) {
     var viewModel = {
-        gridViewModel: {
+        content: {
             items: ko.observableArray(),
             columns: []
         },
@@ -15,20 +15,20 @@
                 ],
                 itemText: "tenKho",
                 itemValue: "maKho",
-                selected: ko.observable(1)
+                value: ko.observable(1)
             },
             loaiHang: {
                 caption: "...",
                 items: ko.observableArray(),
                 itemText: "tenLoai",
                 itemValue: "ma",
-                selected: ko.observable()
+                value: ko.observable()
             },
-            load: function (root) {
+            action: function (root) {
                 var context = root.filter;
                 var filter = {};
                 filter.whereOptions = [];
-                var fKho = context.kho.selected();
+                var fKho = context.kho.value();
                 if (fKho !== undefined) {
                     filter.whereOptions.push({
                         predicate: "=",
@@ -36,7 +36,7 @@
                         value: fKho
                     });
                 }
-                var fLoaiHang = context.loaiHang.selected();
+                var fLoaiHang = context.loaiHang.value();
                 if (fLoaiHang !== undefined) {
                     filter.whereOptions.push({
                         predicate: "=",
@@ -50,8 +50,8 @@
         load: load
     };
 
-    viewModel.gridViewModel.columns.push({ cellValueProperty: "tenMatHang" });
-    viewModel.gridViewModel.columns.push({ cellValueProperty: "soLuong" });
+    viewModel.content.columns.push({ cellValueProperty: "tenMatHang" });
+    viewModel.content.columns.push({ cellValueProperty: "soLuong" });
 
     datacontext.getList(datacontext.rLoaiHangUrl("GetrLoaiHangs"))
         .done(function (data) {
@@ -64,6 +64,10 @@
             alert(error);
         });
 
+    viewModel.filter.action(viewModel);
+        
+    return viewModel;
+
     function load(filter) {
         datacontext.getList(datacontext.tTonKhoUrl("GettTonKhoes"), filter)
         .done(function (data) {
@@ -71,14 +75,10 @@
             for (var i = 0; i < data.length; i++) {
                 items.push(data[i]);
             }
-            viewModel.gridViewModel.items(items);
+            viewModel.content.items(items);
         }).fail(function (error) {
             alert(error);
         });
     }
-
-    load();
-
-    return viewModel;
 
 })(window.app.datacontext);
