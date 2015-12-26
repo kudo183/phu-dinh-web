@@ -48,11 +48,11 @@
         if (tag === "select") {
             container.appendChild(window.app.utilsDOM.createElement("select", {},
                 "options: items, optionsText: itemText, optionsValue: itemValue, value: value"));
-        }else if (tag === "selectAllowBlank") {
+        } else if (tag === "selectAllowBlank") {
             container.appendChild(window.app.utilsDOM.createElement("select", {},
                 "optionsCaption: caption, options: items, optionsText: itemText, optionsValue: itemValue, value: value"));
-        }else if (tag === "date") {
-            var dateInput = window.app.utilsDOM.createElement("input", { type: "text" },
+        } else if (tag === "date") {
+            var dateInput = window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
                 "value: value");
             window.app.utilsDOM.addClass(dateInput, "datePicker");
             container.appendChild(dateInput);
