@@ -4,20 +4,25 @@
     };
     return utils;
 
-    function createReadOnlyGridView(id, modelName, filter) {
+    function createReadOnlyGridView(id, modelName, filter, style) {
         var view = window.app.utilsDOM.createElement("div", { id: id }, "with: " + modelName);
         view.appendChild(createFilter(filter));
-        view.appendChild(createGridViewContent());
+        view.appendChild(createGridViewContent(style));
         $(view).hide();
         return view;
     };
 
-    function createGridViewContent() {
+    function createGridViewContent(style) {
         var view = window.app.utilsDOM.createElement("div", {}, "with: content");
         var koItems = window.app.utilsDOM.createComment(" ko foreach: items ");
-        var row = window.app.utilsDOM.createElement("div", {}, "foreach: $parent.columns");
+        var row;
+        if (style === "row") {
+            row = window.app.utilsDOM.createElement("div", {}, "foreach: $parent.columns, css: css");
+        } else {
+            row = window.app.utilsDOM.createElement("div", {}, "foreach: $parent.columns");
+        }
         window.app.utilsDOM.addClass(row, "row");
-        var cell = window.app.utilsDOM.createElement("div", {});
+        var cell = window.app.utilsDOM.createElement("div", {}, "css: $parent[css]");
         window.app.utilsDOM.addClass(cell, "cell");
         var cellText = window.app.utilsDOM.createElement("span", {}, "text: $parent[cellValueProperty]");
         var endKoItems = window.app.utilsDOM.createComment(" /ko ");

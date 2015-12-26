@@ -3,7 +3,7 @@
         var view = window.app.view.utils.createReadOnlyGridView(id, "xuatViewModel", [
                 { type: "select", name: "kho" },
                 { type: "date", name: "ngay" }
-        ]);
+        ], "row");
         return view;
     };
 })();

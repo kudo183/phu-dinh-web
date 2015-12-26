@@ -108,6 +108,10 @@ fieldset {
     cursor: pointer;
 }
 
+.underlineText {
+    text-decoration: underline;
+}
+
 .selectedMenuItem {
     color: navy;
     font-weight: bold;

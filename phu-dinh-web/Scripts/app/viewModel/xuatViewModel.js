@@ -61,10 +61,10 @@
             for (var i = 0; i < data.length; i++) {
                 var length = Number(data[i]);
                 var end = length + i;
-                items.push({ text: data[i + 1] });
+                items.push({ text: data[i + 1], css: "underlineText" });
                 i++;
                 for (; i < end; i++) {
-                    items.push({ text: "\t" + data[i + 1] });
+                    items.push({ text: "\t" + data[i + 1], css: "" });
                 }
             }
             viewModel.content.items(items);
