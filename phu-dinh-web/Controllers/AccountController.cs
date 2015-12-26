@@ -25,6 +25,12 @@ namespace phu_dinh_web.Controllers
         {
             if (ModelState.IsValid)
             {
+                if (WebSecurity.IsConfirmed(model.UserName) == false)
+                {
+                    ModelState.AddModelError("", "User is not activated, please contact admin for help.");
+                    return Json(new { errors = GetErrorsFromModelState() });
+                }
+
                 if (WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
                 {
                     FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
@@ -48,7 +54,7 @@ namespace phu_dinh_web.Controllers
         public ActionResult LogOff()
         {
             WebSecurity.Logout();
-            return Json(new {success = true});
+            return Json(new { success = true });
         }
 
         //
@@ -63,10 +69,8 @@ namespace phu_dinh_web.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
-                    WebSecurity.Login(model.UserName, model.Password);
+                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password, null, true);
 
-                    FormsAuthentication.SetAuthCookie(model.UserName, createPersistentCookie: false);
                     return Json(new { success = true, redirect = returnUrl });
                 }
                 catch (MembershipCreateUserException e)
