@@ -43,8 +43,6 @@ span {
     margin: 0 8px;
 }
 
-#headerMenuView > a,
-#headerMenuView > ul > li > a,
 #registerPanel a,
 #loginPanel a {
     color: navy;
@@ -89,5 +87,19 @@ fieldset {
 .datePicker {
     width: 80px;
 }
+
+.menuItem {
+    color: navy;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.selectedMenuItem {
+    color: navy;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
 /*jquery ui datepicker size*/
-div.ui-datepicker, .ui-datepicker input{font-size:62.5%;}
+div.ui-datepicker, .ui-datepicker input{font-size:70%;}

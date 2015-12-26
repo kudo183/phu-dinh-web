@@ -8,6 +8,7 @@
         var view = window.app.utilsDOM.createElement("div", { id: id }, "with: " + modelName);
         view.appendChild(createFilter(filter));
         view.appendChild(createGridViewContent());
+        $(view).hide();
         return view;
     };
 
