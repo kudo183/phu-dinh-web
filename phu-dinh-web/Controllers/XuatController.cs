@@ -70,7 +70,7 @@ namespace phu_dinh_web.Controllers
             foreach (var donHang in query.ToList())
             {
                 result.Add((donHang.tChiTietDonHangs.Count + 1).ToString("N0"));
-                result.Add(donHang.rKhoHang.TenKho + " => " + donHang.rKhachHang.TenKhachHang);
+                result.Add(donHang.rKhachHang.TenKhachHang);
                 foreach (var chiTietDonHang in donHang.tChiTietDonHangs)
                 {
                     result.Add(string.Format("{0,-5:N0}", chiTietDonHang.SoLuong) + chiTietDonHang.tMatHang.TenMatHangDayDu);

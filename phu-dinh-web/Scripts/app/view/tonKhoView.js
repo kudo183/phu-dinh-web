@@ -3,7 +3,7 @@
         var view = window.app.view.utils.createReadOnlyGridView(id, "tonKhoViewModel", [
                 { type: "select", name: "kho" },
                 { type: "date", name: "ngay" },
-                { type: "select", name: "loaiHang" }
+                { type: "selectAllowBlank", name: "loaiHang" }
         ]);
         return view;
     };

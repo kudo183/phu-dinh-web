@@ -6,7 +6,6 @@
         },
         filter: {
             kho: {
-                caption: "...",
                 items: [
                     {
                         maKho: 1,
