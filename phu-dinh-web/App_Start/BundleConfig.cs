@@ -22,6 +22,7 @@ namespace phu_dinh_web.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/view").Include(
                         "~/Scripts/jquery-ui.min.js",
+                        "~/Scripts/datepicker-vi.js",
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
