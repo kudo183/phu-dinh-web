@@ -1,5 +1,18 @@
 ﻿body {
     padding-top: 40px;
+    font-size: 1.2em;
+}
+
+select {
+    font-size: 0.8em;
+    height: 27px;
+}
+
+input {
+    font-size: 0.8em;
+    height: 25px;
+    padding-bottom: 0px;
+    padding-top: 0px;
 }
 
 span {
