@@ -29,7 +29,7 @@
                 Ma = Ma,
                 MaKhoHang = MaKhoHang,
                 MaMatHang = MaMatHang,
-                //Ngay = Ngay,
+                Ngay = Ngay,
                 SoLuong = SoLuong,
                 SoLuongCu = SoLuongCu
             };
