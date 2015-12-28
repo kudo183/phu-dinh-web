@@ -22,7 +22,7 @@
             row = window.app.utilsDOM.createElement("div", {}, "foreach: $parent.columns");
         }
         window.app.utilsDOM.addClass(row, "row");
-        var cell = window.app.utilsDOM.createElement("div", {}, "css: $parent[css]");
+        var cell = window.app.utilsDOM.createElement("div", {});
         window.app.utilsDOM.addClass(cell, "cell");
         var cellText = window.app.utilsDOM.createElement("span", {}, "text: $parent[cellValueProperty]");
         var endKoItems = window.app.utilsDOM.createComment(" /ko ");
