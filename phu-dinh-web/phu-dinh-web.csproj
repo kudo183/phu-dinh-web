@@ -172,6 +172,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\CanhBaoTonKhoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoaiHangController.cs" />
     <Compile Include="Controllers\TonkhoController.cs" />
@@ -182,6 +183,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\rCanhBaoTonKhoDto.cs" />
     <Compile Include="Models\rLoaiHangDto.cs" />
     <Compile Include="Models\tTonKhoDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -58,6 +58,7 @@
                 root.load(filter);
             }
         },
+        canhBaoTonKho: {},
         load: load
     };
 
@@ -75,6 +76,20 @@
             alert(error);
         });
 
+    datacontext.getList(datacontext.rCanhBaoTonKhoUrl("GetrCanhBaoTonKhoes"))
+        .done(function (data) {
+            for (var i = 0; i < data.length; i++) {
+                viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
+
+                viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] = {
+                    tonCaoNhat: data[i].tonCaoNhat,
+                    tonThapNhat: data[i].tonThapNhat,
+                };
+            }
+        }).fail(function (error) {
+            alert(error);
+        });
+
     viewModel.filter.action(viewModel);
 
     return viewModel;
@@ -84,6 +99,23 @@
         .done(function (data) {
             var items = [];
             for (var i = 0; i < data.length; i++) {
+                if (viewModel.canhBaoTonKho[data[i].maKhoHang] === undefined
+                || viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] === undefined)
+                    continue;
+
+                var range = viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang];
+                var soLuong = data[i].soLuong;
+                
+                if (soLuong == 0 && range.tonThapNhat == 0)
+                    continue;
+                
+                if (soLuong < range.tonThapNhat) {
+                    data[i].css = "warningLower";
+                } else if (soLuong > range.tonCaoNhat) {
+                    data[i].css = "warningUpper";
+                } else {
+                    data[i].css = "";
+                }
                 items.push(data[i]);
             }
             viewModel.content.items(items);

@@ -4,7 +4,7 @@
                 { type: "select", name: "kho" },
                 { type: "date", name: "ngay" },
                 { type: "selectAllowBlank", name: "loaiHang" }
-        ]);
+        ], "row");
         return view;
     };
 })();

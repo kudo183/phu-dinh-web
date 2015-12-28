@@ -112,6 +112,14 @@ fieldset {
     text-decoration: underline;
 }
 
+.warningUpper {
+    color: blue;
+}
+
+.warningLower {
+    color: red;
+}
+
 .selectedMenuItem {
     color: navy;
     font-weight: bold;
