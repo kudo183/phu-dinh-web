@@ -1,68 +1,14 @@
-﻿@using System.Web.Optimization
-@{
-    ViewBag.Title = "Quan Ly";
+﻿@{
+    ViewBag.Title = "Luoi thep Vinh Phat";
 }
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/knockout")
-    @Scripts.Render("~/bundles/ajaxlogin")
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    @functions{
-        public string GetAntiForgeryToken()
-        {
-            string cookieToken, formToken;
-            AntiForgery.GetTokens(null, out cookieToken, out formToken);
-            return cookieToken + ":" + formToken;
-        }
-            }
-    <input id="antiForgeryToken" type="hidden" value="@GetAntiForgeryToken()" />
-
-    @if (@User.Identity.IsAuthenticated)
-    {
-        <div id="headerContent" ></div>
-        <div id="mainContent" ></div>
-        @Scripts.Render("~/bundles/view")
-        @Scripts.Render("~/bundles/viewModel")
-        <script>
-            $("#headerContent").append(window.app.view.headerMenuView("headerMenuView", [
-                { text: "Ton Kho", id: "#tonKhoView" },
-                { text: "Xuat", id: "#xuatView" }
-            ]));
-            
-            $("#mainContent").append(window.app.view.tonKhoView("tonKhoView"));
-            $("#mainContent").append(window.app.view.xuatView("xuatView"));
-
-            $(document).ready(function () {
-                $(".datePicker").datepicker({
-                    dateFormat: "dd/mm/yy"
-                });
-                ko.applyBindings(window.app.viewModel);
-            });
-        </script>
-    }
-    else
-    {
-        <div id="mainContent">
-            <div id="loginPanel">
-                <section id="localLoginPanel">
-                    <h2>Log in</h2>
-                    @Html.Partial("_Login")
-                </section>
-                <p>First time here? <a id="showRegister">Sign up</a></p>
-            </div>
-            <div id="registerPanel">
-                <h2>Sign up</h2>
-                @Html.Partial("_Register")
-                <p>Already signed up? <a id="showLogin">Log in</a></p>
-            </div>
-        </div>
-    }
+    <h1>Đang xây dựng</h1>
 </body>
 </html>

@@ -175,6 +175,7 @@
     <Compile Include="Controllers\CanhBaoTonKhoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoaiHangController.cs" />
+    <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Controllers\TonkhoController.cs" />
     <Compile Include="Controllers\XuatController.cs" />
     <Compile Include="Filters\ValidateHttpAntiForgeryTokenAttribute.cs" />
@@ -198,6 +199,7 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\_ChangePassword.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\QuanLy\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
