@@ -100,8 +100,11 @@
             var items = [];
             for (var i = 0; i < data.length; i++) {
                 if (viewModel.canhBaoTonKho[data[i].maKhoHang] === undefined
-                || viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] === undefined)
+                || viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] === undefined) {
+                    data[i].css = "";
+                    items.push(data[i]);
                     continue;
+                }
 
                 var range = viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang];
                 var soLuong = data[i].soLuong;
