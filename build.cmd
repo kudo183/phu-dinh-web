@@ -1,0 +1,1 @@
+MsBuild.exe %~dp0\phu-dinh-web.sln /m /t:ReBuild /p:Configuration=Release
