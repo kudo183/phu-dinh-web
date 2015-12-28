@@ -22,28 +22,6 @@
             },
             ngay: {
                 value: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
-            },
-            action: function (root) {
-                var context = root.filter;
-                var filter = {};
-                filter.whereOptions = [];
-                var fKho = context.kho.value();
-                if (fKho !== undefined) {
-                    filter.whereOptions.push({
-                        predicate: "=",
-                        propertyPath: "rKhoHang.ma",
-                        value: fKho
-                    });
-                }
-                var fNgay = context.ngay.value();
-                if (fNgay !== "") {
-                    filter.whereOptions.push({
-                        predicate: "=",
-                        propertyPath: "Ngay",
-                        value: fNgay
-                    });
-                }
-                root.load(filter);
             }
         },
         load: load
@@ -51,23 +29,57 @@
 
     viewModel.content.columns.push({ cellValueProperty: "text" });
 
-    viewModel.filter.action(viewModel);
+    load();
+
+    viewModel.filter.kho.value.subscribe(load);
+    viewModel.filter.ngay.value.subscribe(load);
 
     return viewModel;
-    function load(filter) {
+
+    //return void
+    function load() {
+        var filter = createFilter();
         datacontext.getList("/api/xuat/GetXuatAsString", filter)
-        .done(function (data) {
-            var items = [];
-            for (var i = 0; i < data.length; i++) {
-                var length = Number(data[i]);
-                var end = length + i;
-                items.push({ text: data[i + 1], css: "underlineText" });
-                i++;
-                for (; i < end; i++) {
-                    items.push({ text: "\t" + data[i + 1], css: "" });
-                }
+        .done(loadDone);
+    }
+
+    //return filter
+    function createFilter() {
+        var context = viewModel.filter;
+        var filter = {};
+        filter.whereOptions = [];
+        var fKho = context.kho.value();
+        if (fKho !== undefined) {
+            filter.whereOptions.push({
+                predicate: "=",
+                propertyPath: "rKhoHang.ma",
+                value: fKho
+            });
+        }
+        var fNgay = context.ngay.value();
+        if (fNgay !== "") {
+            filter.whereOptions.push({
+                predicate: "=",
+                propertyPath: "Ngay",
+                value: fNgay
+            });
+        }
+
+        return filter;
+    }
+
+    //return void
+    function loadDone(data) {
+        var items = [];
+        for (var i = 0; i < data.length; i++) {
+            var length = Number(data[i]);
+            var end = length + i;
+            items.push({ text: data[i + 1], css: "underlineText" });
+            i++;
+            for (; i < end; i++) {
+                items.push({ text: "\t" + data[i + 1], css: "" });
             }
-            viewModel.content.items(items);
-        });
+        }
+        viewModel.content.items(items);
     }
 })(window.app.datacontext);

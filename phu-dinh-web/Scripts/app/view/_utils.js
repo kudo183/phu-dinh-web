@@ -41,10 +41,7 @@
         for (var i = 0; i < filter.length; i++) {
             appandFilter(view, filter[i].type, filter[i].name);
         }
-        var buttonOk = window.app.utilsDOM.createElement("button", {}, "click: function (data, event) { action($parent, data, event) }", "OK");
-
-        view.appendChild(buttonOk);
-
+        
         return view;
     }
 

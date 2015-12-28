@@ -25,37 +25,6 @@
             },
             ngay: {
                 value: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
-            },
-            action: function (root) {
-                var context = root.filter;
-                var filter = {};
-                filter.whereOptions = [];
-                var fKho = context.kho.value();
-                if (fKho !== undefined) {
-                    filter.whereOptions.push({
-                        predicate: "=",
-                        propertyPath: "rKhoHang.ma",
-                        value: fKho
-                    });
-                }
-                var fLoaiHang = context.loaiHang.value();
-                if (fLoaiHang !== undefined) {
-                    filter.whereOptions.push({
-                        predicate: "=",
-                        propertyPath: "tMatHang.MaLoai",
-                        value: fLoaiHang
-                    });
-                }
-                var fNgay = context.ngay.value();
-                if (fNgay !== "") {
-                    filter.whereOptions.push({
-                        predicate: "=",
-                        propertyPath: "Ngay",
-                        value: fNgay
-                    });
-                }
-                filter.orderOptions = [{ propertyPath: "tMatHang.TenMatHangDayDu", isAscending: true }];
-                root.load(filter);
             }
         },
         canhBaoTonKho: {},
@@ -90,41 +59,84 @@
             alert(error);
         });
 
-    viewModel.filter.action(viewModel);
+    load();
 
+    viewModel.filter.kho.value.subscribe(load);
+    viewModel.filter.loaiHang.value.subscribe(load);
+    viewModel.filter.ngay.value.subscribe(load);
+    
     return viewModel;
 
-    function load(filter) {
+    //return void
+    function load() {
+        var filter = createFilter();
+        
         datacontext.getList(datacontext.tTonKhoUrl("GettTonKhoes"), filter)
-        .done(function (data) {
-            var items = [];
-            for (var i = 0; i < data.length; i++) {
-                if (viewModel.canhBaoTonKho[data[i].maKhoHang] === undefined
-                || viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] === undefined) {
-                    data[i].css = "";
-                    items.push(data[i]);
-                    continue;
-                }
-
-                var range = viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang];
-                var soLuong = data[i].soLuong;
-                
-                if (soLuong == 0 && range.tonThapNhat == 0)
-                    continue;
-                
-                if (soLuong < range.tonThapNhat) {
-                    data[i].css = "warningLower";
-                } else if (soLuong > range.tonCaoNhat) {
-                    data[i].css = "warningUpper";
-                } else {
-                    data[i].css = "";
-                }
-                items.push(data[i]);
-            }
-            viewModel.content.items(items);
-        }).fail(function (error) {
+        .done(loadDone).fail(function (error) {
             alert(error);
         });
     }
 
+    //return filter
+    function createFilter() {
+        var context = viewModel.filter;
+        var filter = {};
+        filter.whereOptions = [];
+        var fKho = context.kho.value();
+        if (fKho !== undefined) {
+            filter.whereOptions.push({
+                predicate: "=",
+                propertyPath: "rKhoHang.ma",
+                value: fKho
+            });
+        }
+        var fLoaiHang = context.loaiHang.value();
+        if (fLoaiHang !== undefined) {
+            filter.whereOptions.push({
+                predicate: "=",
+                propertyPath: "tMatHang.MaLoai",
+                value: fLoaiHang
+            });
+        }
+        var fNgay = context.ngay.value();
+        if (fNgay !== "") {
+            filter.whereOptions.push({
+                predicate: "=",
+                propertyPath: "Ngay",
+                value: fNgay
+            });
+        }
+        filter.orderOptions = [{ propertyPath: "tMatHang.TenMatHangDayDu", isAscending: true }];
+
+        return filter;
+    }
+    
+    //return void
+    function loadDone (data) {
+        var items = [];
+        for (var i = 0; i < data.length; i++) {
+            if (viewModel.canhBaoTonKho[data[i].maKhoHang] === undefined
+            || viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] === undefined) {
+                data[i].css = "";
+                items.push(data[i]);
+                continue;
+            }
+
+            var range = viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang];
+            var soLuong = data[i].soLuong;
+                
+            if (soLuong == 0 && range.tonThapNhat == 0)
+                continue;
+                
+            if (soLuong < range.tonThapNhat) {
+                data[i].css = "warningLower";
+            } else if (soLuong > range.tonCaoNhat) {
+                data[i].css = "warningUpper";
+            } else {
+                data[i].css = "";
+            }
+            items.push(data[i]);
+        }
+        viewModel.content.items(items);
+    }
 })(window.app.datacontext);
