@@ -101,11 +101,16 @@ fieldset {
     width: 80px;
 }
 
-.menuItem {
+a.menuItem {
     color: navy;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
+    margin-left: 10px;
+}
+
+a.selected {
+    text-decoration: underline;
 }
 
 .underlineText {
@@ -120,11 +125,5 @@ fieldset {
     color: red;
 }
 
-.selectedMenuItem {
-    color: navy;
-    font-weight: bold;
-    text-decoration: underline;
-    cursor: pointer;
-}
 /*jquery ui datepicker size*/
 div.ui-datepicker, .ui-datepicker input{font-size:70%;}
