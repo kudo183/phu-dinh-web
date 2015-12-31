@@ -45,7 +45,9 @@ namespace phu_dinh_web.App_Start
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/jquery-ui.min.css",
-                "~/Content/Site.css"));
+                "~/Content/headerMenu.css",
+                "~/Content/Site.css",
+                "~/Content/media.css"));
         }
     }
 }

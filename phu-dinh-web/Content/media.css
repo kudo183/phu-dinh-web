@@ -1,0 +1,14 @@
+﻿@media screen and (max-width: 40em) {
+    #headerMenuViewLarge {
+        display:none;
+    }
+    
+    #headerMenuViewMobile {
+        display:block;
+    }
+
+    body {
+        padding-top: 20px;
+        font-size: 1.2em;
+    }
+}
