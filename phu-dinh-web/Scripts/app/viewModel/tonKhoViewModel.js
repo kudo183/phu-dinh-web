@@ -28,49 +28,58 @@
             }
         },
         canhBaoTonKho: {},
-        load: load
+        load: load,
+        init: init,
+        initialized: false
     };
 
     viewModel.content.columns.push({ cellValueProperty: "tenMatHang" });
     viewModel.content.columns.push({ cellValueProperty: "soLuong" });
 
-    datacontext.getList(datacontext.rLoaiHangUrl("GetrLoaiHangs"))
-        .done(function (data) {
-            var items = [];
-            for (var i = 0; i < data.length; i++) {
-                items.push(data[i]);
-            }
-            viewModel.filter.loaiHang.items(items);
-        }).fail(function (error) {
-            alert(error);
-        });
-
-    datacontext.getList(datacontext.rCanhBaoTonKhoUrl("GetrCanhBaoTonKhoes"))
-        .done(function (data) {
-            for (var i = 0; i < data.length; i++) {
-                viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
-
-                viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] = {
-                    tonCaoNhat: data[i].tonCaoNhat,
-                    tonThapNhat: data[i].tonThapNhat,
-                };
-            }
-        }).fail(function (error) {
-            alert(error);
-        });
-
-    load();
-
     viewModel.filter.kho.value.subscribe(load);
     viewModel.filter.loaiHang.value.subscribe(load);
     viewModel.filter.ngay.value.subscribe(load);
-    
+
+    function init() {
+        if (viewModel.initialized === true)
+            return;
+
+        datacontext.getList(datacontext.rLoaiHangUrl("GetrLoaiHangs"))
+            .done(function (data) {
+                var items = [];
+                for (var i = 0; i < data.length; i++) {
+                    items.push(data[i]);
+                }
+                viewModel.filter.loaiHang.items(items);
+            }).fail(function (error) {
+                alert(error);
+            });
+
+        datacontext.getList(datacontext.rCanhBaoTonKhoUrl("GetrCanhBaoTonKhoes"))
+            .done(function (data) {
+                for (var i = 0; i < data.length; i++) {
+                    viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
+
+                    viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] = {
+                        tonCaoNhat: data[i].tonCaoNhat,
+                        tonThapNhat: data[i].tonThapNhat,
+                    };
+                }
+            }).fail(function (error) {
+                alert(error);
+            });
+
+        load();
+
+        viewModel.initialized = true;
+    }
+
     return viewModel;
 
     //return void
     function load() {
         var filter = createFilter();
-        
+
         datacontext.getList(datacontext.tTonKhoUrl("GettTonKhoes"), filter)
         .done(loadDone).fail(function (error) {
             alert(error);
@@ -110,9 +119,9 @@
 
         return filter;
     }
-    
+
     //return void
-    function loadDone (data) {
+    function loadDone(data) {
         var items = [];
         for (var i = 0; i < data.length; i++) {
             if (viewModel.canhBaoTonKho[data[i].maKhoHang] === undefined
@@ -124,10 +133,10 @@
 
             var range = viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang];
             var soLuong = data[i].soLuong;
-                
+
             if (soLuong == 0 && range.tonThapNhat == 0)
                 continue;
-                
+
             if (soLuong < range.tonThapNhat) {
                 data[i].css = "warningLower";
             } else if (soLuong > range.tonCaoNhat) {

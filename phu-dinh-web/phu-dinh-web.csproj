@@ -153,6 +153,7 @@
     <Content Include="Scripts\app\defineNamespace.js" />
     <Content Include="Scripts\app\viewModel\testViewModel.js" />
     <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
+    <Content Include="Scripts\app\viewModel\_utils.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
     <Content Include="Scripts\app\view\tonKhoView.js" />
     <Content Include="Scripts\app\viewModel\tonKhoViewModel.js" />

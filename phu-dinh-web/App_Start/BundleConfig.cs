@@ -20,13 +20,16 @@ namespace phu_dinh_web.App_Start
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/view").Include(
+            bundles.Add(new ScriptBundle("~/bundles/common").Include(
                         "~/Scripts/jquery-ui.min.js",
                         "~/Scripts/datepicker-vi.js",
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
                         "~/Scripts/app/view/_utils.js",
+                        "~/Scripts/app/viewModel/_utils.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/view").Include(
                         "~/Scripts/app/view/headerMenuView.js",
                         "~/Scripts/app/view/xuatView.js",
                         "~/Scripts/app/view/tonKhoView.js"));

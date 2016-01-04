@@ -27,7 +27,8 @@
             if (i === 0) {
                 $(menuItems[0]).addClass("selected");
                 $(items[0].id).ready(function () {
-                    $(items[0].attr.viewId).show();
+                    var viewId = items[0].attr.viewId;
+                    initAndShow(viewId);
                 });
             }
 
@@ -35,7 +36,7 @@
                 for (var j = 0; j < menuItems.length; j++) {
                     var selectedId = $(menuItems[j]).attr("viewId");
                     if ($(this).attr("viewId") === selectedId) {
-                        $(selectedId).show();
+                        initAndShow(selectedId);
                         $(menuItems[j]).addClass("selected");
                     } else {
                         $(selectedId).hide();
@@ -76,7 +77,8 @@
 
             if (i === 0) {
                 $(items[0].id).ready(function () {
-                    $(items[0].attr.viewId).show();
+                    var viewId = items[0].attr.viewId;
+                    initAndShow(viewId);
                     $(selectedItem).text(items[0].text);
                 });
             }
@@ -85,7 +87,7 @@
                 for (var j = 0; j < menuItems.length; j++) {
                     var selectedId = $(menuItems[j]).attr("viewId");
                     if ($(this).attr("viewId") === selectedId) {
-                        $(selectedId).show();
+                        initAndShow(selectedId);
                         $(selectedItem).text($(menuItems[j]).text());
                     } else {
                         $(selectedId).hide();
@@ -97,5 +99,10 @@
         
         menuWrapper.appendChild(ul);
         view.appendChild(menuWrapper);
+    }
+
+    function initAndShow(viewId) {
+        window.app.viewModel.utils.initViewModel(viewId);
+        $(viewId).show();
     }
 })();

@@ -24,18 +24,26 @@
                 value: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
             }
         },
-        load: load
+        load: load,
+        init: init,
+        initialized: false
     };
 
     viewModel.content.columns.push({ cellValueProperty: "text" });
-
-    load();
-
+    
     viewModel.filter.kho.value.subscribe(load);
     viewModel.filter.ngay.value.subscribe(load);
 
     return viewModel;
 
+    function init() {
+        if (viewModel.initialized === true)
+            return;
+        
+        load();
+        viewModel.initialized = true;
+    }
+    
     //return void
     function load() {
         var filter = createFilter();
