@@ -7,7 +7,7 @@
     };
     return utilsDom;
 
-    function createElement(name, attrs, dataBind, text) {
+    function createElement(name, attrs, dataBind, text, cls) {
         var element = document.createElement(name);
 
         for (var att in attrs) {
@@ -20,6 +20,9 @@
             var n = document.createTextNode(text);
             element.appendChild(n);
         }
+
+        addClass(element, cls);
+        
         return element;
     }
 

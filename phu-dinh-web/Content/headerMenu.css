@@ -32,8 +32,37 @@ a.selected {
     text-decoration: underline;
 }
 
+#refreshButton {
+    background-image: url("images/refresh.png");
+    background-color: transparent;
+    background-position: center center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: medium none;
+    padding: 0px;
+    width: 24px;
+    height: 21px;
+}
+
 #headerMenuViewMobile {
     display: none;
+}
+
+#mobileRefreshButton {
+    background-image: url("images/refresh.png");
+    background-color: transparent;
+    background-position: center center;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: medium none;
+    padding: 0px;
+    margin-top: 2px;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    float: right;
 }
 
 #mobileMenuButton {

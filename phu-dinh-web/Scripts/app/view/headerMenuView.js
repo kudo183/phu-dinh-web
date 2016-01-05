@@ -16,8 +16,7 @@
         for (var i = 0; i < items.length; i++) {
             
             var li = window.app.utilsDOM.createElement("li");
-            var a = window.app.utilsDOM.createElement("a", items[i].attr, undefined, items[i].text);
-            window.app.utilsDOM.addClass(a, "menuItem");
+            var a = window.app.utilsDOM.createElement("a", items[i].attr, undefined, items[i].text,"menuItem");
 
             ul.appendChild(li);
             li.appendChild(a);
@@ -46,6 +45,15 @@
             });
         }
 
+        li = window.app.utilsDOM.createElement("li");
+        var refresh = window.app.utilsDOM.createElement("input", { id: "refreshButton", type: "button", title: "Cap nhat" });
+        $(refresh).click(function () {
+            window.app.viewModel.utils.loadCurrentViewModel();
+        });
+        
+        ul.appendChild(li);
+        li.appendChild(refresh);
+        
         view.appendChild(ul);
     }
 
@@ -59,6 +67,12 @@
         });
         view.appendChild(menu);
 
+        var refresh = window.app.utilsDOM.createElement("input", { id: "mobileRefreshButton", type: "button" });
+        $(refresh).click(function () {
+            window.app.viewModel.utils.loadCurrentViewModel();
+        });
+        view.appendChild(refresh);
+
         var menuWrapper = window.app.utilsDOM.createElement("div", { id: "mobileMenuWapper" });
         $(menuWrapper).hide();
         
@@ -67,8 +81,7 @@
         var menuItems = [];
         for (var i = 0; i < items.length; i++) {
             var li = window.app.utilsDOM.createElement("li");
-            var a = window.app.utilsDOM.createElement("a", items[i].attr, undefined, items[i].text);
-            window.app.utilsDOM.addClass(a, "menuItemMobile");
+            var a = window.app.utilsDOM.createElement("a", items[i].attr, undefined, items[i].text, "menuItemMobile");
 
             ul.appendChild(li);
             li.appendChild(a);
@@ -102,7 +115,8 @@
     }
 
     function initAndShow(viewId) {
-        window.app.viewModel.utils.initViewModel(viewId);
+        window.app.viewModel.utils.setCurrentViewModel(viewId);
+        window.app.viewModel.utils.initCurrentViewModel();
         $(viewId).show();
     }
 })();

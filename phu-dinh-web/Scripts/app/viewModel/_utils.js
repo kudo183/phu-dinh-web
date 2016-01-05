@@ -1,15 +1,21 @@
 ﻿window.app.viewModel.utils = (function () {
     var utils = {
-        getViewModel: getViewModel,
-        initViewModel: initViewModel
+        setCurrentViewModel: setCurrentViewModel,
+        initCurrentViewModel: initCurrentViewModel,
+        loadCurrentViewModel: loadCurrentViewModel,
+        currentViewModel: undefined
     };
     return utils;
-    
-    function getViewModel(viewId) {
-        return window.app.viewModel[viewId.replace("#", "") + "Model"];
+
+    function setCurrentViewModel(viewId) {
+        utils.currentViewModel = window.app.viewModel[viewId.replace("#", "") + "Model"];
     }
-    
-    function initViewModel(viewId) {
-        getViewModel(viewId).init();
+
+    function initCurrentViewModel() {
+        return utils.currentViewModel.init();
+    }
+
+    function loadCurrentViewModel() {
+        return utils.currentViewModel.load();
     }
 })();
