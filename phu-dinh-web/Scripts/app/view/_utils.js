@@ -41,7 +41,7 @@
         for (var i = 0; i < filter.length; i++) {
             appandFilter(view, filter[i].type, filter[i].name);
         }
-        
+
         return view;
     }
 
@@ -54,11 +54,20 @@
             container.appendChild(window.app.utilsDOM.createElement("select", {},
                 "disable: $parents[1].isLoading, optionsCaption: caption, options: items, optionsText: itemText, optionsValue: itemValue, value: value"));
         } else if (tag === "date") {
-            var dateInput = window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
-                "disable: $parents[1].isLoading, value: value");
-            window.app.utilsDOM.addClass(dateInput, "datePicker");
-            container.appendChild(dateInput);
+            container.appendChild(window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
+                "disable: $parents[1].isLoading, value: value", undefined, "datePicker"));
+        } else if (tag === "dateAllowBlank") {
+            container.appendChild(createAllowBlankDateInput());
         }
         container.appendChild(window.app.utilsDOM.createComment(" /ko "));
+    }
+
+    function createAllowBlankDateInput() {
+        var div = window.app.utilsDOM.createElement("div");
+        div.appendChild(window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
+                "disable: (isDisabled() || $parents[1].isLoading()), value: value", undefined, "datePicker"));
+        div.appendChild(window.app.utilsDOM.createElement("input", { type: "checkbox" }, "checked: isDisabled"));
+
+        return div;
     }
 })();
