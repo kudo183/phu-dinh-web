@@ -26,7 +26,8 @@
         },
         load: load,
         init: init,
-        initialized: false
+        initialized: false,
+        isLoading: ko.observable(false)
     };
 
     viewModel.content.columns.push({ cellValueProperty: "text" });
@@ -47,6 +48,7 @@
     //return void
     function load() {
         var filter = createFilter();
+        viewModel.isLoading(true);
         datacontext.getList("/api/xuat/GetXuatAsString", filter)
         .done(loadDone);
     }
@@ -89,5 +91,6 @@
             }
         }
         viewModel.content.items(items);
+        viewModel.isLoading(false);
     }
 })(window.app.datacontext);

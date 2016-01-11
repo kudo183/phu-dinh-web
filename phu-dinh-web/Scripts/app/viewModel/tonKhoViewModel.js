@@ -30,7 +30,8 @@
         canhBaoTonKho: {},
         load: load,
         init: init,
-        initialized: false
+        initialized: false,
+        isLoading: ko.observable(false)
     };
 
     viewModel.content.columns.push({ cellValueProperty: "tenMatHang" });
@@ -79,7 +80,7 @@
     //return void
     function load() {
         var filter = createFilter();
-
+        viewModel.isLoading(true);
         datacontext.getList(datacontext.tTonKhoUrl("GettTonKhoes"), filter)
         .done(loadDone).fail(function (error) {
             alert(error);
@@ -147,5 +148,6 @@
             items.push(data[i]);
         }
         viewModel.content.items(items);
+        viewModel.isLoading(false);
     }
 })(window.app.datacontext);
