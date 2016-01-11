@@ -22,7 +22,14 @@
             },
             ngay: {
                 value: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
-            }
+            },
+            khachHang: {
+                caption: "...",
+                items: ko.observableArray(),
+                itemText: "tenKhachHang",
+                itemValue: "ma",
+                value: ko.observable()
+            },
         },
         load: load,
         init: init,
@@ -34,13 +41,25 @@
     
     viewModel.filter.kho.value.subscribe(load);
     viewModel.filter.ngay.value.subscribe(load);
+    viewModel.filter.khachHang.value.subscribe(load);
 
     return viewModel;
 
     function init() {
         if (viewModel.initialized === true)
             return;
-        
+
+        datacontext.getList(datacontext.rKhachHangUrl("GetrKhachHangs"))
+            .done(function (data) {
+                var items = [];
+                for (var i = 0; i < data.length; i++) {
+                    items.push(data[i]);
+                }
+                viewModel.filter.khachHang.items(items);
+            }).fail(function (error) {
+                alert(error);
+            });
+
         load();
         viewModel.initialized = true;
     }
@@ -74,7 +93,15 @@
                 value: fNgay
             });
         }
-
+        var fKhachHang = context.khachHang.value();
+        if (fKhachHang !== undefined) {
+            filter.whereOptions.push({
+                predicate: "=",
+                propertyPath: "rKhachHang.ma",
+                value: fKhachHang
+            });
+        }
+        
         return filter;
     }
 

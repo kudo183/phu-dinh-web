@@ -2,7 +2,8 @@
     return function (id) {
         var view = window.app.view.utils.createReadOnlyGridView(id, "xuatViewModel", [
                 { type: "select", name: "kho" },
-                { type: "date", name: "ngay" }
+                { type: "date", name: "ngay" },
+                { type: "selectAllowBlank", name: "khachHang" }
         ], "row");
         return view;
     };

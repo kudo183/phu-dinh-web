@@ -4,6 +4,7 @@
         getList: getList,
         saveChanges: saveChanges,
         rLoaiHangUrl: rLoaiHangUrl,
+        rKhachHangUrl: rKhachHangUrl,
         rCanhBaoTonKhoUrl: rCanhBaoTonKhoUrl,
         tTonKhoUrl: tTonKhoUrl
     };
@@ -49,5 +50,6 @@
 
     function rCanhBaoTonKhoUrl(action) { return "/api/canhbaotonkho/" + action; }
     function rLoaiHangUrl(action) { return "/api/loaihang/" + action; }
+    function rKhachHangUrl(action) { return "/api/khachhang/" + action; }
     function tTonKhoUrl(action) { return "/api/tonkho/" + action; }
 })();
