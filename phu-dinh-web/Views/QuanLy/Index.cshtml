@@ -44,7 +44,10 @@
 
             $(document).ready(function () {
                 $(".datePicker").datepicker({
-                    dateFormat: "dd/mm/yy"
+                    dateFormat: "dd/mm/yy",
+                    showButtonPanel: true,
+                    changeMonth: true,
+                    changeYear: true
                 });
                 ko.applyBindings(window.app.viewModel);
             });
