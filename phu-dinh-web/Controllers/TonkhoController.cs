@@ -14,11 +14,11 @@ namespace phu_dinh_web.Controllers
         public IEnumerable<tTonKhoDto> GettTonKhoes(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
-            var now = DateTime.Now.Date;
+            
             const int pageSize = 300;
             int pageCount;
 
-            AddDefaultDateFilter(filter, now);
+            AddDefaultDateFilter(filter, DateTime.Now.Date);
             var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
                 _context.tTonKhoes.Include(p => p.tMatHang)
                 , filter, pageSize, out pageCount);

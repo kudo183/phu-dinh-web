@@ -11,11 +11,11 @@ namespace phu_dinh_web.Controllers
         public List<List<string>> GetXuat(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
-            var now = new DateTime(2015, 12, 10);
+            
             const int pageSize = 300;
             int pageCount;
 
-            AddDefaultDateFilter(filter, now);
+            AddDefaultDateFilter(filter, DateTime.Now.Date);
             var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
                 _context.tDonHangs
                     .Include(p => p.tChiTietDonHangs)
@@ -29,11 +29,11 @@ namespace phu_dinh_web.Controllers
         public List<string> GetXuatAsString(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
-            var now = new DateTime(2015, 12, 10);
+            
             const int pageSize = 300;
             int pageCount;
 
-            AddDefaultDateFilter(filter, now);
+            AddDefaultDateFilter(filter, DateTime.Now.Date);
             var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
                 _context.tDonHangs
                     .Include(p => p.tChiTietDonHangs)
