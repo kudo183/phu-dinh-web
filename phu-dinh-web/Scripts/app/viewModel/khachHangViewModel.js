@@ -35,6 +35,9 @@
         if (viewModel.initialized === true)
             return;
 
+        window.app.view.utils.appendViewToContainer(
+            window.app.view.mainContentID, "khachHangView", viewModel, "khachHangView");
+        
         datacontext.getList(datacontext.rKhachHangUrl("GetrKhachHangs"))
             .done(function (data) {
                 var items = [];

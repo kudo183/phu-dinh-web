@@ -40,19 +40,8 @@
                 { text: "Thoat", attr: { id: "logOff" } }
             ]));
 
-            $("#mainContent").append(window.app.view.tonKhoView("tonKhoView"));
-            $("#mainContent").append(window.app.view.xuatView("xuatView"));
-            $("#mainContent").append(window.app.view.khachHangView("khachHangView"));
-
-            $(document).ready(function () {
-                $(".datePicker").datepicker({
-                    dateFormat: "dd/mm/yy",
-                    showButtonPanel: true,
-                    changeMonth: true,
-                    changeYear: true
-                });
-                ko.applyBindings(window.app.viewModel);
-            });
+            window.app.view.mainContentID = "#mainContent";
+            
         </script>
     }
     else

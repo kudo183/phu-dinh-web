@@ -45,6 +45,9 @@
         if (viewModel.initialized === true)
             return;
 
+        window.app.view.utils.appendViewToContainer(
+            window.app.view.mainContentID, "tonKhoView", viewModel, "tonKhoView");
+        
         datacontext.getList(datacontext.rLoaiHangUrl("GetrLoaiHangs"))
             .done(function (data) {
                 var items = [];

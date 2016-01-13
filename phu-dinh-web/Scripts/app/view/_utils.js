@@ -1,11 +1,18 @@
 ﻿window.app.view.utils = (function () {
     var utils = {
-        createReadOnlyGridView: createReadOnlyGridView
+        createReadOnlyGridView: createReadOnlyGridView,
+        appendViewToContainer: appendViewToContainer
     };
     return utils;
 
-    function createReadOnlyGridView(id, modelName, filter, style) {
-        var view = window.app.utilsDOM.createElement("div", { id: id }, "with: " + modelName);
+    function appendViewToContainer(containerId, viewName, viewModel, viewId) {
+        var view = window.app.view[viewName](viewId);
+        $(containerId).append(view);
+        ko.applyBindings(viewModel, view);
+    }
+
+    function createReadOnlyGridView(id, filter, style) {
+        var view = window.app.utilsDOM.createElement("div", { id: id });
         view.appendChild(createFilter(filter));
         view.appendChild(createGridViewContent(style));
         $(view).hide();
@@ -46,28 +53,45 @@
     }
 
     function appandFilter(container, tag, binding) {
+        var filter;
         container.appendChild(window.app.utilsDOM.createComment((" ko with: {0} ").replace("{0}", binding)));
         if (tag === "select") {
-            container.appendChild(window.app.utilsDOM.createElement("select", {},
-                "disable: $parents[1].isLoading, options: items, optionsText: itemText, optionsValue: itemValue, value: value"));
+            filter = window.app.utilsDOM.createElement("select", {},
+                "disable: $parents[1].isLoading, options: items, optionsText: itemText, optionsValue: itemValue, value: value");
         } else if (tag === "selectAllowBlank") {
-            container.appendChild(window.app.utilsDOM.createElement("select", {},
-                "disable: $parents[1].isLoading, optionsCaption: caption, options: items, optionsText: itemText, optionsValue: itemValue, value: value"));
+            filter = window.app.utilsDOM.createElement("select", {},
+                "disable: $parents[1].isLoading, optionsCaption: caption, options: items, optionsText: itemText, optionsValue: itemValue, value: value");
         } else if (tag === "date") {
-            container.appendChild(window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
-                "disable: $parents[1].isLoading, value: value", undefined, "datePicker"));
+            filter = window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
+                "disable: $parents[1].isLoading, value: value", undefined, "datePicker");
+            initDatePicker(filter);
         } else if (tag === "dateAllowBlank") {
-            container.appendChild(createAllowBlankDateInput());
+            filter = createAllowBlankDateInput();
+        }
+
+        if (filter !== undefined) {
+            container.appendChild(filter);
         }
         container.appendChild(window.app.utilsDOM.createComment(" /ko "));
     }
 
     function createAllowBlankDateInput() {
         var div = window.app.utilsDOM.createElement("div");
-        div.appendChild(window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
-                "disable: (isDisabled() || $parents[1].isLoading()), value: value", undefined, "datePicker"));
+        var datePicker = window.app.utilsDOM.createElement("input", { type: "text", readOnly: "readOnly" },
+                "disable: (isDisabled() || $parents[1].isLoading()), value: value", undefined, "datePicker");
+        initDatePicker(datePicker);
+        div.appendChild(datePicker);
         div.appendChild(window.app.utilsDOM.createElement("input", { type: "checkbox" }, "checked: isDisabled"));
 
         return div;
+    }
+
+    function initDatePicker(element) {
+        $(element).datepicker({
+            dateFormat: "dd/mm/yy",
+            showButtonPanel: true,
+            changeMonth: true,
+            changeYear: true
+        });
     }
 })();
