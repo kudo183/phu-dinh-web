@@ -32,11 +32,13 @@ namespace phu_dinh_web.App_Start
             bundles.Add(new ScriptBundle("~/bundles/view").Include(
                         "~/Scripts/app/view/headerMenuView.js",
                         "~/Scripts/app/view/xuatView.js",
-                        "~/Scripts/app/view/tonKhoView.js"));
+                        "~/Scripts/app/view/tonKhoView.js",
+                        "~/Scripts/app/view/khachHangView.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
                         "~/Scripts/app/viewModel/xuatViewModel.js",
-                        "~/Scripts/app/viewModel/tonKhoViewModel.js"));
+                        "~/Scripts/app/viewModel/tonKhoViewModel.js",
+                        "~/Scripts/app/viewModel/khachHangViewModel.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/test").Include(
                         "~/Scripts/jquery-ui.min.js",

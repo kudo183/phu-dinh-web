@@ -44,6 +44,22 @@ namespace phu_dinh_web.Controllers
             return FormatResultAsString(query);
         }
 
+        public List<string> GetXuatGroupByKhachHangAsString(string json)
+        {
+            var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
+
+            const int pageSize = 30;
+            int pageCount;
+            
+            var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
+                _context.tDonHangs
+                    .Include(p => p.tChiTietDonHangs)
+                    .Include(p => p.rKhoHang)
+                , filter, pageSize, out pageCount);
+
+            return FormatResultGroupByKhachHangAsString(query);
+        }
+
         private List<List<string>> FormatResult(IQueryable<Data.tDonHang> query)
         {
             var result = new List<List<string>>();
@@ -71,6 +87,21 @@ namespace phu_dinh_web.Controllers
             {
                 result.Add((donHang.tChiTietDonHangs.Count + 1).ToString("N0"));
                 result.Add(donHang.rKhachHang.TenKhachHang);
+                foreach (var chiTietDonHang in donHang.tChiTietDonHangs)
+                {
+                    result.Add(string.Format("{0,-5:N0}", chiTietDonHang.SoLuong) + chiTietDonHang.tMatHang.TenMatHangDayDu);
+                }
+            }
+            return result;
+        }
+
+        private List<string> FormatResultGroupByKhachHangAsString(IQueryable<Data.tDonHang> query)
+        {
+            var result = new List<string>();
+            foreach (var donHang in query.ToList())
+            {
+                result.Add((donHang.tChiTietDonHangs.Count + 1).ToString("N0"));
+                result.Add(donHang.Ngay.ToString("dd/MM/yyyy"));
                 foreach (var chiTietDonHang in donHang.tChiTietDonHangs)
                 {
                     result.Add(string.Format("{0,-5:N0}", chiTietDonHang.SoLuong) + chiTietDonHang.tMatHang.TenMatHangDayDu);

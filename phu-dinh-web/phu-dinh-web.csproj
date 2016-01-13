@@ -154,10 +154,12 @@
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\app\datacontext.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
+    <Content Include="Scripts\app\viewModel\khachHangViewModel.js" />
     <Content Include="Scripts\app\viewModel\testViewModel.js" />
     <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
     <Content Include="Scripts\app\viewModel\_utils.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
+    <Content Include="Scripts\app\view\khachHangView.js" />
     <Content Include="Scripts\app\view\tonKhoView.js" />
     <Content Include="Scripts\app\viewModel\tonKhoViewModel.js" />
     <Content Include="Scripts\app\utilsDOM.js" />
