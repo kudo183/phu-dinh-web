@@ -165,6 +165,7 @@
     <Content Include="Scripts\app\utilsDOM.js" />
     <Content Include="Scripts\app\view\xuatView.js" />
     <Content Include="Scripts\app\view\_utils.js" />
+    <Content Include="Scripts\app\webApiUrl.js" />
     <Content Include="Scripts\datepicker-vi.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />

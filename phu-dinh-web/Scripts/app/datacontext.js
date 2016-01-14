@@ -2,11 +2,7 @@
 
     var datacontext = {
         getList: getList,
-        saveChanges: saveChanges,
-        rLoaiHangUrl: rLoaiHangUrl,
-        rKhachHangUrl: rKhachHangUrl,
-        rCanhBaoTonKhoUrl: rCanhBaoTonKhoUrl,
-        tTonKhoUrl: tTonKhoUrl
+        saveChanges: saveChanges
     };
     return datacontext;
 
@@ -45,11 +41,4 @@
         }
         return $.ajax(url, options);
     }
-
-    // routes
-
-    function rCanhBaoTonKhoUrl(action) { return "/api/canhbaotonkho/" + action; }
-    function rLoaiHangUrl(action) { return "/api/loaihang/" + action; }
-    function rKhachHangUrl(action) { return "/api/khachhang/" + action; }
-    function tTonKhoUrl(action) { return "/api/tonkho/" + action; }
 })();

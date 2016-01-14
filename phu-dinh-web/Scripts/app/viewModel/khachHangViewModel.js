@@ -1,4 +1,4 @@
-﻿window.app.viewModel.khachHangViewModel = (function (datacontext) {
+﻿window.app.viewModel.khachHangViewModel = (function (datacontext, api) {
     var viewModel = {
         content: {
             items: ko.observableArray(),
@@ -38,7 +38,7 @@
         window.app.view.utils.appendViewToContainer(
             window.app.view.mainContentID, "khachHangView", viewModel, "khachHangView");
         
-        datacontext.getList(datacontext.rKhachHangUrl("GetrKhachHangs"))
+        datacontext.getList(api.rKhachHangUrl(api.rKhachHangAction.getrKhachHangs))
             .done(function (data) {
                 var items = [];
                 for (var i = 0; i < data.length; i++) {
@@ -57,7 +57,7 @@
     function load() {
         var filter = createFilter();
         viewModel.isLoading(true);
-        datacontext.getList("/api/xuat/GetXuatGroupByKhachHangAsString", filter)
+        datacontext.getList(api.xuatUrl(api.xuatAction.getXuatGroupByKhachHangAsString), filter)
         .done(loadDone);
     }
 
@@ -101,4 +101,4 @@
         viewModel.content.items(items);
         viewModel.isLoading(false);
     }
-})(window.app.datacontext);
+})(window.app.datacontext, window.app.webApiUrl);

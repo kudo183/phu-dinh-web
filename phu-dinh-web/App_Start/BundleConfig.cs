@@ -24,6 +24,7 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/jquery-ui.min.js",
                         "~/Scripts/datepicker-vi.js",
                         "~/Scripts/app/defineNamespace.js",
+                        "~/Scripts/app/webApiUrl.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
                         "~/Scripts/app/view/_utils.js",

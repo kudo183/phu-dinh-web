@@ -1,4 +1,4 @@
-﻿window.app.viewModel.tonKhoViewModel = (function (datacontext) {
+﻿window.app.viewModel.tonKhoViewModel = (function (datacontext, api) {
     var viewModel = {
         content: {
             items: ko.observableArray(),
@@ -47,8 +47,8 @@
 
         window.app.view.utils.appendViewToContainer(
             window.app.view.mainContentID, "tonKhoView", viewModel, "tonKhoView");
-        
-        datacontext.getList(datacontext.rLoaiHangUrl("GetrLoaiHangs"))
+
+        datacontext.getList(api.rLoaiHangUrl(api.rLoaiHangAction.getrLoaiHangs))
             .done(function (data) {
                 var items = [];
                 for (var i = 0; i < data.length; i++) {
@@ -59,7 +59,7 @@
                 alert(error);
             });
 
-        datacontext.getList(datacontext.rCanhBaoTonKhoUrl("GetrCanhBaoTonKhoes"))
+        datacontext.getList(api.rCanhBaoTonKhoUrl(api.rCanhBaoTonKhoAction.getrCanhBaoTonKhoes))
             .done(function (data) {
                 for (var i = 0; i < data.length; i++) {
                     viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
@@ -84,7 +84,7 @@
     function load() {
         var filter = createFilter();
         viewModel.isLoading(true);
-        datacontext.getList(datacontext.tTonKhoUrl("GettTonKhoes"), filter)
+        datacontext.getList(api.tTonKhoUrl(api.tTonKhoAction.gettTonKhoes), filter)
         .done(loadDone).fail(function (error) {
             alert(error);
         });
@@ -153,4 +153,4 @@
         viewModel.content.items(items);
         viewModel.isLoading(false);
     }
-})(window.app.datacontext);
+})(window.app.datacontext, window.app.webApiUrl);

@@ -1,4 +1,4 @@
-﻿window.app.viewModel.xuatViewModel = (function (datacontext) {
+﻿window.app.viewModel.xuatViewModel = (function (datacontext, api) {
     var viewModel = {
         content: {
             items: ko.observableArray(),
@@ -11,10 +11,10 @@
                         maKho: 1,
                         tenKho: "PhuDinh"
                     },
-                {
-                    maKho: 3,
-                    tenKho: "DucHoa"
-                }
+                    {
+                        maKho: 3,
+                        tenKho: "DucHoa"
+                    }
                 ],
                 itemText: "tenKho",
                 itemValue: "maKho",
@@ -38,7 +38,7 @@
     };
 
     viewModel.content.columns.push({ cellValueProperty: "text" });
-    
+
     viewModel.filter.kho.value.subscribe(load);
     viewModel.filter.ngay.value.subscribe(load);
     viewModel.filter.khachHang.value.subscribe(load);
@@ -51,8 +51,8 @@
 
         window.app.view.utils.appendViewToContainer(
             window.app.view.mainContentID, "xuatView", viewModel, "xuatView");
-        
-        datacontext.getList(datacontext.rKhachHangUrl("GetrKhachHangs"))
+
+        datacontext.getList(api.rKhachHangUrl(api.rKhachHangAction.getrKhachHangs))
             .done(function (data) {
                 var items = [];
                 for (var i = 0; i < data.length; i++) {
@@ -66,12 +66,12 @@
         load();
         viewModel.initialized = true;
     }
-    
+
     //return void
     function load() {
         var filter = createFilter();
         viewModel.isLoading(true);
-        datacontext.getList("/api/xuat/GetXuatAsString", filter)
+        datacontext.getList(api.xuatUrl(api.xuatAction.getXuatAsString), filter)
         .done(loadDone);
     }
 
@@ -104,7 +104,7 @@
                 value: fKhachHang
             });
         }
-        
+
         return filter;
     }
 
@@ -123,4 +123,4 @@
         viewModel.content.items(items);
         viewModel.isLoading(false);
     }
-})(window.app.datacontext);
+})(window.app.datacontext, window.app.webApiUrl);
