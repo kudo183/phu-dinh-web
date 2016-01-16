@@ -10,6 +10,10 @@
         rKhachHangAction: {
             getrKhachHangs: "GetrKhachHangs"
         },
+        rNhaCungCapUrl: rNhaCungCapUrl,
+        rNhaCungCapAction: {
+            getrNhaCungCaps: "GetrNhaCungCaps"
+        },
         rCanhBaoTonKhoUrl: rCanhBaoTonKhoUrl,
         rCanhBaoTonKhoAction: {
             getrCanhBaoTonKhoes: "GetrCanhBaoTonKhoes"
@@ -23,6 +27,10 @@
             getXuat: "GetXuat",
             getXuatAsString: "GetXuatAsString",
             getXuatGroupByKhachHangAsString: "GetXuatGroupByKhachHangAsString"
+        },
+        nhapUrl: nhapUrl,
+        nhapAction: {
+            getNhapAsString: "GetNhapAsString"
         }
     };
     return webApiUrl;
@@ -31,6 +39,8 @@
     function rCanhBaoTonKhoUrl(action) { return webApiUrl.root + "/canhbaotonkho/" + action; }
     function rLoaiHangUrl(action) { return webApiUrl.root + "/loaihang/" + action; }
     function rKhachHangUrl(action) { return webApiUrl.root + "/khachhang/" + action; }
+    function rNhaCungCapUrl(action) { return webApiUrl.root + "/nhacungcap/" + action; }
     function tTonKhoUrl(action) { return webApiUrl.root + "/tonkho/" + action; }
     function xuatUrl(action) { return webApiUrl.root + "/xuat/" + action; }
+    function nhapUrl(action) { return webApiUrl.root + "/nhap/" + action; }
 })();

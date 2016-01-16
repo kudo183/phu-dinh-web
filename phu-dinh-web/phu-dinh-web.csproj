@@ -155,11 +155,13 @@
     <Content Include="Scripts\app\datacontext.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
     <Content Include="Scripts\app\viewModel\khachHangViewModel.js" />
+    <Content Include="Scripts\app\viewModel\nhapViewModel.js" />
     <Content Include="Scripts\app\viewModel\testViewModel.js" />
     <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
     <Content Include="Scripts\app\viewModel\_utils.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
     <Content Include="Scripts\app\view\khachHangView.js" />
+    <Content Include="Scripts\app\view\nhapView.js" />
     <Content Include="Scripts\app\view\tonKhoView.js" />
     <Content Include="Scripts\app\viewModel\tonKhoViewModel.js" />
     <Content Include="Scripts\app\utilsDOM.js" />
@@ -185,6 +187,8 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KhachHangController.cs" />
     <Compile Include="Controllers\LoaiHangController.cs" />
+    <Compile Include="Controllers\NhaCungCapController.cs" />
+    <Compile Include="Controllers\NhapController.cs" />
     <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Controllers\TonkhoController.cs" />
     <Compile Include="Controllers\XuatController.cs" />
@@ -197,6 +201,7 @@
     <Compile Include="Models\rCanhBaoTonKhoDto.cs" />
     <Compile Include="Models\rKhachHangDto.cs" />
     <Compile Include="Models\rLoaiHangDto.cs" />
+    <Compile Include="Models\rNhaCungCapDto.cs" />
     <Compile Include="Models\tTonKhoDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
