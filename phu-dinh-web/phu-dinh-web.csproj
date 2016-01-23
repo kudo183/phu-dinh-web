@@ -57,6 +57,14 @@
       <HintPath>lib\ExpressionBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -64,6 +72,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.0\lib\net40\System.Spatial.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.DynamicData" />
@@ -81,6 +93,10 @@
     </Reference>
     <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=5.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.5.7.0\lib\net45\System.Web.Http.OData.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -189,6 +205,42 @@
     <Compile Include="Controllers\LoaiHangController.cs" />
     <Compile Include="Controllers\NhaCungCapController.cs" />
     <Compile Include="Controllers\NhapController.cs" />
+    <Compile Include="Controllers\OData\0Level\rBaiXesController.cs" />
+    <Compile Include="Controllers\OData\0Level\rKhoHangsController.cs" />
+    <Compile Include="Controllers\OData\0Level\rLoaiChiPhisController.cs" />
+    <Compile Include="Controllers\OData\0Level\rLoaiHangsController.cs" />
+    <Compile Include="Controllers\OData\0Level\rLoaiNguyenLieusController.cs" />
+    <Compile Include="Controllers\OData\0Level\rNhaCungCapsController.cs" />
+    <Compile Include="Controllers\OData\0Level\rNuocsController.cs" />
+    <Compile Include="Controllers\OData\0Level\rPhuongTiensController.cs" />
+    <Compile Include="Controllers\OData\1Level\rChanhsController.cs" />
+    <Compile Include="Controllers\OData\1Level\rDiaDiemsController.cs" />
+    <Compile Include="Controllers\OData\1Level\rNguyenLieusController.cs" />
+    <Compile Include="Controllers\OData\1Level\rNhanViensController.cs" />
+    <Compile Include="Controllers\OData\1Level\tMatHangsController.cs" />
+    <Compile Include="Controllers\OData\2Level\rCanhBaoTonKhosController.cs" />
+    <Compile Include="Controllers\OData\2Level\rKhachHangsController.cs" />
+    <Compile Include="Controllers\OData\2Level\rMatHangNguyenLieusController.cs" />
+    <Compile Include="Controllers\OData\2Level\tChiPhisController.cs" />
+    <Compile Include="Controllers\OData\2Level\tChuyenHangsController.cs" />
+    <Compile Include="Controllers\OData\2Level\tChuyenKhosController.cs" />
+    <Compile Include="Controllers\OData\2Level\tNhapHangsController.cs" />
+    <Compile Include="Controllers\OData\2Level\tNhapNguyenLieusController.cs" />
+    <Compile Include="Controllers\OData\2Level\tTonKhosController.cs" />
+    <Compile Include="Controllers\OData\3Level\rKhachHangChanhsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tChiTietChuyenKhosController.cs" />
+    <Compile Include="Controllers\OData\3Level\tChiTietNhapHangsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tCongNoKhachHangsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tDonHangsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tGiamTruKhachHangsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tNhanTienKhachHangsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tPhuThuKhachHangsController.cs" />
+    <Compile Include="Controllers\OData\3Level\tToaHangsController.cs" />
+    <Compile Include="Controllers\OData\4Level\tChiTietDonHangsController.cs" />
+    <Compile Include="Controllers\OData\4Level\tChuyenHangDonHangsController.cs" />
+    <Compile Include="Controllers\OData\5Level\tChiTietChuyenHangDonHangsController.cs" />
+    <Compile Include="Controllers\OData\5Level\tChiTietToaHangsController.cs" />
+    <Compile Include="Controllers\OData\BaseODataController.cs" />
     <Compile Include="Controllers\QuanLyController.cs" />
     <Compile Include="Controllers\TonkhoController.cs" />
     <Compile Include="Controllers\XuatController.cs" />
