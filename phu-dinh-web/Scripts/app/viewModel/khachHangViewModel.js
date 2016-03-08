@@ -25,10 +25,6 @@
 
     viewModel.content.columns.push({ cellValueProperty: "text" });
 
-    viewModel.filter.khachHang.value.subscribe(load);
-    viewModel.filter.ngay.value.subscribe(load);
-    viewModel.filter.ngay.isDisabled.subscribe(load);
-
     return viewModel;
 
     function init() {
@@ -37,7 +33,7 @@
 
         window.app.view.utils.appendViewToContainer(
             window.app.view.mainContentID, "khachHangView", viewModel, "khachHangView");
-        
+
         datacontext.getList(api.rKhachHangUrl(api.rKhachHangAction.getrKhachHangs))
             .done(function (data) {
                 var items = [];
@@ -45,11 +41,16 @@
                     items.push(data[i]);
                 }
                 viewModel.filter.khachHang.items(items);
+
+                viewModel.filter.khachHang.value.subscribe(load);
+                viewModel.filter.ngay.value.subscribe(load);
+                viewModel.filter.ngay.isDisabled.subscribe(load);
+
+                load();
             }).fail(function (error) {
                 alert(error);
             });
 
-        load();
         viewModel.initialized = true;
     }
 

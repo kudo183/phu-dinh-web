@@ -37,10 +37,6 @@
     viewModel.content.columns.push({ cellValueProperty: "tenMatHang" });
     viewModel.content.columns.push({ cellValueProperty: "soLuong" });
 
-    viewModel.filter.kho.value.subscribe(load);
-    viewModel.filter.loaiHang.value.subscribe(load);
-    viewModel.filter.ngay.value.subscribe(load);
-
     function init() {
         if (viewModel.initialized === true)
             return;
@@ -55,25 +51,29 @@
                     items.push(data[i]);
                 }
                 viewModel.filter.loaiHang.items(items);
+
+                datacontext.getList(api.rCanhBaoTonKhoUrl(api.rCanhBaoTonKhoAction.getrCanhBaoTonKhoes))
+                    .done(function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
+
+                            viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] = {
+                                tonCaoNhat: data[i].tonCaoNhat,
+                                tonThapNhat: data[i].tonThapNhat,
+                            };
+                        }
+
+                        viewModel.filter.kho.value.subscribe(load);
+                        viewModel.filter.loaiHang.value.subscribe(load);
+                        viewModel.filter.ngay.value.subscribe(load);
+
+                        load();
+                    }).fail(function (error) {
+                        alert(error);
+                    });
             }).fail(function (error) {
                 alert(error);
             });
-
-        datacontext.getList(api.rCanhBaoTonKhoUrl(api.rCanhBaoTonKhoAction.getrCanhBaoTonKhoes))
-            .done(function (data) {
-                for (var i = 0; i < data.length; i++) {
-                    viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
-
-                    viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] = {
-                        tonCaoNhat: data[i].tonCaoNhat,
-                        tonThapNhat: data[i].tonThapNhat,
-                    };
-                }
-            }).fail(function (error) {
-                alert(error);
-            });
-
-        load();
 
         viewModel.initialized = true;
     }

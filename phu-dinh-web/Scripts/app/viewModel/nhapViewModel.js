@@ -39,10 +39,6 @@
 
     viewModel.content.columns.push({ cellValueProperty: "text" });
 
-    viewModel.filter.kho.value.subscribe(load);
-    viewModel.filter.ngay.value.subscribe(load);
-    viewModel.filter.nhaCungCap.value.subscribe(load);
-
     return viewModel;
 
     function init() {
@@ -59,11 +55,16 @@
                     items.push(data[i]);
                 }
                 viewModel.filter.nhaCungCap.items(items);
+
+                viewModel.filter.kho.value.subscribe(load);
+                viewModel.filter.ngay.value.subscribe(load);
+                viewModel.filter.nhaCungCap.value.subscribe(load);
+
+                load();
             }).fail(function (error) {
                 alert(error);
             });
 
-        load();
         viewModel.initialized = true;
     }
 
