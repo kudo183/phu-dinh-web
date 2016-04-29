@@ -26,24 +26,10 @@
 
     @if (@User.Identity.IsAuthenticated)
     {
-        <div id="headerContent"></div>
-        <div id="mainContent"></div>
         @Scripts.Render("~/bundles/common")
         @Scripts.Render("~/bundles/view")
         @Scripts.Render("~/bundles/viewModel")
-        <script>
-            $("#headerContent").append(window.app.view.headerMenuView("headerMenuView", [
-                { text: "Ton Kho", attr: { viewId: "#tonKhoView" } },
-                { text: "Xuat", attr: { viewId: "#xuatView" } },
-                { text: "Nhap", attr: { viewId: "#nhapView" } },
-                { text: "Khach Hang", attr: { viewId: "#khachHangView" } },
-                { text: "Tai Khoan", attr: { href: "/Account/Manage" } },
-                { text: "Thoat", attr: { id: "logOff" } }
-            ]));
-
-            window.app.view.mainContentID = "#mainContent";
-            
-        </script>
+        @Scripts.Render("~/bundles/main")
     }
     else
     {

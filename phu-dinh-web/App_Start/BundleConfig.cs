@@ -12,7 +12,9 @@ namespace phu_dinh_web.App_Start
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+                        "~/Scripts/jquery-{version}.js",
+                        "~/Scripts/jquery-ui.min.js",
+                        "~/Scripts/datepicker-vi.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/ajaxlogin").Include(
                 "~/Scripts/ajaxlogin.js"));
@@ -21,8 +23,6 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/knockout-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/common").Include(
-                        "~/Scripts/jquery-ui.min.js",
-                        "~/Scripts/datepicker-vi.js",
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/webApiUrl.js",
                         "~/Scripts/app/datacontext.js",
@@ -35,6 +35,9 @@ namespace phu_dinh_web.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
                         "~/Scripts/app/viewModel/*ViewModel.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/main").Include(
+                        "~/Scripts/app/main.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/test").Include(
                         "~/Scripts/jquery-ui.min.js",
