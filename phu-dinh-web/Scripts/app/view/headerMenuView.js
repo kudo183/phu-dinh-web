@@ -30,7 +30,7 @@
         ul = window.app.utilsDOM.createElement("ul", {}, "foreach: buttons");
         li = window.app.utilsDOM.createElement("li");
         a = window.app.utilsDOM.createElement("a", {},
-            "attr: {id: id}",
+            "attr: {id: id}, click: action",
             undefined, "menuButtonItem");
 
         li.appendChild(a);

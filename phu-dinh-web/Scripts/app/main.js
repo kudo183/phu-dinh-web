@@ -15,7 +15,12 @@ var headerMenuViewModel = {
     selectedItemText: ko.observable("Ton Kho"),
     selectedItemValue: ko.observable(),
     buttons: [
-        { id: "refreshButton" }
+        {
+            id: "refreshButton",
+            action: function () {
+                window.app.viewModel.utils.loadCurrentViewModel();
+            }
+        }
     ],
     _previousSelectedItemValue: {}
 };
