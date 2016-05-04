@@ -1,122 +1,83 @@
 ﻿window.app.view.headerMenuView = (function () {
-    return function (id, items) {
+    return function (id, model) {
         var view = window.app.utilsDOM.createElement("div", { id: id });
-        var viewLarge = window.app.utilsDOM.createElement("div", { id: id + "Large" });
-        createLargeMenuItem(viewLarge, items);
-        var viewMobile = window.app.utilsDOM.createElement("div", { id: id + "Mobile" });
-        createMobileMenuItem(viewMobile, items);
+        var viewLarge = createLargeMenuItem(id + "Large");
         view.appendChild(viewLarge);
+        var viewMobile = createMobileMenuItem(id + "Mobile");
         view.appendChild(viewMobile);
+        ko.applyBindings(model, view);
         return view;
     };
 
-    function createLargeMenuItem(view, items) {
-        var ul = window.app.utilsDOM.createElement("ul");
-        var menuItems = [];
-        for (var i = 0; i < items.length; i++) {
-            
-            var li = window.app.utilsDOM.createElement("li");
-            var a = window.app.utilsDOM.createElement("a", items[i].attr, undefined, items[i].text,"menuItem");
+    function createLargeMenuItem(id) {
+        var result = window.app.utilsDOM.createElement("div", { id: id });
+        var ul = window.app.utilsDOM.createElement("ul", {}, "foreach: items");
+        var li = window.app.utilsDOM.createElement("li");
+        var a = window.app.utilsDOM.createElement("a", {},
+            "attr: {'data-item': value, id: id}, \
+            click: function(){\
+                $parent.selectedItemValue($data.value);\
+                $parent.selectedItemText($data.text);\
+            },\
+            css: {selected: $parent.selectedItemValue() === value},\
+            text: text",
+            undefined, "menuItem");
 
-            ul.appendChild(li);
-            li.appendChild(a);
-
-            menuItems.push(a);
-
-            if (i === 0) {
-                $(menuItems[0]).addClass("selected");
-                $(items[0].id).ready(function () {
-                    var viewId = items[0].attr.viewId;
-                    initAndShow(viewId);
-                });
-            }
-
-            $(a).click(function () {
-                for (var j = 0; j < menuItems.length; j++) {
-                    var selectedId = $(menuItems[j]).attr("viewId");
-                    if ($(this).attr("viewId") === selectedId) {
-                        initAndShow(selectedId);
-                        $(menuItems[j]).addClass("selected");
-                    } else {
-                        $(selectedId).hide();
-                        $(menuItems[j]).removeClass("selected");
-                    }
-                }
-            });
-        }
-
-        li = window.app.utilsDOM.createElement("li");
-        var refresh = window.app.utilsDOM.createElement("input", { id: "refreshButton", type: "button", title: "Cap nhat" });
-        $(refresh).click(function () {
-            window.app.viewModel.utils.loadCurrentViewModel();
-        });
-        
+        li.appendChild(a);
         ul.appendChild(li);
-        li.appendChild(refresh);
-        
-        view.appendChild(ul);
+        result.appendChild(ul);
+
+        ul = window.app.utilsDOM.createElement("ul", {}, "foreach: buttons");
+        li = window.app.utilsDOM.createElement("li");
+        a = window.app.utilsDOM.createElement("a", {},
+            "attr: {id: id}",
+            undefined, "menuButtonItem");
+
+        li.appendChild(a);
+        ul.appendChild(li);
+        result.appendChild(ul);
+        return result;
     }
 
-    function createMobileMenuItem(view, items) {
-        var selectedItem = window.app.utilsDOM.createElement("span", { id: "mobileMenuSelectedItem" });
-        view.appendChild(selectedItem);
+    function createMobileMenuItem(id) {
+        var result = window.app.utilsDOM.createElement("div", { id: id });
+        
+        var selectedItem = window.app.utilsDOM.createElement("span", { id: "mobileMenuSelectedItem" }, "text: selectedItemText");
+        result.appendChild(selectedItem);
 
         var menu = window.app.utilsDOM.createElement("div", { id: "mobileMenuButton" });
         $(menu).click(function () {
             $(menuWrapper).toggle();
         });
-        view.appendChild(menu);
-
-        var refresh = window.app.utilsDOM.createElement("input", { id: "mobileRefreshButton", type: "button" });
-        $(refresh).click(function () {
-            window.app.viewModel.utils.loadCurrentViewModel();
-        });
-        view.appendChild(refresh);
+        result.appendChild(menu);
 
         var menuWrapper = window.app.utilsDOM.createElement("div", { id: "mobileMenuWapper" });
         $(menuWrapper).hide();
+        result.appendChild(menuWrapper);
         
-        var ul = window.app.utilsDOM.createElement("ul");
-        
-        var menuItems = [];
-        for (var i = 0; i < items.length; i++) {
-            var li = window.app.utilsDOM.createElement("li");
-            var a = window.app.utilsDOM.createElement("a", items[i].attr, undefined, items[i].text, "menuItemMobile");
+        var ul = window.app.utilsDOM.createElement("ul", {}, "foreach: items");
+        var li = window.app.utilsDOM.createElement("li");
+        var a = window.app.utilsDOM.createElement("a", {},
+            "attr: {'data-item': value, id: id}, \
+            click: function(){\
+                $parent.selectedItemValue($data.value);\
+                $parent.selectedItemText($data.text);\
+                $('#mobileMenuWapper').hide();\
+            },\
+            text: text",
+            undefined, "menuItem");
 
-            ul.appendChild(li);
-            li.appendChild(a);
-
-            menuItems.push(a);
-
-            if (i === 0) {
-                $(items[0].id).ready(function () {
-                    var viewId = items[0].attr.viewId;
-                    initAndShow(viewId);
-                    $(selectedItem).text(items[0].text);
-                });
-            }
-
-            $(a).click(function () {
-                for (var j = 0; j < menuItems.length; j++) {
-                    var selectedId = $(menuItems[j]).attr("viewId");
-                    if ($(this).attr("viewId") === selectedId) {
-                        initAndShow(selectedId);
-                        $(selectedItem).text($(menuItems[j]).text());
-                    } else {
-                        $(selectedId).hide();
-                    }
-                }
-                $(menuWrapper).hide();
-            });
-        }
-        
+        li.appendChild(a);
+        ul.appendChild(li);
         menuWrapper.appendChild(ul);
-        view.appendChild(menuWrapper);
-    }
+        
+        result.appendChild(window.app.utilsDOM.createComment("ko foreach: buttons"));
+        a = window.app.utilsDOM.createElement("a", {},
+            "attr: {id: id+'Mobile'}",
+            undefined, "menuButtonItem");
 
-    function initAndShow(viewId) {
-        window.app.viewModel.utils.setCurrentViewModel(viewId);
-        window.app.viewModel.utils.initCurrentViewModel();
-        $(viewId).show();
+        result.appendChild(a);
+        result.appendChild(window.app.utilsDOM.createComment("/ko"));
+        return result;
     }
 })();

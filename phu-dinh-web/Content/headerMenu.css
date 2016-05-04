@@ -29,6 +29,15 @@ a.menuItem {
     margin-right: 10px;
 }
 
+a.menuButtonItem {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 a.selected {
     text-decoration: underline;
 }
@@ -44,13 +53,14 @@ a.selected {
     padding: 0px;
     width: 24px;
     height: 21px;
+    display: block;
 }
 
 #headerMenuViewMobile {
     display: none;
 }
 
-#mobileRefreshButton {
+#refreshButtonMobile {
     background-image: url("images/refresh.png");
     background-color: transparent;
     background-position: center center;

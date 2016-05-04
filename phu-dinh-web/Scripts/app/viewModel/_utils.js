@@ -8,7 +8,7 @@
     return utils;
 
     function setCurrentViewModel(viewId) {
-        utils.currentViewModel = window.app.viewModel[viewId.replace("#", "") + "Model"];
+        utils.currentViewModel = window.app.viewModel[viewId + "Model"];
     }
 
     function initCurrentViewModel() {
