@@ -10,6 +10,8 @@ namespace phu_dinh_web.Controllers
     {
         public ActionResult Index(string returnUrl)
         {
+            ViewBag.SelectedView = Request.QueryString["v"];
+            
             return View();
         }
     }
