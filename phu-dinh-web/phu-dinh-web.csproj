@@ -158,7 +158,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\donHangView.css" />
     <Content Include="Content\headerMenu.css" />
+    <Content Include="Content\huy.control.datagrid.css" />
+    <Content Include="Content\huy.ko.binding.combobox.css" />
     <Content Include="Content\images\refresh.png" />
     <Content Include="Content\images\ui-icons_444444_256x240.png" />
     <Content Include="Content\images\ui-icons_555555_256x240.png" />
@@ -169,17 +172,20 @@
     <Content Include="Scripts\ajaxlogin.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\app\datacontext.js" />
+    <Content Include="Scripts\app\dataProvider\donHangDataProvider.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.utilsDOM.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.ko.binding.combobox.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.ko.binding.datepicker.js" />
     <Content Include="Scripts\app\main.js" />
+    <Content Include="Scripts\app\viewModel\donHangViewModel.js" />
     <Content Include="Scripts\app\viewModel\khachHangViewModel.js" />
     <Content Include="Scripts\app\viewModel\nhapViewModel.js" />
     <Content Include="Scripts\app\viewModel\testViewModel.js" />
     <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
     <Content Include="Scripts\app\viewModel\_utils.js" />
+    <Content Include="Scripts\app\view\donHangView.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
     <Content Include="Scripts\app\view\khachHangView.js" />
     <Content Include="Scripts\app\view\nhapView.js" />
@@ -202,9 +208,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Constant.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\CanhBaoTonKhoController.cs" />
+    <Compile Include="Controllers\Api\DonHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Api\KhachHangController.cs" />
     <Compile Include="Controllers\Api\LoaiHangController.cs" />
@@ -254,7 +262,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\JsonConverter.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ChangedItem.cs" />
+    <Compile Include="Models\DonHangDto.cs" />
+    <Compile Include="Models\GetResult.cs" />
     <Compile Include="Models\rCanhBaoTonKhoDto.cs" />
     <Compile Include="Models\rKhachHangDto.cs" />
     <Compile Include="Models\rLoaiHangDto.cs" />

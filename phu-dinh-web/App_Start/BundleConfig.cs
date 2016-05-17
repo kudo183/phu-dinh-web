@@ -21,6 +21,9 @@ namespace phu_dinh_web.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                         "~/Scripts/knockout-{version}.js"));
+            
+            bundles.Add(new ScriptBundle("~/bundles/lib").Include(
+                        "~/Scripts/app/lib/jsControl/release/*.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/common").Include(
                         "~/Scripts/app/defineNamespace.js",
@@ -34,6 +37,7 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/view/*View.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
+                        "~/Scripts/app/dataProvider/*DataProvider.js",
                         "~/Scripts/app/viewModel/*ViewModel.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/main").Include(
@@ -51,7 +55,10 @@ namespace phu_dinh_web.App_Start
                 "~/Content/jquery-ui.min.css",
                 "~/Content/headerMenu.css",
                 "~/Content/Site.css",
-                "~/Content/media.css"));
+                "~/Content/media.css",
+                "~/Content/huy.control.datagrid.css",
+                "~/Content/huy.ko.binding.combobox.css",
+                "~/Content/donHangView.css"));
         }
     }
 }
