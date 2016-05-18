@@ -1,3 +1,10 @@
+.h-dataGrid button {
+    border: 0 none;
+    margin: 2px;
+    padding: 3px 2px;
+    cursor: pointer;
+}
+
 .table
 {
     display: table;
