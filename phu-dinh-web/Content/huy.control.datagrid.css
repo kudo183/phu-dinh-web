@@ -3,87 +3,86 @@
     margin: 2px;
     padding: 3px 2px;
     cursor: pointer;
+    width: 40px;
 }
 
-.table
+.h-dataGrid .table
 {
     display: table;
 }
-.gridHeader
+.h-dataGrid .gridHeader
 {
     display: table-row;
     text-align: center;
     background: rgba(0, 0, 0, 0) -moz-linear-gradient(100% 100% 90deg, #eaeaea, #f8f8f8) repeat scroll 0 0;	
 }
-.row
+.h-dataGrid .row
 {
     display: table-row;
 }
-.col1 {
+.h-dataGrid .col1 {
     width: 20px;
 }
-.col2 {
+.h-dataGrid .col2 {
     width: 70px;
 }
-.col3 {
+.h-dataGrid .col3 {
     width: 70px;
 }
-.col4 {
+.h-dataGrid .col4 {
     width: 80px;
 }
-.col5 {
+.h-dataGrid .col5 {
     width: 80px;
 }
-.col6 {
+.h-dataGrid .col6 {
     width: 80px;
 }
-.cell
-{
+.h-dataGrid .cell {
     display: table-cell;
-    border: solid;
-    border-width: thin;
-    padding: 0px;
+    border: 1px solid #e8eef4;
+    padding: 2px;
 }
-.cell input {
+.h-dataGrid .cell input {
     width: 100%;
     border: 0 none;
     margin: 0px;
     padding: 0px;
 }
 
-.cell select {
+.h-dataGrid .cell select {
     width: 100%;
     border: 0 none;
     margin: 0px;
     padding: 0px;
 }
-.cell button {
+.h-dataGrid .cell button {
     width: 100%;
     border: 0 none;
     margin: 0px;
     padding: 0px;
 }
-.readonly{
+.h-dataGrid .readonly{
     background-color: #eee;
 }
-.columnFilter{
+.h-dataGrid .columnFilter{
     background-color: #FFE3AD;
 }
-.columnFilter input {
+.h-dataGrid .columnFilter input {
     width: 100%;
     border: 0 none;
     margin: 0px;
     padding: 0px;
     background-color: #FFE3AD;
 }
-.columnFilter select {
+.h-dataGrid .columnFilter select {
     width: 100%;
     border: 0 none;
     margin: 0px;
     padding: 0px;
     background-color: #FFE3AD;
 }
-.columnFilter button {
+.h-dataGrid .columnFilter button {
     width: 100%;
     border: 0 none;
     margin: 0px;
