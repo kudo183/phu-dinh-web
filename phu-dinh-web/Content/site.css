@@ -54,16 +54,6 @@ fieldset {
         text-align: left;
     }
 
-.row {
-    display: table-row;
-}
-
-.cell {
-    display: table-cell;
-    border: 1px solid #e8eef4;
-    padding: 2px;
-}
-
 .datePicker {
     width: 80px;
 }
@@ -78,6 +68,30 @@ fieldset {
 
 .warningLower {
     color: red;
+}
+
+.readOnlyGrid {
+    font-size: 1.4em;
+}
+
+.readOnlyGrid .row {
+    display: table-row;
+}
+
+.readOnlyGrid .cell {
+    display: table-cell;
+    border: 1px solid #e8eef4;
+    padding: 5px;
+}
+
+.readOnlyGrid input {
+    height: 25px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.readOnlyGrid select {
+    height: 27px;
 }
 
 /*jquery ui datepicker size*/

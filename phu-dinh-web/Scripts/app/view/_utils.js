@@ -12,7 +12,7 @@
     }
 
     function createReadOnlyGridView(id, filter, style) {
-        var view = window.app.utilsDOM.createElement("div", { id: id });
+        var view = window.app.utilsDOM.createElement("div", { id: id }, undefined, undefined, "readOnlyGrid");
         view.appendChild(createFilter(filter));
         view.appendChild(createGridViewContent(style));
         $(view).hide();
