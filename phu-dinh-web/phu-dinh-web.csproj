@@ -213,6 +213,7 @@
     <Compile Include="Controllers\Api\BaseApiController.cs" />
     <Compile Include="Controllers\Api\CanhBaoTonKhoController.cs" />
     <Compile Include="Controllers\Api\DonHangController.cs" />
+    <Compile Include="Controllers\Api\KhoHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Api\KhachHangController.cs" />
     <Compile Include="Controllers\Api\LoaiHangController.cs" />
@@ -267,6 +268,7 @@
     <Compile Include="Models\ChangedItem.cs" />
     <Compile Include="Models\DonHangDto.cs" />
     <Compile Include="Models\GetResult.cs" />
+    <Compile Include="Models\KhoHangDto.cs" />
     <Compile Include="Models\rCanhBaoTonKhoDto.cs" />
     <Compile Include="Models\rKhachHangDto.cs" />
     <Compile Include="Models\rLoaiHangDto.cs" />

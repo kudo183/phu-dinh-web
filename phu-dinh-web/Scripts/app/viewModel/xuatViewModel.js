@@ -48,7 +48,7 @@
         window.app.view.utils.appendViewToContainer(
             window.app.view.mainContentID, "xuatView", viewModel, "xuatView");
 
-        datacontext.getList(api.rKhachHangUrl(api.rKhachHangAction.getrKhachHangs))
+        datacontext.getList(window.app.webApiUrl.khachHangApi.get, {})
             .done(function (data) {
                 var items = [];
                 for (var i = 0; i < data.length; i++) {

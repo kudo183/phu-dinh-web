@@ -8,7 +8,7 @@ namespace phu_dinh_web.Controllers
 {
     public class KhachHangController : BaseApiController
     {
-        public IEnumerable<rKhachHangDto> GetrKhachHangs()
+        public IEnumerable<rKhachHangDto> Get()
         {
             return _context.rKhachHangs.OrderBy(p => p.TenKhachHang)
                 .AsEnumerable().Select(p => new rKhachHangDto(p));

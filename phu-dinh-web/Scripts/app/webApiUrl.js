@@ -6,10 +6,6 @@
         rLoaiHangAction: {
             getrLoaiHangs: "GetrLoaiHangs"
         },
-        rKhachHangUrl: rKhachHangUrl,
-        rKhachHangAction: {
-            getrKhachHangs: "GetrKhachHangs"
-        },
         rNhaCungCapUrl: rNhaCungCapUrl,
         rNhaCungCapAction: {
             getrNhaCungCaps: "GetrNhaCungCaps"
@@ -35,6 +31,12 @@
         donHangApi: {
             get: api("donHang", "get"),
             save: api("donHang", "save")
+        },
+        khachHangApi: {
+            get: api("khachHang", "get")
+        },
+        khoHangApi: {
+            get: api("khoHang", "get")
         }
     };
     return webApiUrl;
@@ -44,10 +46,8 @@
     function api(controllder, action) { return "/api" + "/" + controllder + "/" + action; }
     function rCanhBaoTonKhoUrl(action) { return webApiUrl.root + "/canhbaotonkho/" + action; }
     function rLoaiHangUrl(action) { return webApiUrl.root + "/loaihang/" + action; }
-    function rKhachHangUrl(action) { return webApiUrl.root + "/khachhang/" + action; }
     function rNhaCungCapUrl(action) { return webApiUrl.root + "/nhacungcap/" + action; }
     function tTonKhoUrl(action) { return webApiUrl.root + "/tonkho/" + action; }
     function xuatUrl(action) { return webApiUrl.root + "/xuat/" + action; }
     function nhapUrl(action) { return webApiUrl.root + "/nhap/" + action; }
-    function donHangUrl(action) { return webApiUrl.root + "/donHang/" + action; }
 })();

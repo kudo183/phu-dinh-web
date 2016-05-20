@@ -1,7 +1,6 @@
-﻿window.app.dataProvider.donHangDataProvider = (function () {
+﻿window.app.dataProvider.donHangDataProvider = (function (datacontext) {
     var dataProvider = {
         _items: [],
-        pageSize: 12,
         getItemId: getItemId,
         setItemId: setItemId,
         toEntity: toEntity,
@@ -29,31 +28,37 @@
     }
 
     function getItemsAjax(filter, done, fail) {
-        window.app.datacontext.getList(window.app.webApiUrl.donHangApi.get, filter)
-            .done(function (data) {
-                var result = {
-                    items: [],
-                    totalItemCount: data.TotalItemCount,
-                    pageIndex: data.PageIndex,
-                    pageCount: data.PageCount
-                };
-                for (var i = 0; i < data.Items.length; i++) {
-                    var item = data.Items[i];
-                    result.items.push({
-                        ma: ko.observable(item.Ma),
-                        ngay: ko.observable(new Date(item.Ngay)),
-                        maKhachHang: ko.observable(item.MaKhachHang),
-                        maKhoHang: ko.observable(item.MaKhoHang)
-                    });
-                }
-                done(result);
-            })
-            .fail(fail);
+        $.when(
+            datacontext.donHang.get(filter),
+            datacontext.khachHang.get({}),
+            datacontext.khoHang.get({})
+        ).done(function (donHangs, khachHangs, khoHangs) {
+            var result = {
+                items: [],
+                totalItemCount: donHangs[0].TotalItemCount,
+                pageIndex: donHangs[0].PageIndex,
+                pageCount: donHangs[0].PageCount
+            };
+            for (var i = 0; i < donHangs[0].Items.length; i++) {
+                var item = donHangs[0].Items[i];
+                result.items.push({
+                    ma: ko.observable(item.Ma),
+                    ngay: ko.observable(new Date(item.Ngay)),
+                    maKhachHang: ko.observable(item.MaKhachHang),
+                    maKhoHang: ko.observable(item.MaKhoHang)
+                });
+            }
+
+            result.comboBoxItemsSource = {};
+            result.comboBoxItemsSource.khachHangs = khachHangs[0];
+            result.comboBoxItemsSource.khoHangs = khoHangs[0];
+            done(result);
+        }).fail(fail);
     }
 
     function saveChangesAjax(changes, done, fail) {
-        window.app.datacontext.saveChanges(changes, window.app.webApiUrl.donHangApi.save)
+        datacontext.donHang.save(changes)
             .done(done)
             .fail(fail);
     }
-})();
+})(window.app.datacontext);
