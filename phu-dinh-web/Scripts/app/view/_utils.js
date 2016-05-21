@@ -1,15 +1,8 @@
 ﻿window.app.view.utils = (function () {
     var utils = {
-        createReadOnlyGridView: createReadOnlyGridView,
-        appendViewToContainer: appendViewToContainer
+        createReadOnlyGridView: createReadOnlyGridView
     };
     return utils;
-
-    function appendViewToContainer(containerId, viewName, viewModel, viewId) {
-        var view = window.app.view[viewName](viewId);
-        $(containerId).append(view);
-        ko.applyBindings(viewModel, view);
-    }
 
     function createReadOnlyGridView(id, filter, style) {
         var view = window.app.utilsDOM.createElement("div", { id: id }, undefined, undefined, "readOnlyGrid");

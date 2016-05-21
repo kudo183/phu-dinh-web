@@ -47,9 +47,6 @@
 
         viewModel.initialized = true;
         
-        window.app.view.utils.appendViewToContainer(
-            window.app.view.mainContentID, "donHangView", viewModel, "donHangView");
-
         viewModel.load(viewModel);
     };
     return viewModel;

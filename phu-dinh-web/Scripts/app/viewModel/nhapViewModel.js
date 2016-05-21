@@ -45,9 +45,6 @@
         if (viewModel.initialized === true)
             return;
 
-        window.app.view.utils.appendViewToContainer(
-            window.app.view.mainContentID, "nhapView", viewModel, "nhapView");
-
         datacontext.getList(api.rNhaCungCapUrl(api.rNhaCungCapAction.getrNhaCungCaps))
             .done(function (data) {
                 var items = [];

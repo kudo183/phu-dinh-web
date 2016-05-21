@@ -30,15 +30,15 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/webApiUrl.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
-                        "~/Scripts/app/view/_utils.js",
-                        "~/Scripts/app/viewModel/_utils.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/view").Include(
-                        "~/Scripts/app/view/*View.js"));
+                        "~/Scripts/app/view/_utils.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
                         "~/Scripts/app/dataProvider/*DataProvider.js",
                         "~/Scripts/app/viewModel/*ViewModel.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/view").Include(
+                        "~/Scripts/app/view/*View.js",
+                        "~/Scripts/app/view/_viewManager.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/main").Include(
                         "~/Scripts/app/main.js"));
