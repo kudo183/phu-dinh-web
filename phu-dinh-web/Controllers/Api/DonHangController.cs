@@ -13,7 +13,7 @@ namespace phu_dinh_web.Controllers.Api
 {
     public class DonHangController : BaseApiController
     {
-        public JsonResult<GetResult<DonHangDto>> Get(string json)
+        public GetResult<DonHangDto> Get(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
 
@@ -23,12 +23,12 @@ namespace phu_dinh_web.Controllers.Api
                 _context.tDonHangs.Include(p => p.rKhachHang).Include(p => p.rKhoHang)
                 , filter, Constant.DefaultPageSize, out pageCount);
 
-            return Json(new GetResult<DonHangDto>()
+            return new GetResult<DonHangDto>()
             {
                 PageIndex = filter.PageIndex,
                 PageCount = pageCount,
                 Items = query.AsEnumerable().Select(p => new DonHangDto(p)).ToList()
-            });
+            };
         }
 
         [HttpPost]

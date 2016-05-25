@@ -35,17 +35,17 @@
         ).done(function (donHangs, khachHangs, khoHangs) {
             var result = {
                 items: [],
-                totalItemCount: donHangs[0].TotalItemCount,
-                pageIndex: donHangs[0].PageIndex,
-                pageCount: donHangs[0].PageCount
+                totalItemCount: donHangs[0].totalItemCount,
+                pageIndex: donHangs[0].pageIndex,
+                pageCount: donHangs[0].pageCount
             };
-            for (var i = 0; i < donHangs[0].Items.length; i++) {
-                var item = donHangs[0].Items[i];
+            for (var i = 0; i < donHangs[0].items.length; i++) {
+                var item = donHangs[0].items[i];
                 result.items.push({
-                    ma: ko.observable(item.Ma),
-                    ngay: ko.observable(new Date(item.Ngay)),
-                    maKhachHang: ko.observable(item.MaKhachHang),
-                    maKhoHang: ko.observable(item.MaKhoHang)
+                    ma: ko.observable(item.ma),
+                    ngay: ko.observable(new Date(item.ngay)),
+                    maKhachHang: ko.observable(item.maKhachHang),
+                    maKhoHang: ko.observable(item.maKhoHang)
                 });
             }
 
