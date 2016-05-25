@@ -160,22 +160,24 @@
   <ItemGroup>
     <Content Include="Content\donHangView.css" />
     <Content Include="Content\headerMenu.css" />
-    <Content Include="Content\huy.control.datagrid.css" />
-    <Content Include="Content\huy.ko.binding.combobox.css" />
     <Content Include="Content\images\refresh.png" />
     <Content Include="Content\images\ui-icons_444444_256x240.png" />
     <Content Include="Content\images\ui-icons_555555_256x240.png" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\media.css" />
     <Content Include="Content\site.css" />
+    <Content Include="Content\tonKhoView.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\ajaxlogin.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\app\datacontext.js" />
     <Content Include="Scripts\app\dataProvider\donHangDataProvider.js" />
+    <Content Include="Scripts\app\dataProvider\tonKhoDataProvider.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
+    <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.css" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.utilsDOM.js" />
+    <Content Include="Scripts\app\lib\jsControl\release\huy.ko.binding.combobox.css" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.ko.binding.combobox.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.ko.binding.datepicker.js" />
     <Content Include="Scripts\app\main.js" />

@@ -53,12 +53,13 @@ namespace phu_dinh_web.App_Start
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/jquery-ui.min.css",
-                "~/Content/huy.ko.binding.combobox.css",
-                "~/Content/huy.control.datagrid.css",
+                "~/Scripts/app/lib/jsControl/release/huy.ko.binding.combobox.css",
+                "~/Scripts/app/lib/jsControl/release/huy.control.datagrid.css",
                 "~/Content/Site.css",
-                "~/Content/media.css",
                 "~/Content/headerMenu.css",
-                "~/Content/donHangView.css"));
+                "~/Content/donHangView.css",
+                "~/Content/tonKhoView.css",
+                "~/Content/media.css"));
         }
     }
 }

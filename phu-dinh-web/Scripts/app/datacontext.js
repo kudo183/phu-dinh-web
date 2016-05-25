@@ -19,6 +19,21 @@
                 return saveChanges(changes, window.app.webApiUrl.donHangApi.save);
             }
         },
+        tonKho: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.tonKhoApi.get, filter);
+            },
+        },
+        loaiHang: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.loaiHangApi.get, filter);
+            },
+        },
+        canhBaoTonKho: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.canhBaoTonKhoApi.get, filter);
+            },
+        },
         getList: getList,
         saveChanges: saveChanges
     };

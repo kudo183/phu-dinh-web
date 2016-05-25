@@ -1,0 +1,28 @@
+﻿#tonKhoView .customFilterCell button {
+    width: 25px;
+}
+
+#tonKhoView .cell {
+    font-size: 1.4em;
+    padding: 5px;
+}
+
+#tonKhoView .col1 {
+    width: 300px;
+}
+
+#tonKhoView .col2 {
+    width: 50px;
+}
+
+#tonKhoView .col1.customFilterCell {
+    width: 120px;
+}
+
+#tonKhoView .col2.customFilterCell {
+    width: 100px;
+}
+
+#tonKhoView .col3.customFilterCell {
+    width: 180px;
+}

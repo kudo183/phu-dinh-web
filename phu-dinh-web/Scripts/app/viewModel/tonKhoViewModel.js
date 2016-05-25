@@ -1,153 +1,53 @@
-﻿window.app.viewModel.tonKhoViewModel = (function (datacontext, api) {
-    var viewModel = {
-        content: {
-            items: ko.observableArray(),
-            columns: []
+﻿window.app.viewModel.tonKhoViewModel = (function () {
+    var viewModel = huy.control.dataGrid.createViewModel(window.app.dataProvider.tonKhoDataProvider, { hasDeleteButton: false });
+    viewModel.addColumn({
+        headerText: "",
+        type: "span",
+        cellValueProperty: "tenMatHang",
+        readOnly: false,
+        order: 0,
+        filterValue: ko.observable()
+    });
+    viewModel.addColumn({
+        headerText: "",
+        type: "span",
+        cellValueProperty: "soLuong",
+        readOnly: false,
+        order: 0,
+        filterValue: ko.observable()
+    });
+    viewModel.addCustomFilters([
+        {
+            type: "comboBox",
+            propertyPath: "rKhoHang.Ma",
+            itemsSourceName: "khoHangs",
+            itemText: "tenKho",
+            itemValue: "ma",
+            filterValue: ko.observable()
         },
-        filter: {
-            kho: {
-                items: [
-                    {
-                        maKho: 1,
-                        tenKho: "PhuDinh"
-                    }
-                ],
-                itemText: "tenKho",
-                itemValue: "maKho",
-                value: ko.observable(1)
-            },
-            loaiHang: {
-                caption: "...",
-                items: ko.observableArray(),
-                itemText: "tenLoai",
-                itemValue: "ma",
-                value: ko.observable()
-            },
-            ngay: {
-                value: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
-            }
+        {
+            type: "date",
+            propertyPath: "Ngay",
+            filterValue: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
         },
-        canhBaoTonKho: {},
-        load: load,
-        init: init,
-        initialized: false,
-        isLoading: ko.observable(false)
-    };
+        {
+            type: "comboBox",
+            propertyPath: "tMatHang.MaLoai",
+            itemsSourceName: "loaiHangs",
+            itemText: "tenLoai",
+            itemValue: "ma",
+            filterValue: ko.observable()
+        }
+    ]);
 
-    viewModel.content.columns.push({ cellValueProperty: "tenMatHang" });
-    viewModel.content.columns.push({ cellValueProperty: "soLuong" });
-
-    function init() {
+    viewModel.init = function () {
         if (viewModel.initialized === true)
             return;
 
-        datacontext.getList(api.rLoaiHangUrl(api.rLoaiHangAction.getrLoaiHangs))
-            .done(function (data) {
-                var items = [];
-                for (var i = 0; i < data.length; i++) {
-                    items.push(data[i]);
-                }
-                viewModel.filter.loaiHang.items(items);
-
-                datacontext.getList(api.rCanhBaoTonKhoUrl(api.rCanhBaoTonKhoAction.getrCanhBaoTonKhoes))
-                    .done(function (data) {
-                        for (var i = 0; i < data.length; i++) {
-                            viewModel.canhBaoTonKho[data[i].maKhoHang] = viewModel.canhBaoTonKho[data[i].maKhoHang] || {};
-
-                            viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] = {
-                                tonCaoNhat: data[i].tonCaoNhat,
-                                tonThapNhat: data[i].tonThapNhat,
-                            };
-                        }
-
-                        viewModel.filter.kho.value.subscribe(load);
-                        viewModel.filter.loaiHang.value.subscribe(load);
-                        viewModel.filter.ngay.value.subscribe(load);
-
-                        load();
-                    }).fail(function (error) {
-                        alert(error);
-                    });
-            }).fail(function (error) {
-                alert(error);
-            });
-
         viewModel.initialized = true;
-    }
+
+        viewModel.load(viewModel);
+    };
 
     return viewModel;
-
-    //return void
-    function load() {
-        var filter = createFilter();
-        viewModel.isLoading(true);
-        datacontext.getList(api.tTonKhoUrl(api.tTonKhoAction.gettTonKhoes), filter)
-        .done(loadDone).fail(function (error) {
-            alert(error);
-        });
-    }
-
-    //return filter
-    function createFilter() {
-        var context = viewModel.filter;
-        var filter = {};
-        filter.whereOptions = [];
-        var fKho = context.kho.value();
-        if (fKho !== undefined) {
-            filter.whereOptions.push({
-                predicate: "=",
-                propertyPath: "rKhoHang.ma",
-                value: fKho
-            });
-        }
-        var fLoaiHang = context.loaiHang.value();
-        if (fLoaiHang !== undefined) {
-            filter.whereOptions.push({
-                predicate: "=",
-                propertyPath: "tMatHang.MaLoai",
-                value: fLoaiHang
-            });
-        }
-        var fNgay = context.ngay.value();
-        if (fNgay !== "") {
-            filter.whereOptions.push({
-                predicate: "=",
-                propertyPath: "Ngay",
-                value: fNgay
-            });
-        }
-        filter.orderOptions = [{ propertyPath: "tMatHang.TenMatHangDayDu", isAscending: true }];
-
-        return filter;
-    }
-
-    //return void
-    function loadDone(data) {
-        var items = [];
-        for (var i = 0; i < data.length; i++) {
-            if (viewModel.canhBaoTonKho[data[i].maKhoHang] === undefined
-            || viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang] === undefined) {
-                data[i].css = "";
-                items.push(data[i]);
-                continue;
-            }
-
-            var range = viewModel.canhBaoTonKho[data[i].maKhoHang][data[i].maMatHang];
-            var soLuong = data[i].soLuong;
-
-            if (soLuong == 0 && range.tonThapNhat == 0)
-                continue;
-
-            if (soLuong < range.tonThapNhat) {
-                data[i].css = "warningLower";
-            } else if (soLuong > range.tonCaoNhat) {
-                data[i].css = "warningUpper";
-            } else {
-                data[i].css = "";
-            }
-            items.push(data[i]);
-        }
-        viewModel.content.items(items);
-        viewModel.isLoading(false);
-    }
-})(window.app.datacontext, window.app.webApiUrl);
+})();
