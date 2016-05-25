@@ -23,7 +23,7 @@
             itemsSourceName: "khoHangs",
             itemText: "tenKho",
             itemValue: "ma",
-            filterValue: ko.observable()
+            filterValue: ko.observable(1)
         },
         {
             type: "date",
