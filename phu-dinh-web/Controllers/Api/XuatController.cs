@@ -1,139 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Data.Entity;
+using System.Web.Http;
+using Data;
+using phu_dinh_web.Models;
 
 namespace phu_dinh_web.Controllers
 {
     public class XuatController : BaseApiController
     {
-        public List<List<string>> GetXuat(string json)
-        {
-            var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
-            
-            const int pageSize = 300;
-            int pageCount;
-
-            AddDefaultDateFilter(filter, DateTime.Now.Date);
-            var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
-                _context.tDonHangs
-                    .Include(p => p.tChiTietDonHangs)
-                    .Include(p => p.rKhoHang)
-                    .Include(p => p.rKhachHang)
-                , filter, pageSize, out pageCount);
-
-            return FormatResult(query);
-        }
-
-        public List<string> GetXuatAsString(string json)
-        {
-            var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
-            
-            const int pageSize = 300;
-            int pageCount;
-
-            AddDefaultDateFilter(filter, DateTime.Now.Date);
-            var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
-                _context.tDonHangs
-                    .Include(p => p.tChiTietDonHangs)
-                    .Include(p => p.rKhoHang)
-                    .Include(p => p.rKhachHang)
-                , filter, pageSize, out pageCount);
-
-            return FormatResultAsString(query);
-        }
-
-        public List<string> GetXuatGroupByKhachHangAsString(string json)
+        public IEnumerable<XuatDto> Get(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
 
-            const int pageSize = 30;
-            int pageCount;
-            
-            var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
-                _context.tDonHangs
-                    .Include(p => p.tChiTietDonHangs)
-                    .Include(p => p.rKhoHang)
-                , filter, pageSize, out pageCount);
-
-            return FormatResultGroupByKhachHangAsString(query);
-        }
-
-        private List<List<string>> FormatResult(IQueryable<Data.tDonHang> query)
-        {
-            var result = new List<List<string>>();
-            foreach (var donHang in query.ToList())
+            var query = _context.tDonHangs
+                .Include("tChiTietDonHangs.tMatHang")
+                .Include(p => p.rKhoHang)
+                .Include(p => p.rKhachHang);
+            query = ExpressionBuilder.WhereExpression.AddWhereExpression(query, filter.WhereOptions);
+            if (query.Count() > 200)
             {
-                result.Add(new List<string> { donHang.rKhoHang.TenKho });
-                result.Add(new List<string> { donHang.rKhachHang.TenKhachHang });
-                result.Add(new List<string> { donHang.tChiTietDonHangs.Count.ToString("N0") });
-                foreach (var chiTietDonHang in donHang.tChiTietDonHangs)
-                {
-                    result.Add(new List<string>
-                    {
-                        chiTietDonHang.tMatHang.TenMatHangDayDu,
-                        chiTietDonHang.SoLuong.ToString("N0")
-                    });
-                }
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.RequestEntityTooLarge));
             }
-            return result;
-        }
-
-        private List<string> FormatResultAsString(IQueryable<Data.tDonHang> query)
-        {
-            var result = new List<string>();
-            foreach (var donHang in query.ToList())
-            {
-                result.Add((donHang.tChiTietDonHangs.Count + 1).ToString("N0"));
-                result.Add(donHang.rKhachHang.TenKhachHang);
-                foreach (var chiTietDonHang in donHang.tChiTietDonHangs)
-                {
-                    result.Add(string.Format("{0,-5:N0}", chiTietDonHang.SoLuong) + chiTietDonHang.tMatHang.TenMatHangDayDu);
-                }
-            }
-            return result;
-        }
-
-        private List<string> FormatResultGroupByKhachHangAsString(IQueryable<Data.tDonHang> query)
-        {
-            var result = new List<string>();
-            foreach (var donHang in query.ToList())
-            {
-                result.Add((donHang.tChiTietDonHangs.Count + 1).ToString("N0"));
-                result.Add(donHang.Ngay.ToString("dd/MM/yyyy"));
-                foreach (var chiTietDonHang in donHang.tChiTietDonHangs)
-                {
-                    result.Add(string.Format("{0,-5:N0}", chiTietDonHang.SoLuong) + chiTietDonHang.tMatHang.TenMatHangDayDu);
-                }
-            }
-            return result;
-        }
-
-        private void AddDefaultDateFilter(ExpressionBuilder.FilterExpression filter, DateTime date)
-        {
-            if (filter.WhereOptions == null)
-            {
-                filter.WhereOptions = new List<ExpressionBuilder.WhereExpression.WhereOption>
-                {
-                    new ExpressionBuilder.WhereExpression.WhereOption
-                        {
-                            Predicate = "=",
-                            PropertyPath = "Ngay",
-                            Value = date.ToString("yyyy/MM/dd")
-                        }
-                };
-                return;
-            }
-            if (filter.WhereOptions.Any(p => p.PropertyPath == "Ngay") == false)
-            {
-                filter.WhereOptions.Add(new ExpressionBuilder.WhereExpression.WhereOption
-                {
-                    Predicate = "=",
-                    PropertyPath = "Ngay",
-                    Value = date.ToString("yyyy/MM/dd")
-                });
-            }
+            query = ExpressionBuilder.OrderByExpression.AddOrderByExpression(query, filter.OrderOptions);
+            return query.AsEnumerable().Select(p => new XuatDto(p));
         }
     }
 }

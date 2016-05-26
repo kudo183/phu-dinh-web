@@ -6,12 +6,6 @@
         rNhaCungCapAction: {
             getrNhaCungCaps: "GetrNhaCungCaps"
         },
-        xuatUrl: xuatUrl,
-        xuatAction: {
-            getXuat: "GetXuat",
-            getXuatAsString: "GetXuatAsString",
-            getXuatGroupByKhachHangAsString: "GetXuatGroupByKhachHangAsString"
-        },
         nhapUrl: nhapUrl,
         nhapAction: {
             getNhapAsString: "GetNhapAsString"
@@ -34,6 +28,10 @@
         },
         canhBaoTonKhoApi: {
             get: api("canhBaoTonKho", "get")
+        },
+        xuatApi: {
+            get: api("xuat", "get"),
+            getByKhachHang: api("xuat", "getByKhachHang")
         }
     };
     return webApiUrl;
@@ -42,6 +40,5 @@
 
     function api(controllder, action) { return "/api" + "/" + controllder + "/" + action; }
     function rNhaCungCapUrl(action) { return webApiUrl.root + "/nhacungcap/" + action; }
-    function xuatUrl(action) { return webApiUrl.root + "/xuat/" + action; }
     function nhapUrl(action) { return webApiUrl.root + "/nhap/" + action; }
 })();

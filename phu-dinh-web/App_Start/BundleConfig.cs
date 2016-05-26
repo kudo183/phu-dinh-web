@@ -57,8 +57,7 @@ namespace phu_dinh_web.App_Start
                 "~/Scripts/app/lib/jsControl/release/huy.control.datagrid.css",
                 "~/Content/Site.css",
                 "~/Content/headerMenu.css",
-                "~/Content/donHangView.css",
-                "~/Content/tonKhoView.css",
+                "~/Content/*View.css",
                 "~/Content/media.css"));
         }
     }

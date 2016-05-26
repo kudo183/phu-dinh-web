@@ -167,12 +167,14 @@
     <Content Include="Content\media.css" />
     <Content Include="Content\site.css" />
     <Content Include="Content\tonKhoView.css" />
+    <Content Include="Content\xuatView.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\ajaxlogin.js" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\app\datacontext.js" />
     <Content Include="Scripts\app\dataProvider\donHangDataProvider.js" />
     <Content Include="Scripts\app\dataProvider\tonKhoDataProvider.js" />
+    <Content Include="Scripts\app\dataProvider\xuatDataProvider.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.css" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.js" />
@@ -182,13 +184,11 @@
     <Content Include="Scripts\app\lib\jsControl\release\huy.ko.binding.datepicker.js" />
     <Content Include="Scripts\app\main.js" />
     <Content Include="Scripts\app\viewModel\donHangViewModel.js" />
-    <Content Include="Scripts\app\viewModel\khachHangViewModel.js" />
     <Content Include="Scripts\app\viewModel\nhapViewModel.js" />
     <Content Include="Scripts\app\viewModel\testViewModel.js" />
     <Content Include="Scripts\app\viewModel\xuatViewModel.js" />
     <Content Include="Scripts\app\view\donHangView.js" />
     <Content Include="Scripts\app\view\headerMenuView.js" />
-    <Content Include="Scripts\app\view\khachHangView.js" />
     <Content Include="Scripts\app\view\nhapView.js" />
     <Content Include="Scripts\app\view\tonKhoView.js" />
     <Content Include="Scripts\app\viewModel\tonKhoViewModel.js" />
@@ -276,6 +276,7 @@
     <Compile Include="Models\rLoaiHangDto.cs" />
     <Compile Include="Models\rNhaCungCapDto.cs" />
     <Compile Include="Models\tTonKhoDto.cs" />
+    <Compile Include="Models\XuatDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

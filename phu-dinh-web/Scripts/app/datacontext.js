@@ -34,6 +34,14 @@
                 return getList(window.app.webApiUrl.canhBaoTonKhoApi.get, filter);
             },
         },
+        xuat: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.xuatApi.get, filter);
+            },
+            getByKhachHang: function (filter) {
+                return getList(window.app.webApiUrl.xuatApi.getByKhachHang, filter);
+            },
+        },
         getList: getList,
         saveChanges: saveChanges
     };

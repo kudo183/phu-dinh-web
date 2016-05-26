@@ -1,25 +1,10 @@
 ﻿window.app.dataProvider.tonKhoDataProvider = (function (datacontext) {
     var dataProvider = {
         _items: [],
-        getItemId: getItemId,
-        setItemId: setItemId,
-        toEntity: toEntity,
         getItemsAjax: getItemsAjax,
-        saveChangesAjax: saveChangesAjax
     };
 
     return dataProvider;
-
-    function getItemId(item) {
-        return undefined;
-    }
-
-    function setItemId(item, newId) {
-    }
-
-    function toEntity(item) {
-        return undefined;
-    }
 
     function getItemsAjax(filter, done, fail) {
         filter.orderOptions = [{ propertyPath: "tMatHang.TenMatHangDayDu", isAscending: true }];
@@ -78,11 +63,5 @@
             result.comboBoxItemsSource.khoHangs = khoHangs[0];
             done(result);
         }).fail(fail);
-    }
-
-    function saveChangesAjax(changes, done, fail) {
-        datacontext.donHang.save(changes)
-            .done(done)
-            .fail(fail);
     }
 })(window.app.datacontext);
