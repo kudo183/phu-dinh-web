@@ -1,10 +1,11 @@
 ﻿window.app.view.nhapView = (function () {
     return function (id) {
-        var view = window.app.view.utils.createReadOnlyGridView(id, [
-                { type: "select", name: "kho" },
-                { type: "date", name: "ngay" },
-                { type: "selectAllowBlank", name: "nhaCungCap" }
-        ], "row");
+        var view = window.huy.control.dataGrid.createView(id, {
+            hasCustomFilter: true,
+            hasColumnHeader: false,
+            hasColumnFilter: false,
+            hasBottomToolbar: false
+        }, "row");
         return view;
     };
 })();

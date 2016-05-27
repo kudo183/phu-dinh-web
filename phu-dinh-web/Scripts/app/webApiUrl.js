@@ -2,10 +2,6 @@
 
     var webApiUrl = {
         root: "/api",
-        rNhaCungCapUrl: rNhaCungCapUrl,
-        rNhaCungCapAction: {
-            getrNhaCungCaps: "GetrNhaCungCaps"
-        },
         nhapUrl: nhapUrl,
         nhapAction: {
             getNhapAsString: "GetNhapAsString"
@@ -32,6 +28,12 @@
         xuatApi: {
             get: api("xuat", "get"),
             getByKhachHang: api("xuat", "getByKhachHang")
+        },
+        nhaCungCapApi: {
+            get: api("nhaCungCap", "get")
+        },
+        nhapApi: {
+            get: api("nhap", "get")
         }
     };
     return webApiUrl;

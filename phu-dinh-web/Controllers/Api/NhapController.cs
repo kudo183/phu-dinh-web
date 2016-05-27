@@ -1,44 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Http;
 using System.Web;
 using System.Data.Entity;
+using System.Web.Http;
+using phu_dinh_web.Models;
 
 namespace phu_dinh_web.Controllers
 {
     public class NhapController : BaseApiController
     {
-        public List<string> GetNhapAsString(string json)
+        public IEnumerable<NhapDto> Get(string json)
         {
             var filter = ExpressionBuilder.FilterExpression.FromJsonString(json);
 
-            const int pageSize = 30;
-            int pageCount;
-
-            var query = ExpressionBuilder.FilterExpression.AddFilterExpression(
-                _context.tNhapHangs
-                    .Include(p => p.tChiTietNhapHangs)
-                    .Include(p => p.rKhoHang)
-                    .Include(p => p.rNhaCungCap)
-                , filter, pageSize, out pageCount);
-
-            return FormatResultAsString(query);
-        }
-
-        private List<string> FormatResultAsString(IQueryable<Data.tNhapHang> query)
-        {
-            var result = new List<string>();
-            foreach (var nhapHang in query.ToList())
+            var query = _context.tNhapHangs
+                .Include("tChiTietNhapHangs.tMatHang")
+                .Include(p => p.rKhoHang)
+                .Include(p => p.rNhaCungCap);
+            query = ExpressionBuilder.WhereExpression.AddWhereExpression(query, filter.WhereOptions);
+            if (query.Count() > 200)
             {
-                result.Add((nhapHang.tChiTietNhapHangs.Count + 1).ToString("N0"));
-                result.Add(nhapHang.rNhaCungCap.TenNhaCungCap);
-                foreach (var chiTietNhapHang in nhapHang.tChiTietNhapHangs)
-                {
-                    result.Add(string.Format("{0,-5:N0}", chiTietNhapHang.SoLuong) + chiTietNhapHang.tMatHang.TenMatHangDayDu);
-                }
+                throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.RequestEntityTooLarge));
             }
-            return result;
+            query = ExpressionBuilder.OrderByExpression.AddOrderByExpression(query, filter.OrderOptions);
+            return query.AsEnumerable().Select(p => new NhapDto(p));
         }
-
     }
 }

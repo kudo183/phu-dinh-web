@@ -29,8 +29,7 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/webApiUrl.js",
                         "~/Scripts/app/datacontext.js",
-                        "~/Scripts/app/utilsDOM.js",
-                        "~/Scripts/app/view/_utils.js"));
+                        "~/Scripts/app/utilsDOM.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
                         "~/Scripts/app/dataProvider/*DataProvider.js",
@@ -48,7 +47,6 @@ namespace phu_dinh_web.App_Start
                         "~/Scripts/app/defineNamespace.js",
                         "~/Scripts/app/datacontext.js",
                         "~/Scripts/app/utilsDOM.js",
-                        "~/Scripts/app/view/_utils.js",
                         "~/Scripts/app/viewModel/testViewModel.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(

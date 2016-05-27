@@ -8,7 +8,7 @@ namespace phu_dinh_web.Controllers
 {
     public class NhaCungCapController : BaseApiController
     {
-        public IEnumerable<rNhaCungCapDto> GetrNhaCungCaps()
+        public IEnumerable<rNhaCungCapDto> Get()
         {
             return _context.rNhaCungCaps.OrderBy(p => p.TenNhaCungCap)
                 .AsEnumerable().Select(p => new rNhaCungCapDto(p));

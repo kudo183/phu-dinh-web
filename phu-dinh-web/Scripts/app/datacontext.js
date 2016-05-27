@@ -42,6 +42,16 @@
                 return getList(window.app.webApiUrl.xuatApi.getByKhachHang, filter);
             },
         },
+        nhaCungCap: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.nhaCungCapApi.get, filter);
+            },
+        },
+        nhap: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.nhapApi.get, filter);
+            },
+        },
         getList: getList,
         saveChanges: saveChanges
     };

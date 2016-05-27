@@ -1,0 +1,12 @@
+﻿#nhapView .cell {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+#nhapView .col1.customFilterCell {
+    width: 120px;
+}
+
+#nhapView .col2.customFilterCell {
+    width: 100px;
+}

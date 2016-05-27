@@ -1,0 +1,12 @@
+﻿#xuatView .cell {
+    font-size: 1.2em;
+    padding: 5px;
+}
+
+#xuatView .col1.customFilterCell {
+    width: 120px;
+}
+
+#xuatView .col2.customFilterCell {
+    width: 100px;
+}
