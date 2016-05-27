@@ -18,6 +18,7 @@ namespace Data
         public PhuDinhEntities()
             : base("name=PhuDinhEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
