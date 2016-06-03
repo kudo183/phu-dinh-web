@@ -20,7 +20,7 @@
         {
             type: "date",
             propertyPath: "Ngay",
-            filterValue: ko.observable(new Date())
+            filterValue: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
         },
         {
             type: "comboBox",

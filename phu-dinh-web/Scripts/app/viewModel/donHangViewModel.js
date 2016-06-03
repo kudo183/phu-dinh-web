@@ -14,7 +14,7 @@
         cellValueProperty: "ngay",
         readOnly: false,
         order: -1,
-        filterValue: ko.observable(new Date())
+        filterValue: ko.observable($.datepicker.formatDate('dd/mm/yy', new Date()))
     });
 
     viewModel.addColumn({
