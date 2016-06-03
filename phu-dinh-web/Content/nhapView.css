@@ -10,3 +10,7 @@
 #nhapView .col2.customFilterCell {
     width: 100px;
 }
+
+#nhapView .col3.customFilterCell {
+    width: 250px;
+}
