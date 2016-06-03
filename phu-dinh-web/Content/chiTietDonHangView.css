@@ -1,0 +1,20 @@
+﻿.chiTietDonHangView .gridBody {
+    width: 417px;
+    overflow: auto;
+}
+
+.chiTietDonHangView .cell.col2 {
+    width: 55px;
+}
+
+.chiTietDonHangView .cell.col3 {
+    width: 55px;
+}
+
+.chiTietDonHangView .cell.col4 {
+    width: 170px;
+}
+
+.chiTietDonHangView .cell.col5 {
+    width: 70px;
+}

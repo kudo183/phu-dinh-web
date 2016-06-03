@@ -1,0 +1,17 @@
+﻿#donHangWithChiTietDonHangView .chiTietDonHangView {
+    display: inline-block;
+}
+
+#donHangWithChiTietDonHangView .donHangView {
+    display: inline-block;
+}
+
+#donHangWithChiTietDonHangView .chiTietDonHangView .gridBody {
+    width: 425px;
+    height: 300px;
+}
+
+#donHangWithChiTietDonHangView .donHangView .gridBody {
+    width: 452px;
+    height: 300px;
+}

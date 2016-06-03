@@ -34,6 +34,13 @@
         },
         nhapApi: {
             get: api("nhap", "get")
+        },
+        chiTietDonHangApi: {
+            get: api("chiTietDonHang", "get"),
+            save: api("chiTietDonHang", "save")
+        },
+        matHangApi: {
+            get: api("matHang", "get")
         }
     };
     return webApiUrl;

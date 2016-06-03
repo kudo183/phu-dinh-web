@@ -14,7 +14,7 @@
         cellValueProperty: "ngay",
         readOnly: false,
         order: -1,
-        filterValue: ko.observable()
+        filterValue: ko.observable(new Date())
     });
 
     viewModel.addColumn({

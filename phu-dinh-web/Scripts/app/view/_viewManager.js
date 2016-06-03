@@ -20,7 +20,7 @@
                 { text: "Ton Kho", value: "tonKhoView", id: "" },
                 { text: "Xuat", value: "xuatView", id: "" },
                 { text: "Nhap", value: "nhapView", id: "" },
-                { text: "Don Hang", value: "donHangView", id: "" },
+                { text: "DH Complex", value: "donHangWithChiTietDonHangView", id: "" },
                 //{ text: "Tai Khoan", value: "/Account/Manage", id: "" },
                 //{ text: "Thoat", value: "logOff", id: "" }
             ],

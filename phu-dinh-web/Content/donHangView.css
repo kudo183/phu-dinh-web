@@ -1,6 +1,16 @@
-﻿#donHangView .col3 {
-    width: 100px;
+﻿.donHangView .gridBody {
+    width: 452px;
+    overflow: auto;
 }
-#donHangView .col4 {
-    width: 200px;
+
+.donHangView .cell.col2 {
+    width: 55px;
+}
+
+.donHangView .cell.col3 {
+    width: 80px;
+}
+
+.donHangView .cell.col4 {
+    width: 170px;
 }

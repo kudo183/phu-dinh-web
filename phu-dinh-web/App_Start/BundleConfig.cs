@@ -33,10 +33,12 @@ namespace phu_dinh_web.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/viewModel").Include(
                         "~/Scripts/app/dataProvider/*DataProvider.js",
-                        "~/Scripts/app/viewModel/*ViewModel.js"));
+                        "~/Scripts/app/viewModel/*ViewModel.js",
+                        "~/Scripts/app/viewModel/complex/*ViewModel.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/view").Include(
                         "~/Scripts/app/view/*View.js",
+                        "~/Scripts/app/view/complex/*View.js",
                         "~/Scripts/app/view/_viewManager.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/main").Include(
@@ -56,6 +58,7 @@ namespace phu_dinh_web.App_Start
                 "~/Content/Site.css",
                 "~/Content/headerMenu.css",
                 "~/Content/*View.css",
+                "~/Content/complex/*View.css",
                 "~/Content/media.css"));
         }
     }

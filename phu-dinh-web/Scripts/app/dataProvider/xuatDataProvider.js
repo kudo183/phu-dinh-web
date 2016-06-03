@@ -24,12 +24,12 @@
                 var item = xuats[0][i];
                 result.items.push({
                     text: ko.observable(formatItem(item)),
-                    css: "underlineText"
+                    css: ko.observable("underlineText")
                 });
                 for (var j = 0; j < item.chiTietDonHangs.length; j++) {
                     result.items.push({
                         text: ko.observable("\t" + item.chiTietDonHangs[j]),
-                        css: ""
+                        css: ko.observable("")
                     });
                 }
             }

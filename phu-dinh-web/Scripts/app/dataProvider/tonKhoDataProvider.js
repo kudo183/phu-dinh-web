@@ -34,10 +34,10 @@
             for (var i = 0; i < tonKhos[0].length; i++) {
                 var item = tonKhos[0][i];
                 var css = "";
-                
+
                 if (canhBaoTonKho[item.maKhoHang] !== undefined
                     && canhBaoTonKho[item.maKhoHang][item.maMatHang] !== undefined) {
-                    
+
                     var range = canhBaoTonKho[item.maKhoHang][item.maMatHang];
                     var soLuong = item.soLuong;
 
@@ -50,11 +50,11 @@
                         css = "warningUpper";
                     }
                 }
-                
+
                 result.items.push({
                     tenMatHang: ko.observable(item.tenMatHang),
                     soLuong: ko.observable(item.soLuong),
-                    css: css
+                    css: ko.observable(css)
                 });
             }
 

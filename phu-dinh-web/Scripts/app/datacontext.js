@@ -52,6 +52,19 @@
                 return getList(window.app.webApiUrl.nhapApi.get, filter);
             },
         },
+        chiTietDonHang: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.chiTietDonHangApi.get, filter);
+            },
+            save: function (changes) {
+                return saveChanges(changes, window.app.webApiUrl.chiTietDonHangApi.save);
+            }
+        },
+        matHang: {
+            get: function (filter) {
+                return getList(window.app.webApiUrl.matHangApi.get, filter);
+            },
+        },
         getList: getList,
         saveChanges: saveChanges
     };
