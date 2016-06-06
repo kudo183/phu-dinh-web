@@ -13,7 +13,6 @@ using phu_dinh_web.Models;
 namespace phu_dinh_web.Controllers
 {
     [Authorize]
-    [InitializeSimpleMembership]
     public class AccountController : Controller
     {
         //

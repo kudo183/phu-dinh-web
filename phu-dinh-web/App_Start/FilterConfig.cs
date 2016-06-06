@@ -7,6 +7,7 @@ namespace phu_dinh_web.App_Start
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new phu_dinh_web.Filters.InitializeSimpleMembershipAttribute());
         }
     }
 }
