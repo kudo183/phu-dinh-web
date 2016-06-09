@@ -180,6 +180,7 @@
     <Content Include="Scripts\app\dataProvider\nhapDataProvider.js" />
     <Content Include="Scripts\app\dataProvider\tonKhoDataProvider.js" />
     <Content Include="Scripts\app\dataProvider\xuatDataProvider.js" />
+    <Content Include="Scripts\app\dateTimeUtils.js" />
     <Content Include="Scripts\app\defineNamespace.js" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.css" />
     <Content Include="Scripts\app\lib\jsControl\release\huy.control.datagrid.js" />
