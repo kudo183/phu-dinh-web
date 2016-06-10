@@ -41,10 +41,6 @@
         <EntityTypeShape EntityType="PhuDinhEntity.tToaHang" Width="1.5" PointX="7.5" PointY="28.25" IsExpanded="true" />
         <EntityTypeShape EntityType="PhuDinhEntity.tTonKho" Width="1.5" PointX="15.75" PointY="3.375" IsExpanded="true" />
         <EntityTypeShape EntityType="PhuDinhEntity.ThamSoNgay" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PhuDinhEntity.UserProfile" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="PhuDinhEntity.webpages_Membership" Width="1.5" PointX="2.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PhuDinhEntity.webpages_OAuthMembership" Width="1.5" PointX="4.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="PhuDinhEntity.webpages_Roles" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
         <AssociationConnector Association="PhuDinhEntity.FK_rChanh_rBaiXe" ManuallyRouted="false" />
         <AssociationConnector Association="PhuDinhEntity.FK_rCanhBaoTonKho_rKhoHang" ManuallyRouted="false" />
         <AssociationConnector Association="PhuDinhEntity.FK_rCanhBaoTonKho_tMatHang" ManuallyRouted="false" />
@@ -90,7 +86,6 @@
         <AssociationConnector Association="PhuDinhEntity.FK_tChuyenHangDonHang_tChuyenHang" ManuallyRouted="false" />
         <AssociationConnector Association="PhuDinhEntity.FK_tChuyenHangDonHang_tDonHang" ManuallyRouted="false" />
         <AssociationConnector Association="PhuDinhEntity.FK_tTonKho_tMatHang" ManuallyRouted="false" />
-        <AssociationConnector Association="PhuDinhEntity.webpages_UsersInRoles" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

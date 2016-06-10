@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rDiaDiem
+    public partial class rDiaDiem : IEntity
     {
         public rDiaDiem()
         {
@@ -25,5 +25,10 @@ namespace Data
     
         public virtual rNuoc rNuoc { get; set; }
         public virtual ICollection<rKhachHang> rKhachHangs { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

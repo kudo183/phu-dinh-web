@@ -12,10 +12,15 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class ThamSoNgay
+    public partial class ThamSoNgay : IEntity
     {
         public int Ma { get; set; }
         public string Ten { get; set; }
         public System.DateTime GiaTri { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rNhaCungCap
+    public partial class rNhaCungCap : IEntity
     {
         public rNhaCungCap()
         {
@@ -25,5 +25,10 @@ namespace Data
     
         public virtual ICollection<tNhapHang> tNhapHangs { get; set; }
         public virtual ICollection<tNhapNguyenLieu> tNhapNguyenLieux { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

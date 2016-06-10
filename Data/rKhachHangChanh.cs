@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rKhachHangChanh
+    public partial class rKhachHangChanh : IEntity
     {
         public int Ma { get; set; }
         public int MaChanh { get; set; }
@@ -21,5 +21,10 @@ namespace Data
     
         public virtual rChanh rChanh { get; set; }
         public virtual rKhachHang rKhachHang { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

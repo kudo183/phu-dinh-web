@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rKhoHang
+    public partial class rKhoHang : IEntity
     {
         public rKhoHang()
         {
@@ -34,5 +34,10 @@ namespace Data
         public virtual ICollection<tDonHang> tDonHangs { get; set; }
         public virtual ICollection<tNhapHang> tNhapHangs { get; set; }
         public virtual ICollection<tTonKho> tTonKhoes { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

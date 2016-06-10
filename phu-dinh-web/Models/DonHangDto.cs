@@ -6,7 +6,7 @@ using Data;
 
 namespace phu_dinh_web.Models
 {
-    public class DonHangDto
+    public class DonHangDto : IDto<tDonHang>
     {
         public int Ma { get; set; }
         public DateTime Ngay { get; set; }
@@ -14,15 +14,18 @@ namespace phu_dinh_web.Models
         public int MaKhoHang { get; set; }
         public int? MaChanh { get; set; }
 
-        public DonHangDto() { }
-
-        public DonHangDto(tDonHang donHang)
+        public int GetKey()
         {
-            Ma = donHang.Ma;
-            Ngay = donHang.Ngay;
-            MaKhachHang = donHang.MaKhachHang;
-            MaKhoHang = donHang.MaKhoHang;
-            MaChanh = donHang.MaChanh;
+            return Ma;
+        }
+
+        public void FromEntity(tDonHang entity)
+        {
+            Ma = entity.Ma;
+            Ngay = entity.Ngay;
+            MaKhachHang = entity.MaKhachHang;
+            MaKhoHang = entity.MaKhoHang;
+            MaChanh = entity.MaChanh;
         }
 
         public tDonHang ToEntity()

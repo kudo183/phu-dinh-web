@@ -52,6 +52,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IEntity.cs" />
     <Compile Include="PhuDinh.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,18 +175,6 @@
       <DependentUpon>PhuDinh.tt</DependentUpon>
     </Compile>
     <Compile Include="tTonKho.cs">
-      <DependentUpon>PhuDinh.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserProfile.cs">
-      <DependentUpon>PhuDinh.tt</DependentUpon>
-    </Compile>
-    <Compile Include="webpages_Membership.cs">
-      <DependentUpon>PhuDinh.tt</DependentUpon>
-    </Compile>
-    <Compile Include="webpages_OAuthMembership.cs">
-      <DependentUpon>PhuDinh.tt</DependentUpon>
-    </Compile>
-    <Compile Include="webpages_Roles.cs">
       <DependentUpon>PhuDinh.tt</DependentUpon>
     </Compile>
   </ItemGroup>

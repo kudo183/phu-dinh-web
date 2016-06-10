@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rNuoc
+    public partial class rNuoc : IEntity
     {
         public rNuoc()
         {
@@ -23,5 +23,10 @@ namespace Data
         public string TenNuoc { get; set; }
     
         public virtual ICollection<rDiaDiem> rDiaDiems { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

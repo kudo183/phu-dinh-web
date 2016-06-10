@@ -6,7 +6,7 @@ using Data;
 
 namespace phu_dinh_web.Models
 {
-    public class ChiTietDonHangDto
+    public class ChiTietDonHangDto : IDto<tChiTietDonHang>
     {
         public int Ma { get; set; }
         public int MaDonHang { get; set; }
@@ -14,16 +14,19 @@ namespace phu_dinh_web.Models
         public int MaMatHang { get; set; }
         public int SoLuong { get; set; }
 
-        public ChiTietDonHangDto() { }
-
-        public ChiTietDonHangDto(tChiTietDonHang chiTietDonHang)
+        public int GetKey()
         {
-            Ma = chiTietDonHang.Ma;
-            MaDonHang = chiTietDonHang.MaDonHang;
-            TenDonHang = string.Format("{0:dd/MM/yy}_{1}_{2}", chiTietDonHang.tDonHang.Ngay,
-                chiTietDonHang.tDonHang.rKhoHang.TenKho, chiTietDonHang.tDonHang.rKhachHang.TenKhachHang);
-            MaMatHang = chiTietDonHang.MaMatHang;
-            SoLuong = chiTietDonHang.SoLuong;
+            return Ma;
+        }
+
+        public void FromEntity(tChiTietDonHang entity)
+        {
+            Ma = entity.Ma;
+            MaDonHang = entity.MaDonHang;
+            TenDonHang = string.Format("{0:dd/MM/yy}_{1}_{2}", entity.tDonHang.Ngay,
+                entity.tDonHang.rKhoHang.TenKho, entity.tDonHang.rKhachHang.TenKhachHang);
+            MaMatHang = entity.MaMatHang;
+            SoLuong = entity.SoLuong;
         }
 
         public tChiTietDonHang ToEntity()

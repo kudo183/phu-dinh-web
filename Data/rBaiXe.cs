@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rBaiXe
+    public partial class rBaiXe : IEntity
     {
         public rBaiXe()
         {
@@ -23,5 +23,10 @@ namespace Data
         public string DiaDiemBaiXe { get; set; }
     
         public virtual ICollection<rChanh> rChanhs { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

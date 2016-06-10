@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class tChiTietChuyenKho
+    public partial class tChiTietChuyenKho : IEntity
     {
         public int Ma { get; set; }
         public int MaChuyenKho { get; set; }
@@ -21,5 +21,10 @@ namespace Data
     
         public virtual tChuyenKho tChuyenKho { get; set; }
         public virtual tMatHang tMatHang { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

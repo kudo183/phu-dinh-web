@@ -282,6 +282,7 @@
     <Compile Include="Models\ChiTietDonHangDto.cs" />
     <Compile Include="Models\DonHangDto.cs" />
     <Compile Include="Models\GetResult.cs" />
+    <Compile Include="Models\IDto.cs" />
     <Compile Include="Models\KhoHangDto.cs" />
     <Compile Include="Models\NhapDto.cs" />
     <Compile Include="Models\rCanhBaoTonKhoDto.cs" />

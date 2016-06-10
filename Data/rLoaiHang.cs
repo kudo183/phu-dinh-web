@@ -12,7 +12,7 @@ namespace Data
     using System;
     using System.Collections.Generic;
     
-    public partial class rLoaiHang
+    public partial class rLoaiHang : IEntity
     {
         public rLoaiHang()
         {
@@ -23,5 +23,10 @@ namespace Data
         public string TenLoai { get; set; }
     
         public virtual ICollection<tMatHang> tMatHangs { get; set; }
+    
+        public int GetKey()
+        {
+            return Ma;
+        }
     }
 }

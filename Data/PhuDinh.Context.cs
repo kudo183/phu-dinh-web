@@ -62,9 +62,5 @@ namespace Data
         public DbSet<tToaHang> tToaHangs { get; set; }
         public DbSet<tTonKho> tTonKhoes { get; set; }
         public DbSet<ThamSoNgay> ThamSoNgays { get; set; }
-        public DbSet<UserProfile> UserProfiles { get; set; }
-        public DbSet<webpages_Membership> webpages_Membership { get; set; }
-        public DbSet<webpages_OAuthMembership> webpages_OAuthMembership { get; set; }
-        public DbSet<webpages_Roles> webpages_Roles { get; set; }
     }
 }
