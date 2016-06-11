@@ -9,8 +9,6 @@
             viewModel.initialized = true;
             this.donHangViewModel.init();
             this.chiTietDonHangViewModel.init();
-
-            this.load(this);
         },
         load: function (vm) {
             vm.donHangViewModel.load(vm.donHangViewModel);
